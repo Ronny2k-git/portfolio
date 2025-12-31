@@ -1,3 +1,5 @@
+import { GithubIcon, TwitterIcon } from '../icons'
+
 export default function Footer() {
   return (
     <footer className="w-full bg-black/90">
@@ -16,9 +18,16 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-6 text-lg font-bold text-gray-400">
           <p className="text-3xl">Ronny2k</p>
 
-          <div className="flex gap-4 text-base font-normal">
-            <p>Github</p>
-            <p>Twitter</p>
+          <div className="flex gap-4 text-base font-normal cursor-pointer">
+            {/* {ADD ICONS LATER, ACTUALLY I WILL CREATE A COMPONENT FOR EACH ICON} */}
+            <span className="flex gap-2 hover:underline">
+              <GithubIcon />
+              Github
+            </span>
+            <span className="flex gap-2 hover:underline">
+              <TwitterIcon />
+              Twitter
+            </span>
           </div>
         </div>
       </div>
