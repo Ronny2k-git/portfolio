@@ -2,6 +2,7 @@
 
 ### ‼️ Project Structure
 
+```txt
 portfolio/
 ├── .tanstack/ # TanStack Router cache / generated files
 ├── .vscode/ # VS Code workspace settings
@@ -47,3 +48,4 @@ portfolio/
 ├── README.md
 ├── tsconfig.json
 └── vite.config.ts
+```
