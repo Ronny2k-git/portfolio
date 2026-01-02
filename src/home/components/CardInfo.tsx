@@ -42,8 +42,10 @@ export function CardInfo() {
                 px-3 py-1
                 rounded-full
                 bg-blue-500/10
+                hover:bg-blue-500/20
                 text-blue-300
-                border border-blue-500/20
+                border border-blue-500/30
+                hover:scale-105 cursor-pointer
               "
                 >
                   {tech}

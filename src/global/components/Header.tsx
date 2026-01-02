@@ -2,10 +2,14 @@ import { GithubIcon, TwitterIcon } from '../icons'
 import { scrollToContainer } from '../utils'
 
 const NAV_ROUTE_ID = [
-  { id: 'card-info', label: 'Ronny2k', font: 'text-3xl' },
-  { id: 'Skill', label: 'Skills', font: 'text-lg' },
-  { id: 'project', label: 'Projects', font: 'text-lg' },
-  { id: 'test2', label: 'Test2', font: 'text-lg' },
+  { id: 'card-info', label: 'Ronny2k', class: 'text-3xl' },
+  { id: 'Skill', label: 'Skills', class: 'text-lg max-md:hidden' },
+  { id: 'project', label: 'Projects', class: 'text-lg max-md:hidden' },
+  {
+    label: 'Source Code',
+    class: 'text-lg max-md:hidden',
+    path: 'https://github.com/Ronny2k-git/portfolio',
+  },
 ]
 
 export default function Header() {
@@ -14,15 +18,16 @@ export default function Header() {
       {/* Nav Bar */}
       <nav className="flex gap-x-12 items-center font-bold text-gray-400 cursor-pointer">
         {NAV_ROUTE_ID.map((route) => (
-          <div
+          <a
             key={route.id}
-            className={`${route.font}`}
+            href={route.path ? route.path : undefined}
+            className={`${route.class} hover:text-gray-300`}
             onClick={() => {
-              requestAnimationFrame(() => scrollToContainer(route.id))
+              requestAnimationFrame(() => scrollToContainer(route.id!))
             }}
           >
             {route.label}
-          </div>
+          </a>
         ))}
       </nav>
 
@@ -30,11 +35,11 @@ export default function Header() {
       <div className="flex items-center gap-4 text-gray-400 cursor-pointer">
         <span className="flex gap-2 hover:underline">
           <GithubIcon />
-          Github
+          {/* Github */}
         </span>
         <span className="flex gap-2 hover:underline">
           <TwitterIcon />
-          Twitter
+          {/* Twitter */}
         </span>
       </div>
     </header>

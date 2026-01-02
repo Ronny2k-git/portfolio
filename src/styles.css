@@ -36,10 +36,10 @@ code {
   animation: orbit 12s linear infinite;
 }
 
-/* .planet-orbit {
-  transform: translateX(23rem);
-} */
+.planet1 {
+  animation: counter-rotate 12s linear infinite;
+}
 
-.planet {
+.planet2 {
   animation: counter-rotate 12s linear infinite;
 }
