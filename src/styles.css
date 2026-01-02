@@ -36,9 +36,9 @@ code {
   animation: orbit 12s linear infinite;
 }
 
-.planet-orbit {
+/* .planet-orbit {
   transform: translateX(23rem);
-}
+} */
 
 .planet {
   animation: counter-rotate 12s linear infinite;
