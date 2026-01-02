@@ -17,6 +17,14 @@ export const HOME_CIRCLE_LOGO = [
   },
   {
     src: 'profile.png',
-    class: 'planet1 -translate-x-[31rem] -translate-y-[6rem] size-36',
+    class:
+      'planet1 -translate-x-[31rem] -translate-y-[6rem] size-36 border-2 border-blue-300',
   },
+]
+
+export const HOME_SKILL_CARD = [
+  { lang: 'JavaScript / TypeScript', pct: 100 },
+  { lang: 'React / NextJS', pct: 100 },
+  { lang: 'Solid / SolidJS', pct: 100 },
+  { lang: 'Vite.js / Tanstack Start', pct: 100 },
 ]

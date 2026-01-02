@@ -12,7 +12,7 @@ const MAIN_STACK = [
 
 export function CardInfo() {
   return (
-    <div className="w-[20.5rem] h-auto md:w-[24.5rem] p-6 flex items-center justify-center flex-col bg-gray-800/20 rounded-4xl text-gray-400 border border-gray-800">
+    <div className="z-10 w-[20.5rem] h-auto md:w-[24.5rem] p-6 flex items-center justify-center flex-col bg-gray-800/20 rounded-4xl text-gray-400 border border-gray-800">
       {/* My Infos */}
       <section className="flex flex-col gap-6">
         <p className="text-lg">My name is:</p>
@@ -24,8 +24,7 @@ export function CardInfo() {
         <hr className="text-gray-700/70" />
 
         <p className="text-lg">I'm a:</p>
-
-        <div className="flex flex-col text-lg">
+        <div className="flex flex-col text-lg text-center">
           <p>Web Developer Focused on Web3</p>
 
           {/* Stack */}
