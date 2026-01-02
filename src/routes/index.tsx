@@ -1,4 +1,5 @@
 import { CardInfo } from '@/home/components'
+import { HOME_CIRCLE_LOGO } from '@/home/utils'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
@@ -20,14 +21,12 @@ function App() {
         <div className="flex items-center justify-center w-[33.5rem] h-[33.5rem] md:w-[36.5rem] md:h-[36.5rem] border-2 border-dashed border-gray-700 rounded-full">
           {/* Orbiting */}
           <div className="orbit absolute flex items-center justify-center ">
-            <img
-              src="/profile.png"
-              className="planet1  border-2 border-blue-300 translate-x-[22rem] size-16 object-cover bg-blue-400 rounded-full "
-            />
-            <img
-              src="/profile.png"
-              className="planet1 border-2 border-blue-300 translate-x-[23rem] size-36 object-cover bg-blue-400 rounded-full "
-            />
+            {HOME_CIRCLE_LOGO.map((logo) => (
+              <img
+                src={logo.src}
+                className={`${logo.class} rounded-full object-cover`}
+              />
+            ))}
           </div>
 
           {/* My Skills */}
