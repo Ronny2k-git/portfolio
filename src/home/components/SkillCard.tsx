@@ -1,14 +1,45 @@
+import { useEffect, useRef, useState } from 'react'
+import { twMerge } from 'tailwind-merge'
+
 export type SkillCardProps = {
   title?: string
+  pct: number
+  className?: string
 }
 
-export function SkillCard({ title }: SkillCardProps) {
+export function SkillCard({ title, pct, className }: SkillCardProps) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  // Animate the knowledge bar only if the user is
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => entry.isIntersecting && setVisible(true),
+      { threshold: 0.4 },
+    )
+
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <div className="flex flex-col p-4 items-start pb-20 gap-4 rounded-lg bg-black/30">
+    <div
+      ref={ref}
+      className={twMerge(
+        `flex flex-col p-4 items-start py-8 gap-4 rounded-lg bg-black/30`,
+        className,
+      )}
+    >
       <span className="text-lg font-bol text-gray-400">{title}</span>
-      {/* Knowledge bar */}
-      <div className="w-full max-w-[15rem] h-5 bg-blue-400" />
+      {/* Knowledge bar container*/}
+      <div className="w-full max-w-[15rem] h-5 rounded-sm bg-gray-800 overflow-hidden">
+        <div
+          className="w-full h-full bg-blue-400 transition-all duration-700 ease-out"
+          style={{ width: visible ? `${pct}%` : '0%' }}
+        />
+      </div>
+
+      <span className="text-sm text-gray-500">{pct}%</span>
     </div>
-    // UPDATE THIS BAR LATER TO USE THE OBJECT PERCENTAGE
   )
 }

@@ -1,6 +1,6 @@
 export const NAV_ROUTE_ID = [
   { id: 'card-info', label: 'Ronny2k', class: 'text-3xl' },
-  { id: 'Skill', label: 'Skills', class: 'text-lg max-md:hidden' },
+  { id: 'skill', label: 'Skills', class: 'text-lg max-md:hidden' },
   { id: 'project', label: 'Projects', class: 'text-lg max-md:hidden' },
   {
     label: 'Source Code',

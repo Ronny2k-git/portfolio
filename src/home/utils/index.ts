@@ -22,9 +22,28 @@ export const HOME_CIRCLE_LOGO = [
   },
 ]
 
-export const HOME_SKILL_CARD = [
-  { lang: 'JavaScript / TypeScript', pct: 100 },
-  { lang: 'React / NextJS', pct: 100 },
-  { lang: 'Solid / SolidJS', pct: 100 },
-  { lang: 'Vite.js / Tanstack Start', pct: 100 },
+export const SKILL_CARD_LANGUAGES = [
+  { lang: 'JavaScript / TypeScript', pct: 80 },
+  { lang: 'React / NextJS', pct: 90 },
+  { lang: 'Solid / SolidJS', pct: 80 },
+  { lang: 'Vite / Tanstack Start', pct: 85 },
+  { lang: 'CSS3', pct: 80 },
+  { lang: 'HTML5', pct: 85 },
+  { lang: 'Tailwind CSS', pct: 85 },
+]
+
+export const SKILL_CARD_DATABASES_AND_INFRA = [
+  { lang: 'MySQL', pct: 80 },
+  { lang: 'PlanetScale', pct: 60 },
+  { lang: 'PostgreSQL', pct: 70 },
+  { lang: 'Docker', pct: 40 },
+  { lang: 'Neon', pct: 30 },
+]
+
+export const SKILL_CARD_WEB3 = [
+  { lang: 'Ethers.js', pct: 40 },
+  { lang: 'Web3JS', pct: 40 },
+  { lang: 'Wagmi', pct: 80 },
+  { lang: 'Viem', pct: 80 },
+  { lang: 'RaimbowKit', pct: 85 },
 ]
