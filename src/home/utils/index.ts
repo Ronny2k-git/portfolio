@@ -1,3 +1,5 @@
+// CIRCLES SECTION
+
 export const HOME_CIRCLE_LOGO = [
   {
     src: '/logos/solidity-logo.png',
@@ -21,6 +23,8 @@ export const HOME_CIRCLE_LOGO = [
       'planet1 -translate-x-[31rem] -translate-y-[6rem] size-36 border-2 border-blue-300',
   },
 ]
+
+// SKILL CARDS SECTION
 
 export const SKILL_CARD_LANGUAGES = [
   { lang: 'JavaScript / TypeScript', pct: 80 },
@@ -48,4 +52,34 @@ export const SKILL_CARD_WEB3 = [
   { lang: 'Wagmi', pct: 80 },
   { lang: 'Viem', pct: 80 },
   { lang: 'RaimbowKit', pct: 85 },
+]
+
+// MY PROJECT SECTION
+
+export const HOME_PROJECTS = [
+  {
+    title: 'Web3 Portfolio',
+    description:
+      'Personal portfolio focused on Web3, featuring wallet integrations, smooth animations and modern UI.',
+    image: '/logos/eth-logo.png',
+    techs: ['React', 'Vite', 'Tailwind', 'Web3'],
+    github: 'https://github.com/yourname/web3-portfolio',
+    live: 'https://yourdomain.com',
+  },
+  {
+    title: 'DeFi Dashboard',
+    description:
+      'A dashboard to track DeFi positions, token balances and on-chain data in real time.',
+    image: '/logos/react-logo.png',
+    techs: ['Next.js', 'Wagmi', 'Viem', 'Ethers'],
+    github: 'https://github.com/yourname/defi-dashboard',
+  },
+  {
+    title: 'NFT Mint Page',
+    description:
+      'NFT minting page with wallet connection, smart contract interaction and responsive UI.',
+    image: '/logos/ts-logo.png',
+    techs: ['Solidity', 'RainbowKit', 'React'],
+    github: 'https://github.com/yourname/nft-mint',
+  },
 ]

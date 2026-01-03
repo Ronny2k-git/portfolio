@@ -1,6 +1,7 @@
-import { CardInfo, SkillCard } from '@/home/components'
+import { CardInfo, ProjectCard, SkillCard } from '@/home/components'
 import {
   HOME_CIRCLE_LOGO,
+  HOME_PROJECTS,
   SKILL_CARD_DATABASES_AND_INFRA,
   SKILL_CARD_LANGUAGES,
   SKILL_CARD_WEB3,
@@ -14,7 +15,7 @@ export const Route = createFileRoute('/')({
 function App() {
   return (
     <div className="w-full min-h-screen flex flex-col gap-40 items-center justify-center py-30 px-4 lg:px-24 bg-black/90 overflow-x-hidden">
-      <h1 className="z-10 md:hidden text-4xl text-gray-300 pb-10 text-center">
+      <h1 className="z-10 md:hidden text-4xl text-gray-300 text-center">
         View on Desktop for a better experience
       </h1>
 
@@ -84,12 +85,24 @@ function App() {
       </section>
 
       {/* My projects */}
-      <section
+      {/* <section
         id="project"
         className="flex flex-col w-full items-center gap-20 text-blue-300"
       >
         <h2 className="text-4xl font-bold">My Projects</h2>
         dd
+      </section> */}
+      <section
+        id="project"
+        className="flex w-full flex-col items-center gap-20 text-blue-300"
+      >
+        <h2 className="text-4xl font-bold">My Projects</h2>
+
+        <div className="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {HOME_PROJECTS.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
       </section>
     </div>
   )
