@@ -58,28 +58,47 @@ export const SKILL_CARD_WEB3 = [
 
 export const HOME_PROJECTS = [
   {
-    title: 'Web3 Portfolio',
-    description:
-      'Personal portfolio focused on Web3, featuring wallet integrations, smooth animations and modern UI.',
-    image: '/logos/eth-logo.png',
-    techs: ['React', 'Vite', 'Tailwind', 'Web3'],
+    title: 'Metavault',
+    description: 'Test 1',
+    image: '/home/metavault.png',
+    techs: [
+      'Solidity',
+      'React',
+      'Tanstack',
+      'Wagmi',
+      'Viem',
+      'Tailwind',
+      'CSS',
+      'Zod',
+      'PlanetScale',
+      'Neon',
+      'i18next',
+    ],
     github: 'https://github.com/yourname/web3-portfolio',
     live: 'https://yourdomain.com',
   },
   {
-    title: 'DeFi Dashboard',
-    description:
-      'A dashboard to track DeFi positions, token balances and on-chain data in real time.',
+    title: 'Vault Marketplace',
+    description: 'Test 1',
     image: '/logos/react-logo.png',
-    techs: ['Next.js', 'Wagmi', 'Viem', 'Ethers'],
+    techs: [
+      'Solidity',
+      'React',
+      'Next.js',
+      'Wagmi',
+      'Viem',
+      'Tailwind',
+      'CSS',
+      'Zod',
+      'MySQL',
+    ],
     github: 'https://github.com/yourname/defi-dashboard',
   },
   {
-    title: 'NFT Mint Page',
-    description:
-      'NFT minting page with wallet connection, smart contract interaction and responsive UI.',
+    title: 'Marketplace',
+    description: 'Test 1',
     image: '/logos/ts-logo.png',
-    techs: ['Solidity', 'RainbowKit', 'React'],
+    techs: ['React', 'Next.js', 'Tailwind', 'CSS', 'Zod', 'Local Storage'],
     github: 'https://github.com/yourname/nft-mint',
   },
 ]

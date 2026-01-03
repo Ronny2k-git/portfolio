@@ -1,3 +1,5 @@
+import { Tag } from './Tag'
+
 const MAIN_STACK = [
   'JavaScript',
   'TypeScript',
@@ -34,22 +36,9 @@ export function CardInfo() {
               Main stack
             </span>
 
-            <ul className="mt-3 flex flex-wrap gap-2 text-sm">
+            <ul className="mt-3 flex flex-wrap gap-2">
               {MAIN_STACK.map((tech) => (
-                <li
-                  key={tech}
-                  className="
-                px-3 py-1
-                rounded-full
-                bg-blue-500/10
-                hover:bg-blue-500/20
-                text-blue-300
-                border border-blue-500/30
-                hover:scale-105 cursor-pointer
-              "
-                >
-                  {tech}
-                </li>
+                <Tag key={tech} text={tech} className="text-sm" />
               ))}
             </ul>
           </div>

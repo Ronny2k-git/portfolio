@@ -41,6 +41,18 @@ function App() {
         </div>
       </section>
 
+      {/* About me */}
+      <section
+        id="skill"
+        className="flex flex-col w-full items-center justify-center gap-20 text-blue-300"
+      >
+        <h2 className="text-4xl font-bold">About Me</h2>
+
+        <div className="p-10 w-full max-w-4xl bg-black/30 rounded-lg">
+          Hi, I'm Ronny I am 23 years old, I'm from Brazil...
+        </div>
+      </section>
+
       {/* Skill Cards Section */}
       <section
         id="skill"
@@ -85,13 +97,6 @@ function App() {
       </section>
 
       {/* My projects */}
-      {/* <section
-        id="project"
-        className="flex flex-col w-full items-center gap-20 text-blue-300"
-      >
-        <h2 className="text-4xl font-bold">My Projects</h2>
-        dd
-      </section> */}
       <section
         id="project"
         className="flex w-full flex-col items-center gap-20 text-blue-300"

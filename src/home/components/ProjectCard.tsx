@@ -1,3 +1,5 @@
+import { Tag } from './Tag'
+
 type ProjectCardProps = {
   title: string
   description: string
@@ -16,7 +18,7 @@ export function ProjectCard({
   live,
 }: ProjectCardProps) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-blue-500/10 bg-black/40 backdrop-blur-sm transition hover:border-blue-500/30">
+    <div className="group w-full flex flex-col overflow-hidden rounded-2xl border border-blue-500/10 bg-black/40 backdrop-blur-sm transition hover:border-blue-500/30">
       {/* Banner */}
       <div className="relative aspect-video overflow-hidden">
         <img
@@ -38,12 +40,7 @@ export function ProjectCard({
         {/* Tech stack */}
         <ul className="flex flex-wrap gap-2">
           {techs.map((tech) => (
-            <li
-              key={tech}
-              className="rounded-full bg-blue-500/10 px-3 py-1 text-xs text-blue-300"
-            >
-              {tech}
-            </li>
+            <Tag key={tech} text={tech}></Tag>
           ))}
         </ul>
 
