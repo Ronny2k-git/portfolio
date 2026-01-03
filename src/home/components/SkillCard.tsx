@@ -40,8 +40,6 @@ export function SkillCard({ title, pct, className }: SkillCardProps) {
           }}
         />
       </div>
-
-      <span className="text-sm text-gray-500">{pct}%</span>
     </div>
   )
 }

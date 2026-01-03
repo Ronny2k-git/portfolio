@@ -1,5 +1,6 @@
-import { CardInfo, ProjectCard, SkillCard } from '@/home/components'
+import { AboutCard, CardInfo, ProjectCard, SkillCard } from '@/home/components'
 import {
+  ABOUT_CARDS,
   HOME_CIRCLE_LOGO,
   HOME_PROJECTS,
   SKILL_CARD_DATABASES_AND_INFRA,
@@ -43,13 +44,20 @@ function App() {
 
       {/* About me */}
       <section
-        id="skill"
+        id="about"
         className="flex flex-col w-full items-center justify-center gap-20 text-blue-300"
       >
         <h2 className="text-4xl font-bold">About Me</h2>
 
-        <div className="p-10 w-full max-w-4xl bg-black/30 rounded-lg">
-          Hi, I'm Ronny I am 23 years old, I'm from Brazil...
+        <div className="grid w-full max-w-7xl max-md:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-6">
+          {ABOUT_CARDS.map((card, index) => (
+            <AboutCard
+              key={index}
+              title={card.title}
+              description={card.description}
+              items={card.items}
+            />
+          ))}
         </div>
       </section>
 

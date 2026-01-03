@@ -24,6 +24,28 @@ export const HOME_CIRCLE_LOGO = [
   },
 ]
 
+// ABOUT SECTION
+export const ABOUT_CARDS = [
+  {
+    title: 'Who I Am',
+    description:
+      'I’m Ronny, a Web Developer from Brazil focused on modern frontend and Web3 applications. Over the last two years, I’ve been actively working with blockchain technologies, smart contracts, and Web3 ecosystems.',
+  },
+  {
+    title: 'What I Do',
+    items: [
+      'Frontend architecture',
+      'Web3 integrations',
+      'UI performance optimization',
+      'Clean & scalable code',
+    ],
+  },
+  {
+    title: 'Focus',
+    items: ['Web3', 'Frontend', 'UX', 'Performance'],
+  },
+]
+
 // SKILL CARDS SECTION
 
 export const SKILL_CARD_LANGUAGES = [
