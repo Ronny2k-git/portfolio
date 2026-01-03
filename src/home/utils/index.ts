@@ -30,6 +30,8 @@ export const SKILL_CARD_LANGUAGES = [
   { lang: 'CSS3', pct: 80 },
   { lang: 'HTML5', pct: 85 },
   { lang: 'Tailwind CSS', pct: 85 },
+  { lang: 'Solidity', pct: 35 },
+  { lang: 'Rust', pct: 20 },
 ]
 
 export const SKILL_CARD_DATABASES_AND_INFRA = [

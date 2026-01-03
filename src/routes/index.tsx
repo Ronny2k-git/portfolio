@@ -13,7 +13,7 @@ export const Route = createFileRoute('/')({
 
 function App() {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center py-30 px-4 lg:px-24 bg-black/90 overflow-x-hidden">
+    <div className="w-full min-h-screen flex flex-col gap-40 items-center justify-center py-30 px-4 lg:px-24 bg-black/90 overflow-x-hidden">
       <h1 className="z-10 md:hidden text-4xl text-gray-300 pb-10 text-center">
         View on Desktop for a better experience
       </h1>
@@ -43,7 +43,7 @@ function App() {
       {/* Skill Cards Section */}
       <section
         id="skill"
-        className="flex flex-col w-full items-center py-40 gap-20 text-blue-300"
+        className="flex flex-col w-full items-center gap-20 text-blue-300"
       >
         <h2 className="text-4xl font-bold">My Skills</h2>
 
@@ -54,7 +54,7 @@ function App() {
           </h3>
 
           <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
-            {SKILL_CARD_LANGUAGES.map((card, index) => (
+            {SKILL_CARD_LANGUAGES.map((card) => (
               <SkillCard key={card.lang} pct={card.pct} title={card.lang} />
             ))}
           </div>
@@ -65,7 +65,7 @@ function App() {
           <h3 className="pb-10 pl-2 text-2xl font-bold">Databases & Infra</h3>
 
           <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
-            {SKILL_CARD_DATABASES_AND_INFRA.map((card, index) => (
+            {SKILL_CARD_DATABASES_AND_INFRA.map((card) => (
               <SkillCard key={card.lang} title={card.lang} pct={card.pct} />
             ))}
           </div>
@@ -76,11 +76,20 @@ function App() {
           <h3 className="pb-10 pl-2 text-2xl font-bold">WEB3 Libraries</h3>
 
           <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
-            {SKILL_CARD_WEB3.map((card, index) => (
+            {SKILL_CARD_WEB3.map((card) => (
               <SkillCard key={card.lang} title={card.lang} pct={card.pct} />
             ))}
           </div>
         </div>
+      </section>
+
+      {/* My projects */}
+      <section
+        id="project"
+        className="flex flex-col w-full items-center gap-20 text-blue-300"
+      >
+        <h2 className="text-4xl font-bold">My Projects</h2>
+        dd
       </section>
     </div>
   )

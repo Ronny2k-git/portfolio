@@ -34,8 +34,10 @@ export function SkillCard({ title, pct, className }: SkillCardProps) {
       {/* Knowledge bar container*/}
       <div className="w-full max-w-[15rem] h-5 rounded-sm bg-gray-800 overflow-hidden">
         <div
-          className="w-full h-full bg-blue-400 transition-all duration-700 ease-out"
-          style={{ width: visible ? `${pct}%` : '0%' }}
+          className="w-full h-full bg-blue-400 transition-all duration-1000 ease-out"
+          style={{
+            width: visible ? `${pct}%` : '0%',
+          }}
         />
       </div>
 
