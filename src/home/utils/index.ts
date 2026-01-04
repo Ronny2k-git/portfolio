@@ -3,19 +3,23 @@
 export const HOME_CIRCLE_LOGO = [
   {
     src: '/logos/solidity-logo.png',
-    class: 'planet1 -translate-y-[17rem] size-14',
+    class: 'planet1 translate-x-[19rem] -translate-y-[17rem] size-14',
+  },
+  {
+    src: '/logos/vite-logo.png',
+    class: 'planet1 -translate-y-[13.8rem] size-14',
   },
   {
     src: '/logos/ts-logo.png',
-    class: 'planet1 translate-x-[23rem] -translate-y-[12rem] size-14',
+    class: 'planet1 translate-x-[25.5rem] -translate-y-[1rem] size-14',
   },
   {
     src: '/logos/eth-logo.png',
-    class: 'planet2 translate-x-[17rem] translate-y-[14.5rem] size-14',
+    class: 'planet2 translate-x-[4rem] translate-y-[16.5rem] size-14',
   },
   {
     src: '/logos/react-logo.png',
-    class: 'planet2 -translate-x-[14rem] translate-y-[14.5rem] size-16',
+    class: 'planet2 -translate-x-[18rem] translate-y-[11rem] size-16',
   },
   {
     src: 'profile.png',

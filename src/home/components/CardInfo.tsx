@@ -28,14 +28,17 @@ export function CardInfo() {
   }, [])
 
   return (
-    <div className="z-10 w-[21.3rem] h-auto md:w-[24.5rem] p-6 flex items-center justify-center flex-col bg-gray-800/20 rounded-4xl text-gray-400 border border-gray-800">
+    <div
+      className="flex z-10 h-auto max-sm:w-[21.3rem] sm:size-[29rem] p-4 sm:px-6 bg-orange-800/20 rounded-4xl 
+    sm:rounded-full text-gray-400 border border-blue-400/10 shadow-[0_0_80px_rgba(59,130,246,0.15)]"
+    >
       {/* My Infos */}
-      <section className="flex flex-col gap-6">
+      <section className="flex flex-col items-center gap-6">
         <p className="text-lg">My name is:</p>
         {/* Use a customized name later */}
         <span
           key={animationKey}
-          className=" px-4 text-5xl md:text-6xl text-blue-300 font-semibold "
+          className=" px-4 text-5xl sm:text-6xl text-blue-300 font-semibold "
         >
           {NAME.split('').map((char, index) => (
             <span
@@ -48,19 +51,19 @@ export function CardInfo() {
           ))}
         </span>
 
-        <hr className="text-gray-700/70" />
+        <div className="h-px w-full bg-gray-700/70" />
 
         <p className="text-lg">I'm a:</p>
         <div className="flex flex-col text-lg text-center">
           <p>Web Developer Focused on Web3</p>
 
           {/* Stack */}
-          <div className="mt-6 flex flex-col items-start">
+          <div className="mt-6 flex flex-col items-center">
             <span className="text-sm uppercase tracking-widest text-gray-500">
               Main stack
             </span>
 
-            <ul className="mt-3 flex flex-wrap gap-2">
+            <ul className="mt-3 flex flex-wrap items-center justify-center gap-2">
               {MAIN_STACK.map((tech) => (
                 <Tag
                   key={tech}
