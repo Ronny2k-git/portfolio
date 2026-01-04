@@ -1,4 +1,10 @@
-import { AboutCard, CardInfo, ProjectCard, SkillCard } from '@/home/components'
+import {
+  AboutCard,
+  CardInfo,
+  ProjectCard,
+  SectionCard,
+  SkillCard,
+} from '@/home/components'
 import {
   ABOUT_CARDS,
   HOME_CIRCLE_LOGO,
@@ -50,7 +56,7 @@ function App() {
         id="about"
         className="flex flex-col w-full items-center justify-center gap-20 text-blue-300"
       >
-        <h2 className="text-4xl font-bold">About Me</h2>
+        <h2 className="text-4xl font-bold font-display">About Me</h2>
 
         <div className="grid w-full max-w-7xl max-md:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-6">
           {ABOUT_CARDS.map((card, index) => (
@@ -70,41 +76,33 @@ function App() {
         id="skill"
         className="relative flex flex-col w-full items-center gap-20 text-blue-300"
       >
-        <h2 className="text-4xl font-bold">My Skills</h2>
+        <h2 className="text-4xl font-bold font-display">My Skills</h2>
 
         {/* Languages & Frameworks*/}
-        <div className="w-full z-10 flex flex-col text-blue-300/90">
-          <h3 className="pb-10 pl-2 text-2xl font-bold">
-            Languages & Frameworks
-          </h3>
+        <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
+          <SectionCard title="Languages & Frameworks" />
 
-          <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
-            {SKILL_CARD_LANGUAGES.map((card) => (
-              <SkillCard key={card.lang} pct={card.pct} title={card.lang} />
-            ))}
-          </div>
+          {SKILL_CARD_LANGUAGES.map((card) => (
+            <SkillCard key={card.lang} pct={card.pct} title={card.lang} />
+          ))}
         </div>
 
-        {/* Databases & Infra*/}
-        <div className="w-full flex flex-col text-blue-300/90">
-          <h3 className="pb-10 pl-2 text-2xl font-bold">Databases & Infra</h3>
+        {/* Databases & Infra */}
+        <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
+          <SectionCard title="Databases & Infra" />
 
-          <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
-            {SKILL_CARD_DATABASES_AND_INFRA.map((card) => (
-              <SkillCard key={card.lang} title={card.lang} pct={card.pct} />
-            ))}
-          </div>
+          {SKILL_CARD_DATABASES_AND_INFRA.map((card) => (
+            <SkillCard key={card.lang} title={card.lang} pct={card.pct} />
+          ))}
         </div>
 
-        {/* WEB3 Libraries*/}
-        <div className="w-full flex flex-col text-blue-300/90">
-          <h3 className="pb-10 pl-2 text-2xl font-bold">WEB3 Libraries</h3>
+        {/* WEB3 Libraries */}
+        <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
+          <SectionCard title="WEB3 Libraries" />
 
-          <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
-            {SKILL_CARD_WEB3.map((card) => (
-              <SkillCard key={card.lang} title={card.lang} pct={card.pct} />
-            ))}
-          </div>
+          {SKILL_CARD_WEB3.map((card) => (
+            <SkillCard key={card.lang} title={card.lang} pct={card.pct} />
+          ))}
         </div>
       </section>
 
@@ -113,7 +111,7 @@ function App() {
         id="project"
         className="flex w-full flex-col items-center gap-20 text-blue-300"
       >
-        <h2 className="text-4xl font-bold">My Projects</h2>
+        <h2 className="text-4xl font-bold font-display">My Projects</h2>
 
         <div className="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {HOME_PROJECTS.map((project) => (

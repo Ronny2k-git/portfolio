@@ -40,7 +40,7 @@ export function CardInfo() {
           {NAME.split('').map((char, index) => (
             <span
               key={index}
-              className="inline-block animate-letter"
+              className="inline-block animate-letter font-display"
               style={{ animationDelay: `${index * 60}ms` }}
             >
               {char}

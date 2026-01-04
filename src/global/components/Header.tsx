@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="fixed backdrop-blur-xs z-50 w-full p-4 md:px-16 flex items-center justify-between border-b border-gray-700/30">
       {/* Nav Bar */}
-      <nav className="flex gap-x-12 items-center font-bold text-gray-400 cursor-pointer">
+      <nav className="flex gap-x-12 font-display items-center text-gray-400 cursor-pointer">
         {NAV_ROUTE_ID.map((route, index) => (
           <a
             key={`${route.id}_${index}`}

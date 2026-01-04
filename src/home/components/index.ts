@@ -1,5 +1,6 @@
 export * from './AboutCard'
 export * from './CardInfo'
 export * from './ProjectCard'
+export * from './SectionCard'
 export * from './SkillCard'
 export * from './Tag'
