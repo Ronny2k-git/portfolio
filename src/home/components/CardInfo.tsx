@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Tag } from './Tag'
 
 const MAIN_STACK = [
@@ -13,15 +14,38 @@ const MAIN_STACK = [
   'Rust',
 ]
 
+const NAME = 'Ronny EDM'
+
 export function CardInfo() {
+  const [animationKey, setAnimationKey] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimationKey((k) => k + 1)
+    }, 2500)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <div className="z-10 w-[21.3rem] h-auto md:w-[24.5rem] p-6 flex items-center justify-center flex-col bg-gray-800/20 rounded-4xl text-gray-400 border border-gray-800">
       {/* My Infos */}
       <section className="flex flex-col gap-6">
         <p className="text-lg">My name is:</p>
         {/* Use a customized name later */}
-        <span className="px-6 text-4xl md:text-5xl text-blue-300 font-semibold">
-          Ronny Edson
+        <span
+          key={animationKey}
+          className=" px-4 text-5xl md:text-6xl text-blue-300 font-semibold "
+        >
+          {NAME.split('').map((char, index) => (
+            <span
+              key={index}
+              className="inline-block animate-letter"
+              style={{ animationDelay: `${index * 60}ms` }}
+            >
+              {char}
+            </span>
+          ))}
         </span>
 
         <hr className="text-gray-700/70" />
@@ -38,7 +62,11 @@ export function CardInfo() {
 
             <ul className="mt-3 flex flex-wrap gap-2">
               {MAIN_STACK.map((tech) => (
-                <Tag key={tech} text={tech} className="text-sm" />
+                <Tag
+                  key={tech}
+                  text={tech}
+                  className="text-sm hover:scale-105 cursor-pointer"
+                />
               ))}
             </ul>
           </div>

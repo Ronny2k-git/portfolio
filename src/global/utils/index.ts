@@ -13,9 +13,13 @@ export const NAV_ROUTE_ID = [
 export function scrollToContainer(id: string) {
   const element = document.getElementById(id)
 
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  } else {
+  if (!element) {
     console.warn(`Id not found: "${id}"`)
+    return
   }
+
+  const headerHeight = 90
+  const y = element.getBoundingClientRect().top + window.scrollY - headerHeight
+
+  window.scrollTo({ top: y, behavior: 'smooth' })
 }

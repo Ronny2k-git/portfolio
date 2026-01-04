@@ -21,26 +21,29 @@ function App() {
       </h1>
 
       {/* Circles */}
-      <section
-        id="card-info"
-        className="flex items-center justify-center w-[39rem] h-[39rem] md:w-[42rem] md:h-[42rem] border-2 border-dashed border-gray-700 rounded-full overflow-x-hidden"
-      >
-        <div className="flex items-center justify-center w-[33.5rem] h-[33.5rem] md:w-[36.5rem] md:h-[36.5rem] border-2 border-dashed border-gray-700 rounded-full">
-          {/* Orbiting */}
-          <div className="z-0 orbit absolute flex items-center justify-center ">
-            {HOME_CIRCLE_LOGO.map((logo) => (
-              <img
-                key={logo.src}
-                src={logo.src}
-                className={`${logo.class} rounded-full object-cover`}
-              />
-            ))}
-          </div>
+      <div className="relative h-[43rem] py-5 flex w-full justify-center overflow-x-clip">
+        <section
+          id="card-info"
+          className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-[39rem] h-[39rem] md:w-[43rem] md:h-[43rem] border-2 
+           border-dashed border-gray-700/50 rounded-full"
+        >
+          <div className="flex items-center justify-center w-[33.5rem] h-[33.5rem] md:w-[36.5rem] md:h-[36.5rem] border-2 border-dashed border-gray-700 rounded-full">
+            {/* Orbiting */}
+            <div className="z-0 orbit absolute flex items-center justify-center ">
+              {HOME_CIRCLE_LOGO.map((logo) => (
+                <img
+                  key={logo.src}
+                  src={logo.src}
+                  className={`${logo.class} rounded-full object-cover`}
+                />
+              ))}
+            </div>
 
-          {/* My Skills */}
-          <CardInfo />
-        </div>
-      </section>
+            {/* My Skills */}
+            <CardInfo />
+          </div>
+        </section>
+      </div>
 
       {/* About me */}
       <section
@@ -62,14 +65,15 @@ function App() {
       </section>
 
       {/* Skill Cards Section */}
+
       <section
         id="skill"
-        className="flex flex-col w-full items-center gap-20 text-blue-300"
+        className="relative flex flex-col w-full items-center gap-20 text-blue-300"
       >
         <h2 className="text-4xl font-bold">My Skills</h2>
 
         {/* Languages & Frameworks*/}
-        <div className="w-full flex flex-col text-blue-300/90">
+        <div className="w-full z-10 flex flex-col text-blue-300/90">
           <h3 className="pb-10 pl-2 text-2xl font-bold">
             Languages & Frameworks
           </h3>

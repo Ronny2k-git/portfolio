@@ -14,6 +14,7 @@ code {
     source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+/* Home Orbit animation */
 @keyframes orbit {
   from {
     transform: rotate(0deg);
@@ -42,4 +43,21 @@ code {
 
 .planet2 {
   animation: counter-rotate 12s linear infinite;
+}
+
+/* Letter animation */
+@keyframes letterFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-letter {
+  opacity: 0;
+  animation: letterFadeUp 0.45s ease-out forwards;
 }
