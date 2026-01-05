@@ -10,7 +10,7 @@ export function AboutCard({ title, description, items }: AboutCardProps) {
       className="w-full flex flex-col p-8 gap-4 rounded-lg bg-black/40 border border-orange-300/20 hover:border-orange-500/30
         hover:bg-black/50"
     >
-      <h3 className="text-xl font-bold text-orange-300">{title}</h3>
+      <h3 className="text-xl font-bold text-solar">{title}</h3>
 
       {description && (
         <p className="text-sm leading-relaxed text-gray-400">{description}</p>

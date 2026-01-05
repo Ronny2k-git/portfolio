@@ -33,7 +33,7 @@ export function ProjectCard({
 
       {/* Content */}
       <div className="flex flex-col gap-4 p-4">
-        <h3 className="text-xl font-semibold text-orange-300">{title}</h3>
+        <h3 className="text-xl font-semibold text-solar">{title}</h3>
 
         <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
 
@@ -50,7 +50,7 @@ export function ProjectCard({
             <a
               href={github}
               target="_blank"
-              className="text-gray-400 hover:text-orange-300 transition"
+              className="text-gray-400 hover:text-solar transition"
             >
               GitHub →
             </a>
@@ -59,7 +59,7 @@ export function ProjectCard({
             <a
               href={live}
               target="_blank"
-              className="text-gray-400 hover:text-orange-300 transition"
+              className="text-gray-400 hover:text-solar transition"
             >
               Live →
             </a>

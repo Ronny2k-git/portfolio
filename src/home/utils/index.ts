@@ -7,7 +7,7 @@ export const HOME_CIRCLE_LOGO = [
   },
   {
     src: '/logos/vite-logo.png',
-    class: 'planet1 -translate-y-[13.8rem] size-14',
+    class: 'planet1 -translate-y-[13.5rem] size-14',
   },
   {
     src: '/logos/ts-logo.png',
@@ -15,7 +15,7 @@ export const HOME_CIRCLE_LOGO = [
   },
   {
     src: '/logos/eth-logo.png',
-    class: 'planet2 translate-x-[4rem] translate-y-[16.5rem] size-14',
+    class: 'planet2 translate-x-[4rem] translate-y-[15.5rem] size-14',
   },
   {
     src: '/logos/react-logo.png',

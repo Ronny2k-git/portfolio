@@ -22,7 +22,7 @@ export const Route = createFileRoute('/')({
 function App() {
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center py-30 px-4 lg:px-24 bg-black/90 overflow-x-hidden">
-      <h1 className="z-10 md:hidden mb-10 text-4xl text-gray-300 text-center">
+      <h1 className="z-10 md:hidden mb-10 text-4xl text-gray-400 text-center">
         View on Desktop for a better experience
       </h1>
 
@@ -31,10 +31,10 @@ function App() {
         <div className="relative h-[43rem] py-5 flex w-full justify-center overflow-x-clip">
           <section
             id="card-info"
-            className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-[39rem] h-[39rem] md:w-[43rem] md:h-[43rem] border-2 
+            className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-[43rem] h-[43rem] border-2 
            border-dashed border-gray-700/50 rounded-full"
           >
-            <div className="flex items-center justify-center w-[33.5rem] h-[33.5rem] md:w-[36.5rem] md:h-[36.5rem] border-2 border-dashed border-gray-700 rounded-full">
+            <div className="flex items-center justify-center w-[36rem] h-[36rem] border-2 border-dashed border-gray-700 rounded-full">
               {/* Orbiting */}
               <div className="z-0 orbit absolute flex items-center justify-center ">
                 {HOME_CIRCLE_LOGO.map((logo) => (
@@ -55,7 +55,7 @@ function App() {
         {/* About me */}
         <section
           id="about"
-          className="flex flex-col w-full items-center justify-center gap-20 text-orange-300"
+          className="flex flex-col w-full items-center justify-center gap-20 text-solar"
         >
           <h2 className="text-4xl font-bold font-display">About Me</h2>
 
@@ -75,7 +75,7 @@ function App() {
 
         <section
           id="skill"
-          className="relative flex flex-col w-full items-center gap-20 text-orange-300"
+          className="relative flex flex-col w-full items-center gap-20 text-solar"
         >
           <h2 className="text-4xl font-bold font-display">My Skills</h2>
 
@@ -110,7 +110,7 @@ function App() {
         {/* My projects */}
         <section
           id="project"
-          className="flex w-full flex-col items-center gap-20 text-orange-300"
+          className="flex w-full flex-col items-center gap-20 text-solar"
         >
           <h2 className="text-4xl font-bold font-display">My Projects</h2>
 
