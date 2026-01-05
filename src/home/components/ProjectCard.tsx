@@ -18,7 +18,7 @@ export function ProjectCard({
   live,
 }: ProjectCardProps) {
   return (
-    <div className="group w-full flex flex-col overflow-hidden rounded-2xl border border-blue-500/10 bg-black/40 backdrop-blur-sm transition hover:border-blue-500/30">
+    <div className="group w-full flex flex-col overflow-hidden rounded-2xl border border-orange-500/10 bg-black/40 backdrop-blur-sm transition hover:border-orange-500/30">
       {/* Banner */}
       <div className="relative aspect-video overflow-hidden">
         <img
@@ -33,12 +33,12 @@ export function ProjectCard({
 
       {/* Content */}
       <div className="flex flex-col gap-4 p-4">
-        <h3 className="text-xl font-semibold text-blue-300">{title}</h3>
+        <h3 className="text-xl font-semibold text-orange-300">{title}</h3>
 
         <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
 
         {/* Tech stack */}
-        <ul className="flex flex-wrap gap-2">
+        <ul className="flex flex-wrap gap-2 text-black cursor-pointer">
           {techs.map((tech) => (
             <Tag key={tech} text={tech}></Tag>
           ))}
@@ -50,7 +50,7 @@ export function ProjectCard({
             <a
               href={github}
               target="_blank"
-              className="text-gray-400 hover:text-blue-300 transition"
+              className="text-gray-400 hover:text-orange-300 transition"
             >
               GitHub →
             </a>
@@ -59,7 +59,7 @@ export function ProjectCard({
             <a
               href={live}
               target="_blank"
-              className="text-gray-400 hover:text-blue-300 transition"
+              className="text-gray-400 hover:text-orange-300 transition"
             >
               Live →
             </a>

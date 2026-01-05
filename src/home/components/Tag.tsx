@@ -9,7 +9,7 @@ export function Tag({ text, className }: TagProps) {
   return (
     <span
       className={twMerge(
-        'rounded-full bg-blue-500/10 border border-blue-500/30 px-3 py-1 text-xs text-blue-300',
+        'rounded-full px-3 py-1 text-xs text-black bg-orange-200/70 border border-orange-300 backdrop-blur-sm hover:bg-orange-300/70 hover:scale-105 transition ',
         className,
       )}
     >

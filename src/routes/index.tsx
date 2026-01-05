@@ -55,7 +55,7 @@ function App() {
         {/* About me */}
         <section
           id="about"
-          className="flex flex-col w-full items-center justify-center gap-20 text-blue-300"
+          className="flex flex-col w-full items-center justify-center gap-20 text-orange-300"
         >
           <h2 className="text-4xl font-bold font-display">About Me</h2>
 
@@ -75,7 +75,7 @@ function App() {
 
         <section
           id="skill"
-          className="relative flex flex-col w-full items-center gap-20 text-blue-300"
+          className="relative flex flex-col w-full items-center gap-20 text-orange-300"
         >
           <h2 className="text-4xl font-bold font-display">My Skills</h2>
 
@@ -110,7 +110,7 @@ function App() {
         {/* My projects */}
         <section
           id="project"
-          className="flex w-full flex-col items-center gap-20 text-blue-300"
+          className="flex w-full flex-col items-center gap-20 text-orange-300"
         >
           <h2 className="text-4xl font-bold font-display">My Projects</h2>
 
