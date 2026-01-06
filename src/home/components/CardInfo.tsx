@@ -37,51 +37,25 @@ export function CardInfo() {
         relative z-50
         flex items-center justify-center
         max-sm:w-[21.2rem]
-        size-[28rem]
-        py-6
-        shadow-[0_0_80px_rgba(246,161,59,0.25]
+        size-[27rem]
+        py-6 sm:rounded-full rounded-4xl via-[#1A1E1F] to-[#262A2C]
+        bg-linear-to-b 
+        shadow-[0_0_30px_rgba(255,255,255,0.1)]
       "
     >
-      {/* 🔶 Background image (desktop) */}
-      <div
-        className="
-          absolute inset-0
-          hidden sm:block
-          bg-[url('/home/sun.png')]
-          bg-cover
-          opacity-80
-          z-10
-        "
-      />
-
-      {/* 🔶 Background color (mobile) */}
-      <div
-        className="
-          absolute inset-0
-          sm:hidden
-         bg-black/30
-          rounded-4xl
-          
-        "
-      />
-
       {/* Content */}
-      <section className="relative z-10 flex flex-col items-center gap-6 max-sm:gap-8 text-center">
+      <section className="w-full p-4 sm:p-8 relative z-10 flex flex-col items-center gap-6 max-sm:gap-8 text-center">
         {/* Label */}
         <p className="sm:hidden text-sm uppercase tracking-widest font-semiboldold text-gray-400">
           My name is
         </p>
+
         {/* Animated name */}
         <span
           key={animationKey}
           className="
-            px-4
-            text-5xl sm:text-6xl
-            font-name font-bold
-            text-gray-800
-            max-sm:text-solar
-            drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]
-          "
+            px-4 text-5xl sm:text-6xl font-name font-bold text-solar 
+            drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)] hover:scale-110"
         >
           {currentName.split('').map((char, index) => (
             <span
@@ -89,20 +63,19 @@ export function CardInfo() {
               className="inline-block animate-letter"
               style={{ animationDelay: `${index * 60}ms` }}
             >
-              {char}
+              {char === ' ' ? '\u00A0' : char}
             </span>
           ))}
         </span>
         {/* Divider */}
-        <div className="sm:hidden h-0.5 w-full bg-gradient-to-r from-transparent via-gray-900/70" />
+        <div className=" h-px w-full bg-gray-400" />
         {/* Role */}
-        <p className="text-base sm:text-xl text-gray-800 max-sm:text-gray-400 rounded-full">
+        <p className="text-base sm:text-xl text-gray-400 max-sm:text-gray-400 rounded-full">
           A Web Developer focused on Web3
         </p>
-
         {/* Stack */}
         <div className="sm:hidden mt-4 flex flex-col items-center">
-          <span className="text-sm uppercase tracking-widest text-gray-400">
+          <span className="text-sm uppercase tracking-widest text-gray-500">
             Main stack
           </span>
 
@@ -113,8 +86,8 @@ export function CardInfo() {
           </ul>
         </div>
 
-        <p className="max-sm:hidden max-w-[20rem] text-gray-700 max-sm:text-black/70">
-          Building decentralized experiences with modern web technologies
+        <p className="max-sm:hidden text-sm text-gray-400/90 max-sm:text-black/70">
+          Building modern, performant, and decentralized web applications
         </p>
       </section>
     </div>

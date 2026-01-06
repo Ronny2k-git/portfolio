@@ -85,7 +85,7 @@ export const SKILL_CARD_WEB3 = [
 export const HOME_PROJECTS = [
   {
     title: 'Metavault',
-    description: 'Test 1',
+    description: 'The Project Description will be here. Add later',
     image: '/home/metavault.png',
     techs: [
       'Solidity',
@@ -105,7 +105,7 @@ export const HOME_PROJECTS = [
   },
   {
     title: 'Vault Marketplace',
-    description: 'Test 1',
+    description: 'The Project Description will be here. Add later',
     image: '/logos/react-logo.png',
     techs: [
       'Solidity',
@@ -122,7 +122,7 @@ export const HOME_PROJECTS = [
   },
   {
     title: 'Marketplace',
-    description: 'Test 1',
+    description: 'The Project Description will be here. Add later',
     image: '/logos/ts-logo.png',
     techs: ['React', 'Next.js', 'Tailwind', 'CSS', 'Zod', 'Local Storage'],
     github: 'https://github.com/yourname/nft-mint',

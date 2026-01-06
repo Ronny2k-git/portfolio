@@ -33,7 +33,7 @@ export function ProjectCard({
 
       {/* Content */}
       <div className="flex flex-col gap-4 p-4">
-        <h3 className="text-xl font-semibold text-solar">{title}</h3>
+        <h3 className="text-xl font-semibold text-gray-400">{title}</h3>
 
         <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
 

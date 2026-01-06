@@ -3,6 +3,7 @@ import {
   CardInfo,
   ProjectCard,
   SectionCard,
+  SectionHeader,
   SkillCard,
 } from '@/home/components'
 import {
@@ -16,19 +17,22 @@ import {
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
-  component: App,
+  component: Home,
 })
 
-function App() {
+function Home() {
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center py-30 px-4 lg:px-24 bg-black/90 overflow-x-hidden">
       <h1 className="z-10 md:hidden mb-10 text-4xl text-gray-400 text-center">
         View on Desktop for a better experience
       </h1>
 
-      <div className="flex flex-col gap-40">
+      <div className="flex flex-col gap-40 ">
         {/* Circles */}
-        <div className="relative h-[43rem] py-5 flex w-full justify-center overflow-x-clip">
+        <div
+          className="relative rounded-4xl flex w-full h-[44rem] py-5 justify-center items-center 
+          overflow-x-clip"
+        >
           <section
             id="card-info"
             className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-[43rem] h-[43rem] border-2 
@@ -57,7 +61,7 @@ function App() {
           id="about"
           className="flex flex-col w-full items-center justify-center gap-20 text-solar"
         >
-          <h2 className="text-4xl font-bold font-display">About Me</h2>
+          <SectionHeader title="About Me" />
 
           <div className="grid w-full max-w-7xl max-md:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-6">
             {ABOUT_CARDS.map((card, index) => (
@@ -72,15 +76,14 @@ function App() {
         </section>
 
         {/* Skill Cards Section */}
-
         <section
           id="skill"
           className="relative flex flex-col w-full items-center gap-20 text-solar"
         >
-          <h2 className="text-4xl font-bold font-display">My Skills</h2>
+          <SectionHeader title="My Skills" />
 
           {/* Languages & Frameworks*/}
-          <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="w-full z-40 max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
             <SectionCard title="Languages & Frameworks" />
 
             {SKILL_CARD_LANGUAGES.map((card) => (
@@ -112,7 +115,7 @@ function App() {
           id="project"
           className="flex w-full flex-col items-center gap-20 text-solar"
         >
-          <h2 className="text-4xl font-bold font-display">My Projects</h2>
+          <SectionHeader title="My Projects" />
 
           <div className="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {HOME_PROJECTS.map((project) => (
