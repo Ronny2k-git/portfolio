@@ -2,7 +2,7 @@ export const NAV_ROUTE_ID = [
   {
     id: 'card-info',
     label: 'Ronny2k',
-    class: 'text-3xl',
+    class: 'text-3xl text-solar hover:text-orange-400',
   },
   { id: 'about', label: 'About Me', class: 'text-lg max-[850px]:hidden' },
   { id: 'skill', label: 'Skills', class: 'text-lg max-[850px]:hidden' },

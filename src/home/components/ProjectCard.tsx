@@ -20,11 +20,11 @@ export function ProjectCard({
   return (
     <div className="group w-full flex flex-col overflow-hidden rounded-2xl border border-orange-500/10 bg-black/40 backdrop-blur-sm transition hover:border-orange-500/30">
       {/* Banner */}
-      <div className="relative aspect-video overflow-hidden">
+      <div className="relative aspect-video w-full max-h-[27rem] overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
         />
 
         {/* Overlay */}

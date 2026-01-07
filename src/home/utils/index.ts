@@ -122,8 +122,9 @@ export const HOME_PROJECTS = [
   },
   {
     title: 'Marketplace',
-    description: 'The Project Description will be here. Add later',
-    image: '/logos/ts-logo.png',
+    description:
+      'A marketplace where you can buy products, add them to the cart and create you own product on the website. I worked on this project for two weeks. It was one of my first projects when I started studying programming almost three years ago.',
+    image: '/home/marketplace.png',
     techs: ['React', 'Next.js', 'Tailwind', 'CSS', 'Zod', 'Local Storage'],
     github: 'https://github.com/yourname/nft-mint',
   },

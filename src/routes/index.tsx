@@ -56,7 +56,7 @@ function Home() {
           </section>
         </div>
 
-        {/* About me */}
+        {/* About me Section*/}
         <section
           id="about"
           className="flex flex-col w-full items-center justify-center gap-20 text-solar"
@@ -110,7 +110,7 @@ function Home() {
           </div>
         </section>
 
-        {/* My projects */}
+        {/* My projects Section*/}
         <section
           id="project"
           className="flex w-full flex-col items-center gap-20 text-solar"
