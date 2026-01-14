@@ -63,7 +63,7 @@ function Home() {
         >
           <SectionHeader title="About Me" />
 
-          <div className="grid w-full max-w-7xl max-md:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="border border-orange-500/10 p-8 bg-black/40 rounded-2xl grid w-full max-w-7xl max-md:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-6">
             {ABOUT_CARDS.map((card, index) => (
               <AboutCard
                 key={index}

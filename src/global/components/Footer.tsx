@@ -17,6 +17,7 @@ export default function Footer() {
       >
         <div className="flex flex-col items-center font-display gap-6 text-lg text-gray-400">
           <p className="text-3xl text-solar">Ronny2k</p>
+
           <div className="flex gap-4 text-base font-normal cursor-pointer">
             {/* {ADD ICONS LATER, ACTUALLY I WILL CREATE A COMPONENT FOR EACH ICON} */}
             <span className="flex gap-2 hover:underline">

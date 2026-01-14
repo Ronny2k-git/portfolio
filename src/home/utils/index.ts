@@ -7,7 +7,7 @@ export const HOME_CIRCLE_LOGO = [
   },
   {
     src: '/logos/vite-logo.png',
-    class: 'planet1 -translate-y-[13.5rem] size-14',
+    class: 'planet1 -translate-y-[13rem] size-14',
   },
   {
     src: '/logos/ts-logo.png',
@@ -55,7 +55,7 @@ export const ABOUT_CARDS = [
 export const SKILL_CARD_LANGUAGES = [
   { lang: 'JavaScript / TypeScript', pct: 80 },
   { lang: 'React / NextJS', pct: 90 },
-  { lang: 'Solid / SolidJS', pct: 80 },
+  { lang: 'Solid / SolidJS', pct: 65 },
   { lang: 'Vite / Tanstack Start', pct: 85 },
   { lang: 'CSS3', pct: 80 },
   { lang: 'HTML5', pct: 85 },
@@ -100,13 +100,13 @@ export const HOME_PROJECTS = [
       'Neon',
       'i18next',
     ],
-    github: 'https://github.com/yourname/web3-portfolio',
-    live: 'https://yourdomain.com',
+    github: 'https://github.com/Ronny2k-git/metavault',
+    live: 'https://metavault-phi.vercel.app/',
   },
   {
     title: 'Vault Marketplace',
     description: 'The Project Description will be here. Add later',
-    image: '/logos/react-logo.png',
+    image: '/home/vault-marketplace.png',
     techs: [
       'Solidity',
       'React',
@@ -118,14 +118,14 @@ export const HOME_PROJECTS = [
       'Zod',
       'MySQL',
     ],
-    github: 'https://github.com/yourname/defi-dashboard',
+    github: 'https://github.com/Ronny2k-git/vault-marketplace',
   },
   {
     title: 'Marketplace',
     description:
-      'A marketplace where you can buy products, add them to the cart and create you own product on the website. I worked on this project for two weeks. It was one of my first projects when I started studying programming almost three years ago.',
+      'A marketplace where you can buy products, add them to the cart and create you own product on the website. I worked on this project for two weeks. It was one of my first projects when I started studying programming almost two and a half years ago.',
     image: '/home/marketplace.png',
     techs: ['React', 'Next.js', 'Tailwind', 'CSS', 'Zod', 'Local Storage'],
-    github: 'https://github.com/yourname/nft-mint',
+    github: 'https://github.com/Ronny2k-git/marketplace',
   },
 ]
