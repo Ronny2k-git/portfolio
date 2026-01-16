@@ -22,7 +22,7 @@ export const Route = createFileRoute('/')({
 
 function Home() {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center py-30 px-4 lg:px-24 bg-black/90 overflow-x-hidden">
+    <main className="w-full min-h-screen flex flex-col items-center justify-center py-30 px-4 lg:px-24 bg-black/90 overflow-x-hidden">
       <h1 className="z-10 md:hidden mb-10 text-4xl text-gray-400 text-center">
         View on Desktop for a better experience
       </h1>
@@ -50,7 +50,7 @@ function Home() {
                 ))}
               </div>
 
-              {/* My Skills */}
+              {/* My Descrition */}
               <CardInfo />
             </div>
           </section>
@@ -111,6 +111,7 @@ function Home() {
         </section>
 
         {/* My projects Section*/}
+        {/* {PUT LATER A DESCRIPTION ABOUT MY PROJECTS SECTION} */}
         <section
           id="project"
           className="flex w-full flex-col items-center gap-20 text-solar"
@@ -119,11 +120,22 @@ function Home() {
 
           <div className="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {HOME_PROJECTS.map((project) => (
-              <ProjectCard key={project.title} {...project} />
+              <ProjectCard
+                key={project.title}
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                techs={project.techs}
+                github={project.github}
+                live={project.live}
+              />
             ))}
           </div>
         </section>
+
+        {/* {CREATE ANOTHER SECTION FOR MY EXPERIENCES, FOR EXAMPLE: MY EXPERIENCIES}
+        {CREATE A PAGE TO SHOW MY CONTRIBUTIONS FOR FJORD FOUNDRY} */}
       </div>
-    </div>
+    </main>
   )
 }

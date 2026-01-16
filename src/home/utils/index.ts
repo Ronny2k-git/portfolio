@@ -80,43 +80,43 @@ export const SKILL_CARD_WEB3 = [
   { lang: 'RaimbowKit', pct: 85 },
 ]
 
-// MY PROJECT SECTION
-
+// MY PROJECTS SECTION
 export const HOME_PROJECTS = [
   {
     title: 'Metavault',
     description: 'The Project Description will be here. Add later',
     image: '/home/metavault.png',
     techs: [
-      'Solidity',
-      'React',
-      'Tanstack',
-      'Wagmi',
-      'Viem',
-      'Tailwind',
-      'CSS',
-      'Zod',
-      'PlanetScale',
-      'Neon',
-      'i18next',
+      { label: 'Solidity', icon: '/logos/solidity-logo.png' },
+      { label: 'React', icon: '/logos/react-logo.png' },
+      { label: 'Tanstack', icon: '/logos/tag/tanstack.png' },
+      { label: 'Wagmi', icon: '/logos/tag/wagmi.png' },
+      { label: 'Viem', icon: '/logos/tag/viem.png' },
+      { label: 'Tailwind', icon: '/logos/tag/.png' },
+      { label: 'CSS', icon: '/logos/tag/css.png' },
+      { label: 'Zod', icon: '/logos/tag/zod.png' },
+      { label: 'PlanetScale', icon: '/logos/tag/planet-scale.png' },
+      { label: 'Neon', icon: '/logos/tag/neon.png' },
+      { label: 'i18next', icon: '/logos/tag/i18next.png' },
     ],
     github: 'https://github.com/Ronny2k-git/metavault',
     live: 'https://metavault-phi.vercel.app/',
   },
   {
     title: 'Vault Marketplace',
-    description: 'The Project Description will be here. Add later',
+    description:
+      'A decentralized web3 marketplace when you can create your own vault on the blockchain to save your tokens and manage them on sepolia network, allowing users to deposit, withdraw, and explore active or finalized vaults',
     image: '/home/vault-marketplace.png',
     techs: [
-      'Solidity',
-      'React',
-      'Next.js',
-      'Wagmi',
-      'Viem',
-      'Tailwind',
-      'CSS',
-      'Zod',
-      'MySQL',
+      { label: 'Solidity', icon: '/logos/solidity-logo.png' },
+      { label: 'React', icon: '/logos/react-logo.png' },
+      { label: 'Next.js', icon: '/logos/tag/next-js.jpeg' },
+      { label: 'Wagmi', icon: '/logos/tag/wagmi.png' },
+      { label: 'Viem', icon: '/logos/tag/viem.png' },
+      { label: 'Tailwind', icon: '/logos/tag/tailwind.png' },
+      { label: 'CSS', icon: '/logos/tag/css.png' },
+      { label: 'Zod', icon: '/logos/tag/zod.png' },
+      { label: 'MySQL', icon: '/logos/tag/mysql.png' },
     ],
     github: 'https://github.com/Ronny2k-git/vault-marketplace',
   },
@@ -125,7 +125,13 @@ export const HOME_PROJECTS = [
     description:
       'A marketplace where you can buy products, add them to the cart and create you own product on the website. I worked on this project for two weeks. It was one of my first projects when I started studying programming almost two and a half years ago.',
     image: '/home/marketplace.png',
-    techs: ['React', 'Next.js', 'Tailwind', 'CSS', 'Zod', 'Local Storage'],
+    techs: [
+      { label: 'React', icon: '/logos/react-logo.png' },
+      { label: 'Next.js', icon: '/logos/tag/next-js.jpeg' },
+      { label: 'CSS', icon: '/logos/tag/css.png' },
+      { label: 'Zod', icon: '/logos/tag/zod.png' },
+      { label: 'Local Storage', icon: '/logos/tag/local-storage.png' },
+    ],
     github: 'https://github.com/Ronny2k-git/marketplace',
   },
 ]

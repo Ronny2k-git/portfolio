@@ -19,15 +19,20 @@ export default function Footer() {
           <p className="text-3xl text-solar">Ronny2k</p>
 
           <div className="flex gap-4 text-base font-normal cursor-pointer">
-            {/* {ADD ICONS LATER, ACTUALLY I WILL CREATE A COMPONENT FOR EACH ICON} */}
-            <span className="flex gap-2 hover:underline">
+            <a
+              href="https://github.com/Ronny2k-git"
+              className="flex gap-2 hover:underline"
+            >
               <GithubIcon />
               Github
-            </span>
-            <span className="flex gap-2 hover:underline">
+            </a>
+            <a
+              href="https://x.com/RonnyEdson27329"
+              className="flex gap-2 hover:underline"
+            >
               <TwitterIcon />
               Twitter
-            </span>
+            </a>
           </div>
 
           <span className="text-sm text-gray-400/90 font-normal">

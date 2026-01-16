@@ -1,10 +1,15 @@
 import { Tag } from './Tag'
 
+type Tech = {
+  label: string
+  icon: string
+}
+
 type ProjectCardProps = {
   title: string
   description: string
   image: string
-  techs: Array<string>
+  techs: Array<Tech>
   github?: string
   live?: string
 }
@@ -32,38 +37,44 @@ export function ProjectCard({
       </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-4 p-4">
+      <div className="flex flex-col gap-4 p-4 flex-1">
         <h3 className="text-xl font-semibold text-gray-400">{title}</h3>
 
         <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
 
         {/* Tech stack */}
-        <ul className="flex flex-wrap gap-2 text-black cursor-pointer">
-          {techs.map((tech) => (
-            <Tag key={tech} text={tech}></Tag>
-          ))}
-        </ul>
+        <div className="flex flex-col gap-4 justify-end h-full">
+          <ul className="flex flex-wrap gap-2 text-black cursor-pointer">
+            {techs.map((tech, index) => (
+              <Tag
+                key={index}
+                text={tech.label}
+                icon={<img className="size-4 rounded-full" src={tech.icon} />}
+              />
+            ))}
+          </ul>
 
-        {/* Actions */}
-        <div className="mt-2 flex gap-4 text-sm">
-          {github && (
-            <a
-              href={github}
-              target="_blank"
-              className="text-gray-400 hover:text-solar transition"
-            >
-              GitHub →
-            </a>
-          )}
-          {live && (
-            <a
-              href={live}
-              target="_blank"
-              className="text-gray-400 hover:text-solar transition"
-            >
-              Live →
-            </a>
-          )}
+          {/* Actions */}
+          <div className="mt-2 flex gap-4 text-sm">
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                className="text-gray-400 hover:text-solar transition"
+              >
+                GitHub →
+              </a>
+            )}
+            {live && (
+              <a
+                href={live}
+                target="_blank"
+                className="text-gray-400 hover:text-solar transition"
+              >
+                Live →
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>

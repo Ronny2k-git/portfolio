@@ -1,19 +1,21 @@
 import { twMerge } from 'tailwind-merge'
 
 export type TagProps = {
+  icon?: React.ReactNode
   text: string
   className?: string
 }
 
-export function Tag({ text, className }: TagProps) {
+export function Tag({ icon, text, className }: TagProps) {
   return (
-    <span
+    <div
       className={twMerge(
-        'rounded-full px-3 py-1 text-xs text-gray-300 bg-gray-800 border border-gray-500 backdrop-blur-sm hover:bg-gray-800/70 hover:scale-105 transition ',
+        'rounded-full flex items-center gap-2 py-1 px-3 text-gray-300 bg-gray-800 border border-gray-500 backdrop-blur-sm hover:bg-gray-800/70 hover:scale-105 transition ',
         className,
       )}
     >
-      {text}
-    </span>
+      {icon && icon}
+      <span className="text-xs">{text}</span>
+    </div>
   )
 }
