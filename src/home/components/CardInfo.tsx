@@ -2,16 +2,15 @@ import { useEffect, useState } from 'react'
 import { Tag } from './Tag'
 
 const MAIN_STACK = [
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'SolidJS',
-  'Next.js',
-  'CSS3',
-  'HTML5',
-  'Tailwind CSS',
-  'Solidity',
-  'Rust',
+  { label: 'JavaScript', icon: '/logos/js-logo.png' },
+  { label: 'TypeScript', icon: '/logos/ts-logo.png' },
+  { label: 'React', icon: '/logos/tag/react-logo.webp' },
+  { label: 'SolidJS', icon: '/logos/tag/solid-js.png' },
+  { label: 'Next.js', icon: '/logos/tag/next-js.jpeg' },
+  { label: 'CSS3', icon: '/logos/tag/css.png' },
+  { label: 'Tailwind', icon: '/logos/tag/tailwind.png' },
+  { label: 'Solidity', icon: '/logos/solidity-logo.png' },
+  { label: 'Rust', icon: '/logos/tag/rust-logo.png' },
 ]
 
 const NAMES = ['Ronny EDM', 'Web3 Dev']
@@ -36,7 +35,7 @@ export function CardInfo() {
       className="
         relative z-50
         flex items-center justify-center
-        max-sm:w-[21.2rem]
+        max-sm:max-w-[20.4rem]
         size-[27rem]
         py-6 sm:rounded-full rounded-4xl via-[#1A1E1F] to-[#262A2C]
         bg-linear-to-b 
@@ -80,8 +79,18 @@ export function CardInfo() {
           </span>
 
           <ul className="mt-3 flex max-w-[20rem] flex-wrap items-center justify-center gap-2">
-            {MAIN_STACK.map((tech) => (
-              <Tag key={tech} text={tech} className="text-sm cursor-pointer" />
+            {MAIN_STACK.map((tech, index) => (
+              <Tag
+                key={index}
+                text={tech.label}
+                icon={
+                  <img
+                    className="size-4 rounded-full object-center object-cover"
+                    src={tech.icon}
+                  />
+                }
+                className="text-sm cursor-pointer"
+              />
             ))}
           </ul>
         </div>

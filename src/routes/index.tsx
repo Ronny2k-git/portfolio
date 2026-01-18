@@ -61,9 +61,12 @@ function Home() {
           id="about"
           className="flex flex-col w-full items-center justify-center gap-20 text-solar"
         >
-          <SectionHeader title="About Me" />
+          <SectionHeader
+            title="About Me"
+            description="A brief description of my experience and what I enjoy building."
+          />
 
-          <div className="border border-orange-500/10 p-8 bg-black/40 rounded-2xl grid w-full max-w-7xl max-md:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="border border-orange-500/10 p-8 bg-black/30 rounded-2xl grid w-full max-w-7xl max-md:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-6">
             {ABOUT_CARDS.map((card, index) => (
               <AboutCard
                 key={index}
@@ -80,7 +83,10 @@ function Home() {
           id="skill"
           className="relative flex flex-col w-full items-center gap-20 text-solar"
         >
-          <SectionHeader title="My Skills" />
+          <SectionHeader
+            title="My Skills"
+            description="Languages, frameworks and platforms I work with or have worked with in the past"
+          />
 
           {/* Languages & Frameworks*/}
           <div className="w-full z-40 max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
@@ -111,12 +117,14 @@ function Home() {
         </section>
 
         {/* My projects Section*/}
-        {/* {PUT LATER A DESCRIPTION ABOUT MY PROJECTS SECTION} */}
         <section
           id="project"
           className="flex w-full flex-col items-center gap-20 text-solar"
         >
-          <SectionHeader title="My Projects" />
+          <SectionHeader
+            title="My Projects"
+            description="Some projects I built for learning and skill development."
+          />
 
           <div className="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {HOME_PROJECTS.map((project) => (
@@ -133,8 +141,12 @@ function Home() {
           </div>
         </section>
 
-        {/* {CREATE ANOTHER SECTION FOR MY EXPERIENCES, FOR EXAMPLE: MY EXPERIENCIES}
-        {CREATE A PAGE TO SHOW MY CONTRIBUTIONS FOR FJORD FOUNDRY} */}
+        {/* My experience Section */}
+        <section className="flex w-full items-center justify-center gap-20 text-solar">
+          <SectionHeader title="My Experience" description="" />
+
+          {/* {CREATED A CARD AROUND THE CONTENT WITH A TITLE AND AN ICON(FJORD FOUDNRY)} */}
+        </section>
       </div>
     </main>
   )
