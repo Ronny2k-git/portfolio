@@ -6,6 +6,7 @@
   --font-body: 'Inter', system-ui, sans-serif;
   --font-name: 'Nunito Sans';
   --color-solar: #f6a04d;
+  --color-card-basic: #1b1d1e;
 }
 
 @import 'tailwindcss';
