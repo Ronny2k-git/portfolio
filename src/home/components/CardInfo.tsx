@@ -1,3 +1,4 @@
+import { Card } from '@/ui/components'
 import { useEffect, useState } from 'react'
 import { Tag } from './Tag'
 
@@ -31,16 +32,15 @@ export function CardInfo() {
   const currentName = NAMES[nameIndex]
 
   return (
-    <div
+    <Card
       className="
-        relative z-50
-        flex items-center justify-center
+        relative z-50 justify-center
         max-sm:max-w-[20.4rem]
         size-[27rem]
-        py-6 sm:rounded-full rounded-4xl via-[#1A1E1F] to-[#262A2C]
-        bg-linear-to-b 
-        shadow-[0_0_30px_rgba(255,255,255,0.1)]
+        py-6 sm:rounded-full rounded-4xl
+
       "
+      variant={'gradient'}
     >
       {/* Content */}
       <section className="w-full p-4 sm:p-8 relative z-10 flex flex-col items-center gap-6 max-sm:gap-8 text-center">
@@ -99,6 +99,6 @@ export function CardInfo() {
           Building modern, performant, and decentralized web applications
         </p>
       </section>
-    </div>
+    </Card>
   )
 }

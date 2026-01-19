@@ -14,6 +14,7 @@ import {
   SKILL_CARD_LANGUAGES,
   SKILL_CARD_WEB3,
 } from '@/home/utils'
+import { Card, Icon } from '@/ui/components'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
@@ -50,7 +51,7 @@ function Home() {
                 ))}
               </div>
 
-              {/* My Descrition */}
+              {/* Main Card */}
               <CardInfo />
             </div>
           </section>
@@ -61,21 +62,35 @@ function Home() {
           id="about"
           className="flex flex-col w-full items-center justify-center gap-20 text-solar"
         >
-          <SectionHeader
-            title="About Me"
-            description="A brief description of my experience and what I enjoy building."
-          />
+          <Card
+            className="p-6 rounded-4xl max-w-7xl bg-linear-to-br justify-center items-center gap-6 shadow-none "
+            variant={'gradient'}
+          >
+            <SectionHeader
+              title="About Me"
+              icon={<Icon className="!text-6xl">account_circle</Icon>}
+              description="A brief description of my experience and what I enjoy building."
+            />
 
-          <div className="border border-orange-500/10 p-8 bg-black/30 rounded-2xl grid w-full max-w-7xl max-md:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-6">
-            {ABOUT_CARDS.map((card, index) => (
-              <AboutCard
-                key={index}
-                title={card.title}
-                description={card.description}
-                items={card.items}
-              />
-            ))}
-          </div>
+            <div className=" grid w-full  max-md:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-6">
+              {ABOUT_CARDS.map((card, index) => (
+                <AboutCard
+                  // {
+                  //   THE ABOUT CARD WILL BE SOMETHING LIKE:
+
+                  //     1---------
+                  //     ---------2
+                  //     3---------
+                  // }
+
+                  key={index}
+                  title={card.title}
+                  description={card.description}
+                  items={card.items}
+                />
+              ))}
+            </div>
+          </Card>
         </section>
 
         {/* Skill Cards Section */}
@@ -85,6 +100,7 @@ function Home() {
         >
           <SectionHeader
             title="My Skills"
+            icon={<Icon className="!text-6xl">psychology</Icon>}
             description="Languages, frameworks and platforms I work with or have worked with in the past"
           />
 
@@ -123,6 +139,7 @@ function Home() {
         >
           <SectionHeader
             title="My Projects"
+            icon={<Icon className="!text-6xl">work</Icon>}
             description="Some projects I built for learning and skill development."
           />
 
@@ -143,9 +160,20 @@ function Home() {
 
         {/* My experience Section */}
         <section className="flex w-full items-center justify-center gap-20 text-solar">
-          <SectionHeader title="My Experience" description="" />
+          <SectionHeader
+            title="My Experience"
+            icon={<Icon className="!text-6xl">timeline</Icon>}
+            description=""
+          />
 
-          {/* {CREATED A CARD AROUND THE CONTENT WITH A TITLE AND AN ICON(FJORD FOUDNRY)} */}
+          {/* {
+          1 UPDATE THE ABOUT ME SECTION
+
+          2 CREATED A CARD AROUND THE CONTENT WITH A TITLE AND AN ICON(FJORD FOUDNRY) 
+          
+          PROBABLY THIS SECTION WILL BE A LARGE CARD WITH A FJORD'S BANNER AND A DESCRIPTION
+          ABOUT WHAT I DID IN THE COMPANY.
+          } */}
         </section>
       </div>
     </main>

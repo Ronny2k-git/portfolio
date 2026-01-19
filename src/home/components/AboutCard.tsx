@@ -1,3 +1,5 @@
+import { Card } from '@/ui/components'
+
 type AboutCardProps = {
   title: string
   description?: string
@@ -6,10 +8,7 @@ type AboutCardProps = {
 
 export function AboutCard({ title, description, items }: AboutCardProps) {
   return (
-    <div
-      className="w-full flex flex-col p-8 gap-4 rounded-lg bg-black/40 border border-orange-300/20 hover:border-orange-500/30
-        hover:bg-black/50"
-    >
+    <Card className="p-8 gap-4 rounded-4xl" variant={'basic'}>
       <h3 className="text-xl font-bold text-solar">{title}</h3>
 
       {description && (
@@ -23,6 +22,6 @@ export function AboutCard({ title, description, items }: AboutCardProps) {
           ))}
         </ul>
       )}
-    </div>
+    </Card>
   )
 }
