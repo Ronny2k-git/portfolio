@@ -7,6 +7,7 @@
   --font-name: 'Nunito Sans';
   --color-solar: #f6a04d;
   --color-card-basic: #1b1d1e;
+  --breakpoint-desktop-lg: 1300px;
 }
 
 @import 'tailwindcss';
