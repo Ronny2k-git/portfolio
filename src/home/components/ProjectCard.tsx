@@ -26,7 +26,7 @@ export function ProjectCard({
       )}
     >
       {/* Banner */}
-      <div className="relative bg-b aspect-video min-h-[16rem] rounded-4xl w-full max-h-[27rem] overflow-hidden">
+      <div className="relative bg-b aspect-video min-h-[16rem] h-full rounded-4xl w-full max-h-[27rem] overflow-hidden">
         <img
           src={image}
           alt={title}
@@ -49,7 +49,7 @@ export function ProjectCard({
             <a
               href={github}
               target="_blank"
-              className="text-gray-400 hover:text-solar transition"
+              className="text-orange-300 hover:text-solar transition"
             >
               GitHub →
             </a>
@@ -58,7 +58,7 @@ export function ProjectCard({
             <a
               href={live}
               target="_blank"
-              className="text-gray-400 hover:text-solar transition"
+              className="text-orange-300 hover:text-solar transition"
             >
               Live →
             </a>

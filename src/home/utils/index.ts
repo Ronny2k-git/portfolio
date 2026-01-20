@@ -99,7 +99,7 @@ export const HOME_PROJECT_TECHS = [
   { label: 'React hook form', icon: '/logos/tag/hook-form.png' },
 ]
 
-export const HOME_PROJECTS = [
+export const HOME_METAVAULT_PROJECT = [
   {
     title: 'Metavault',
     description: 'The Project Description will be here. Add later',
@@ -108,6 +108,9 @@ export const HOME_PROJECTS = [
     live: 'https://metavault-phi.vercel.app/',
     class: 'max-[1300px]:col-span-1 col-span-2',
   },
+]
+
+export const HOME_SECONDARY_PROJECTS = [
   {
     title: 'Vault Marketplace',
     description:

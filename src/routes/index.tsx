@@ -10,8 +10,9 @@ import {
 import {
   ABOUT_CARDS,
   HOME_CIRCLE_LOGO,
-  HOME_PROJECTS,
+  HOME_METAVAULT_PROJECT,
   HOME_PROJECT_TECHS,
+  HOME_SECONDARY_PROJECTS,
   SKILL_CARD_DATABASES_AND_INFRA,
   SKILL_CARD_LANGUAGES,
   SKILL_CARD_WEB3,
@@ -112,7 +113,7 @@ export default function Home() {
         >
           <Card
             variant={'secondary'}
-            className="justify-center max-w-[24rem] h-28 rounded-4xl"
+            className="justify-center lg:max-w-[24rem] h-28 rounded-4xl"
           >
             <SectionHeader
               title="My Skills"
@@ -151,11 +152,11 @@ export default function Home() {
           id="project"
           className="flex w-full flex-col items-center gap-20 text-solar"
         >
-          <div className="w-full grid max-lg:grid-cols-1 max-desktop-lg:grid-cols-2 grid-cols-3 gap-6">
+          <div className="w-full max-[1350px]:flex flex-col grid max-lg:grid-cols-1 max-desktop-lg:grid-cols-2 grid-cols-2 gap-6">
             <div className="flex flex-col gap-6">
               <Card
                 variant={'secondary'}
-                className=" items-center justify-center h-32 rounded-4xl"
+                className=" items-center justify-center p-4 h-32 rounded-4xl"
               >
                 <SectionHeader
                   title="My Projects"
@@ -165,9 +166,8 @@ export default function Home() {
                   Projects from 2024 — Present
                 </span>
               </Card>
-
               {/* Description & Techs tag */}
-              <Card className="w-full max-desktop-lg:h-auto h-ful rounded-4xl p-8">
+              <Card className="w-full h-full rounded-4xl p-8">
                 <div className="flex flex-col max-sm:items-center h-full gap-6">
                   <h3 className="text-gray-400">
                     <span className="text-blue-200">Personal</span> projects
@@ -204,13 +204,12 @@ export default function Home() {
                 </div>
               </Card>
             </div>
-
-            {/* Projects */}
+            {/* Main Project */}
             <Card
               variant={'basic'}
-              className="grid max-desktop-lg:col-span-1 max-desktop-lg:grid-cols-1 col-span-2 grid-cols-2 gap-6 p-6 rounded-4xl"
+              className="grid max-desktop-lg:col-span-1 max-desktop-lg:grid-cols-1 grid-cols-2 gap-6 p-6 rounded-4xl"
             >
-              {HOME_PROJECTS.map((project) => (
+              {HOME_METAVAULT_PROJECT.map((project) => (
                 <ProjectCard
                   className={`${project.class}`}
                   key={project.title}
@@ -222,6 +221,22 @@ export default function Home() {
                 />
               ))}
             </Card>
+
+            <div className="grid max-[1200px]:grid-cols-1 grid-cols-2 gap-6 col-span-2">
+              {/* Secondary Projects */}
+              {HOME_SECONDARY_PROJECTS.map((project) => (
+                <Card variant={'basic'} className="p-6 rounded-4xl">
+                  <ProjectCard
+                    className={`${project.class}`}
+                    key={project.title}
+                    image={project.image}
+                    title={project.title}
+                    description={project.description}
+                    github={project.github}
+                  />
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
 
