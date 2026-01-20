@@ -4,12 +4,17 @@ export const NAV_ROUTE_ID = [
     label: 'Ronny2k',
     class: 'text-3xl text-solar hover:text-orange-400',
   },
-  { id: 'about', label: 'About Me', class: 'text-lg max-[850px]:hidden' },
-  { id: 'skill', label: 'Skills', class: 'text-lg max-[850px]:hidden' },
-  { id: 'project', label: 'Projects', class: 'text-lg max-[850px]:hidden' },
+  { id: 'about', label: 'About Me', class: 'text-lg max-lg:hidden' },
+  { id: 'skill', label: 'Skills', class: 'text-lg max-lg:hidden' },
+  { id: 'project', label: 'Projects', class: 'text-lg max-lg:hidden' },
+  {
+    id: 'experience',
+    label: 'Experience',
+    class: 'text-lg max-lg:hidden',
+  },
   {
     label: 'Source Code',
-    class: 'text-lg max-[850px]:hidden',
+    class: 'text-lg max-lg:hidden',
     path: 'https://github.com/Ronny2k-git/portfolio',
   },
 ]

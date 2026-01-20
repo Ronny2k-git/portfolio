@@ -25,7 +25,7 @@ export const Route = createFileRoute('/')({
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen flex flex-col items-center justify-center py-30 px-4 lg:px-24 bg-black/90 overflow-x-hidden">
+    <main className="w-full min-h-screen flex flex-col items-center justify-center py-30 px-4 lg:px-28 2xl:px-40 bg-black/90 overflow-x-hidden">
       <h1 className="z-10 md:hidden mb-10 text-4xl text-gray-400 text-center">
         View on Desktop for a better experience
       </h1>
@@ -64,21 +64,23 @@ export default function Home() {
           id="about"
           className="flex flex-col w-full items-center justify-center gap-20 text-solar"
         >
-          <div className="w-full max-w-7xl grid max-lg:grid-cols-1 grid-cols-2 gap-6">
+          <div className="w-full grid max-lg:grid-cols-1 grid-cols-2 gap-6">
             <div className="flex flex-col gap-6">
-              <div className="flex flex-col items-center justify-center p-4 h-32 bg-gray-800 rounded-4xl">
+              <Card
+                variant={'secondary'}
+                className="justify-center p-4 h-32 rounded-4xl"
+              >
                 <SectionHeader
                   title="About Me"
-                  description=""
                   icon={
                     <Icon className="!text-5xl sm:!text-6xl">
                       account_circle
                     </Icon>
                   }
                 />
-              </div>
+              </Card>
 
-              {/* About me Cards */}
+              {/* Description */}
               <Card className="w-full h-full rounded-4xl p-6">
                 <h3 className="text-gray-400">
                   A brief description of my experience and what I enjoy
@@ -87,7 +89,7 @@ export default function Home() {
               </Card>
             </div>
 
-            {/* Projects */}
+            {/* About me Cards */}
             <Card variant={'basic'} className="p-6 gap-4 rounded-4xl">
               {ABOUT_CARDS.map((card, index) => {
                 return (
@@ -108,16 +110,15 @@ export default function Home() {
           id="skill"
           className="relative flex flex-col w-full items-center gap-20 text-solar"
         >
-          <div className="flex flex-col items-center justify-center p-4 min-w-[24rem] h-28 bg-gray-800 rounded-4xl">
+          <Card
+            variant={'secondary'}
+            className="justify-center max-w-[24rem] h-28 rounded-4xl"
+          >
             <SectionHeader
               title="My Skills"
-              description="A brief description of my experience and what I enjoy building."
               icon={<Icon className="!text-5xl sm:!text-6xl">psychology</Icon>}
             />
-            {/* <span className="text-gray-400">
-                  Projects from 2024 — Present
-                </span> */}
-          </div>
+          </Card>
 
           {/* Languages & Frameworks*/}
           <div className="w-full z-40 max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
@@ -152,7 +153,10 @@ export default function Home() {
         >
           <div className="w-full grid max-lg:grid-cols-1 max-desktop-lg:grid-cols-2 grid-cols-3 gap-6">
             <div className="flex flex-col gap-6">
-              <div className="flex flex-col items-center justify-center p-4 h-32 bg-gray-800 rounded-4xl">
+              <Card
+                variant={'secondary'}
+                className=" items-center justify-center h-32 rounded-4xl"
+              >
                 <SectionHeader
                   title="My Projects"
                   icon={<Icon className="!text-5xl sm:!text-6xl">work</Icon>}
@@ -160,12 +164,22 @@ export default function Home() {
                 <span className="text-gray-400">
                   Projects from 2024 — Present
                 </span>
-              </div>
+              </Card>
 
               {/* Description & Techs tag */}
-              <Card className="w-full max-desktop-lg:h-auto h-full  rounded-4xl p-6">
+              <Card className="w-full max-desktop-lg:h-auto h-ful rounded-4xl p-8">
                 <div className="flex flex-col max-sm:items-center h-full gap-6">
-                  <h3>MY DESCRIPTION WILL BE HERE</h3>
+                  <h3 className="text-gray-400">
+                    <span className="text-blue-200">Personal</span> projects
+                    created to explore{' '}
+                    <span className="text-blue-200">new</span> technologies and
+                    ideas, primarily for{' '}
+                    <span className="text-blue-200">study</span> purposes.
+                    Focusing on interactions with{' '}
+                    <span className="text-blue-200">databases</span> and{' '}
+                    <span className="text-blue-200">Smart contracts</span> on
+                    the Blockchain.
+                  </h3>
 
                   <p className="text-gray-400">
                     Languages, frameworks and platforms I used to build these
@@ -212,11 +226,13 @@ export default function Home() {
         </section>
 
         {/* My experience Section */}
-        <section className="flex w-full items-center justify-center gap-20 text-solar">
+        <section
+          id="experience"
+          className="flex w-full items-center justify-center gap-20 text-solar"
+        >
           <SectionHeader
             title="My Experience"
             icon={<Icon className="!text-5xl sm:!text-6xl">timeline</Icon>}
-            description=""
           />
 
           {/* {

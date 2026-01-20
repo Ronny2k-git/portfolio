@@ -10,14 +10,6 @@ type ProjectCardProps = {
   className?: string
 }
 
-// UPDATE THIS CARD LATER, PROBABLY WILL BE SOMETHING LIKE:
-
-// 1 THE DESCRIPTION WILL BE DISPLAYED WHEN THE USER HOVERS THE MOUSE OVER IT AND THE BANNER
-//   IMAGE WILL SCALE UP (105 MAYBE)
-// 2 THE CARD BANNER WILL BE ASPECT-VIDEO
-// 3 WILL BE A SECTION CALLED: TECNOLOGIES USED TO BUILD IT (TAGS)
-// 4 THE NAVIGATION LINKS (GIT AND LIVE) WILL BE ABSOLUTE (ABOVE THE IMAGE)
-
 export function ProjectCard({
   title,
   description,
@@ -42,14 +34,14 @@ export function ProjectCard({
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/90 opacity-0 transition duration-300 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-black/75 opacity-0 transition duration-300 group-hover:opacity-100" />
       </div>
 
       {/* Content */}
       <div className="absolute hidden group-hover:flex flex-col h-full gap-4 p-6 ">
         <h3 className="text-xl font-semibold text-gray-400">{title}</h3>
 
-        <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
+        <p className="text-sm text-gray-300 leading-relaxed">{description}</p>
 
         {/* Actions */}
         <div className="flex h-full items-end gap-4 text-sm">
