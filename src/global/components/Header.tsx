@@ -3,7 +3,7 @@ import { NAV_ROUTE_ID, scrollToContainer } from '../utils'
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between fixed backdrop-blur-xs z-50 w-full p-4 md:px-16 border-b border-gray-700/30">
+    <header className="flex items-center justify-between fixed backdrop-blur-xs z-50 w-full p-4 lg:px-14 2xl:px-40 border-b border-gray-700/30">
       {/* Nav Bar */}
 
       <nav className="flex gap-x-12 font-display items-center text-gray-400 cursor-pointer">

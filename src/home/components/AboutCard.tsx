@@ -1,14 +1,24 @@
 import { Card } from '@/ui/components'
+import { twMerge } from 'tailwind-merge'
 
 type AboutCardProps = {
   title: string
   description?: string
   items?: Array<string>
+  className?: string
 }
 
-export function AboutCard({ title, description, items }: AboutCardProps) {
+export function AboutCard({
+  title,
+  description,
+  items,
+  className,
+}: AboutCardProps) {
   return (
-    <Card className="p-8 gap-4 rounded-4xl" variant={'basic'}>
+    <Card
+      className={twMerge('p-8 gap-4 rounded-4xl', className)}
+      variant={'basic'}
+    >
       <h3 className="text-xl font-bold text-solar">{title}</h3>
 
       {description && (

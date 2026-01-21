@@ -50,6 +50,45 @@ export const ABOUT_CARDS = [
   },
 ]
 
+export const TIMELINE = [
+  {
+    code: 1,
+    title: 'HTML / CSS',
+    description: 'Semantic, layouts, responsibility, design systems etc',
+    img: '/logos/html-css-logo.png',
+  },
+  {
+    code: 2,
+    title: 'JS / TS',
+    description: 'Logic, state management, scalable codebases etc',
+    img: '/logos/js-ts-logo.png',
+  },
+  {
+    code: 3,
+    title: 'React / Next',
+    description: 'Reusable components, states, UI, and SSR',
+    img: '/logos/react-logo.png',
+  },
+  {
+    code: 4,
+    title: 'Frameworks',
+    description: 'Using frameworks: vite, tanstack, solid etc',
+    img: '/logos/framework-logo.png',
+  },
+  {
+    code: 5,
+    title: 'Database',
+    description: 'Data modeling and backend integrations',
+    img: '/logos/database.png',
+  },
+  {
+    code: 6,
+    title: 'Web3',
+    description: 'Smart contracts and blockchain interactions',
+    img: '/logos/web3-logo.png',
+  },
+]
+
 // SKILL CARDS SECTION
 
 export const SKILL_CARD_LANGUAGES = [
@@ -102,7 +141,8 @@ export const HOME_PROJECT_TECHS = [
 export const HOME_METAVAULT_PROJECT = [
   {
     title: 'Metavault',
-    description: 'The Project Description will be here. Add later',
+    description:
+      'A decentralized Web3 platform where users can create on-chain vaults, execute trades, monitor active and completed vaults, and manage their profiles directly on the blockchain. I worked on this project for 3 months.',
     image: '/home/metavault.png',
     github: 'https://github.com/Ronny2k-git/metavault',
     live: 'https://metavault-phi.vercel.app/',
