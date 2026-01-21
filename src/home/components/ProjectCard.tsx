@@ -26,11 +26,11 @@ export function ProjectCard({
       )}
     >
       {/* Banner */}
-      <div className="relative bg-b aspect-video min-h-[16rem] h-full rounded-4xl w-full max-h-[27rem] overflow-hidden">
+      <div className="relative rounded-2xl aspect-video min-h-[16rem] h-full w-full max-h-[27rem] overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
+          className="h-full w-full rounded-2xl object-cover object-top transition duration-500 group-hover:scale-105"
         />
 
         {/* Overlay */}

@@ -6,6 +6,7 @@ import {
   SectionHeader,
   SkillCard,
   Tag,
+  Timeline,
 } from '@/home/components'
 import {
   ABOUT_CARDS,
@@ -32,12 +33,12 @@ export default function Home() {
       </h1>
 
       <div className="flex flex-col w-full gap-40 ">
-        {/* Circles */}
-        <div
+        {/* First Section  */}
+        <section
           className="relative rounded-4xl flex w-full h-[44rem] py-5 justify-center items-center 
           overflow-x-clip"
         >
-          <section
+          <div
             id="card-info"
             className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-[43rem] h-[43rem] border-2 
            border-dashed border-gray-700/50 rounded-full"
@@ -57,19 +58,19 @@ export default function Home() {
               {/* Main Card */}
               <CardInfo />
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
 
         {/* About me Section*/}
         <section
           id="about"
           className="flex flex-col w-full items-center justify-center gap-20 text-solar"
         >
-          <div className="w-full grid max-lg:grid-cols-1 grid-cols-2 gap-6">
+          <div className="w-full grid grid-cols-2 gap-6">
             <div className="flex flex-col gap-6">
               <Card
                 variant={'secondary'}
-                className="justify-center p-4 h-32 rounded-4xl"
+                className="justify-center p-4 h-28 rounded-4xl"
               >
                 <SectionHeader
                   title="About Me"
@@ -79,19 +80,26 @@ export default function Home() {
                     </Icon>
                   }
                 />
+
+                <span className="text-gray-400 text-center">
+                  A bit about me and my learning journey
+                </span>
               </Card>
 
-              {/* Description */}
-              <Card className="w-full h-full rounded-4xl p-6">
-                <h3 className="text-gray-400">
-                  A brief description of my experience and what I enjoy
-                  building.
-                </h3>
+              <Card className="w-full max-h-[40rem] gap-6 h-full items-center rounded-4xl p-6">
+                {/* <h3 className="text-blue-300/70 text-2xl">
+                  My Learning Timeline
+                </h3> */}
+
+                <Timeline />
               </Card>
             </div>
 
             {/* About me Cards */}
-            <Card variant={'basic'} className="p-6 gap-4 rounded-4xl">
+            <Card
+              variant={'basic'}
+              className="p-6 h-full items-center justify-center gap-4 rounded-4xl"
+            >
               {ABOUT_CARDS.map((card, index) => {
                 return (
                   <AboutCard
@@ -103,6 +111,7 @@ export default function Home() {
                 )
               })}
             </Card>
+            {/* Description */}
           </div>
         </section>
 
@@ -137,6 +146,7 @@ export default function Home() {
               <SkillCard key={card.lang} title={card.lang} pct={card.pct} />
             ))}
           </div>
+
           {/* WEB3 Libraries */}
           <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
             <SectionCard title="WEB3 Libraries" />
@@ -166,6 +176,7 @@ export default function Home() {
                   Projects from 2024 — Present
                 </span>
               </Card>
+
               {/* Description & Techs tag */}
               <Card className="w-full h-full rounded-4xl p-8">
                 <div className="flex flex-col max-sm:items-center h-full gap-6">
@@ -174,17 +185,17 @@ export default function Home() {
                     created to explore{' '}
                     <span className="text-blue-200">new</span> technologies and
                     ideas, primarily for{' '}
-                    <span className="text-blue-200">study</span> purposes.
-                    Focusing on interactions with{' '}
-                    <span className="text-blue-200">databases</span> and{' '}
-                    <span className="text-blue-200">Smart contracts</span> on
-                    the Blockchain.
+                    <span className="text-blue-200">study</span> purposes. With
+                    a focus on <span className="text-blue-200">database</span>{' '}
+                    interactions and blockchain{' '}
+                    <span className="text-blue-200">smart contracts</span>.
                   </h3>
 
                   <p className="text-gray-400">
                     Languages, frameworks and platforms I used to build these
                     projects:
                   </p>
+                  {/* Tags */}
                   <ul className="flex flex-wrap gap-2 text-black cursor-pointer">
                     {HOME_PROJECT_TECHS.map((tech, index) => {
                       return (
@@ -204,10 +215,11 @@ export default function Home() {
                 </div>
               </Card>
             </div>
+
             {/* Main Project */}
             <Card
               variant={'basic'}
-              className="grid max-desktop-lg:col-span-1 max-desktop-lg:grid-cols-1 grid-cols-2 gap-6 p-6 rounded-4xl"
+              className="grid max-desktop-lg:col-span-1 max-desktop-lg:grid-cols-1 grid-cols-2 gap-6 p-4 rounded-4xl"
             >
               {HOME_METAVAULT_PROJECT.map((project) => (
                 <ProjectCard
@@ -225,7 +237,11 @@ export default function Home() {
             <div className="grid max-[1200px]:grid-cols-1 grid-cols-2 gap-6 col-span-2">
               {/* Secondary Projects */}
               {HOME_SECONDARY_PROJECTS.map((project) => (
-                <Card variant={'basic'} className="p-6 rounded-4xl">
+                <Card
+                  key={project.title}
+                  variant={'basic'}
+                  className="p-4 rounded-4xl"
+                >
                   <ProjectCard
                     className={`${project.class}`}
                     key={project.title}
@@ -251,9 +267,8 @@ export default function Home() {
           />
 
           {/* {
-          1 UPDATE THE ABOUT ME SECTION
 
-          2 CREATED A CARD AROUND THE CONTENT WITH A TITLE AND AN ICON(FJORD FOUDNRY) 
+          1 CREATED A CARD AROUND THE CONTENT WITH A TITLE AND AN ICON(FJORD FOUDNRY) 
           
           PROBABLY THIS SECTION WILL BE A LARGE CARD WITH A FJORD'S BANNER AND A DESCRIPTION
           ABOUT WHAT I DID IN THE COMPANY.
