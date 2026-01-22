@@ -9,7 +9,7 @@ export function TimeLineMobile() {
         whileInView={{ width: '100%' }}
         transition={{ duration: 1.2, ease: 'easeInOut' }}
         viewport={{ once: true }}
-        className="relative h-[2.5px] bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 mb-12"
+        className="relative h-[2.5px] bg-gradient-to-r from-blue-400 via-gray-400 to-blue-400 mb-12"
       />
 
       <div className="grid max-sm:grid-cols-3 grid-cols-6 gap-4">

@@ -10,7 +10,7 @@ export function TimeLineDesktop() {
         whileInView={{ height: '100%' }}
         transition={{ duration: 1.2, ease: 'easeInOut' }}
         viewport={{ once: true }}
-        className="absolute h-full w-[2.5px] bg-gradient-to-b from-blue-400 via-purple-400 to-blue-400"
+        className="absolute h-full w-[2.5px] bg-gradient-to-b from-blue-400 via-gray-400 to-blue-400"
       />
 
       <div className="flex flex-col gap-4">

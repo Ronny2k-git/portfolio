@@ -1,4 +1,5 @@
 import { Card } from '@/ui/components'
+import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 type ProjectCardProps = {
@@ -18,6 +19,8 @@ export function ProjectCard({
   live,
   className,
 }: ProjectCardProps) {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <Card
       className={twMerge(
@@ -34,37 +37,61 @@ export function ProjectCard({
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/75 opacity-0 transition duration-300 group-hover:opacity-100" />
+        <div
+          className={twMerge(
+            'absolute inset-0 bg-black/75 opacity-0 transition duration-300 group-hover:opacity-100',
+            isOpen && 'opacity-100',
+          )}
+        />
       </div>
 
       {/* Content */}
-      <div className="absolute hidden group-hover:flex flex-col h-full gap-4 p-6 ">
-        <h3 className="text-xl font-semibold text-gray-400">{title}</h3>
-
-        <p className="text-sm text-gray-300 leading-relaxed">{description}</p>
+      <div
+        className={twMerge(
+          'absolute hidden group-hover:flex flex-col h-full gap-4 p-6 ',
+          isOpen && 'flex flex-col transition',
+        )}
+      >
+        <div className="flex flex-col gap-4">
+          <h3 className="text-xl font-semibold text-gray-400">{title}</h3>
+          <p className="max-sm:text-sm text-base text-gray-300 leading-relaxed">
+            {description}
+          </p>
+        </div>
 
         {/* Actions */}
-        <div className="flex h-full items-end gap-4 text-sm">
-          {github && (
-            <a
-              href={github}
-              target="_blank"
-              className="text-orange-300 hover:text-solar transition"
-            >
-              GitHub →
-            </a>
-          )}
-          {live && (
-            <a
-              href={live}
-              target="_blank"
-              className="text-orange-300 hover:text-solar transition"
-            >
-              Live →
-            </a>
-          )}
+        <div className="flex h-full justify-between items-end gap-4 text-sm">
+          <div className="">
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                className="text-orange-300 hover:text-solar transition"
+              >
+                GitHub →
+              </a>
+            )}
+            {live && (
+              <a
+                href={live}
+                target="_blank"
+                className="text-orange-300 hover:text-solar transition"
+              >
+                Live →
+              </a>
+            )}
+          </div>
         </div>
       </div>
+
+      {/* Mobile button to show the card description */}
+      <button
+        className="absolute max-[1100px]:flex hidden text-blue-300 border bg-gray-900 bottom-2 right-2 text-xs py-1 px-3 
+      rounded-2xl cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? 'Close Details' : 'View Details'}
+      </button>
     </Card>
   )
 }

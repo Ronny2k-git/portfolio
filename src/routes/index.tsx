@@ -72,28 +72,19 @@ export default function Home() {
         >
           <div className="w-full max-lg:grid-cols-1 grid grid-cols-2 gap-6">
             <div className="flex flex-col gap-6">
-              <Card
-                variant={'secondary'}
-                className="justify-center max-lg:hidden p-4 h-28 rounded-4xl"
-              >
-                <SectionHeader
-                  title="About Me"
-                  icon={
-                    <Icon className="!text-5xl sm:!text-6xl">
-                      account_circle
-                    </Icon>
-                  }
-                />
-
-                <span className="text-gray-400 text-center">
-                  A bit about me and my learning journey.
-                </span>
-              </Card>
+              <SectionHeader
+                className="max-lg:hidden"
+                title="About Me"
+                icon={
+                  <Icon className="!text-5xl sm:!text-6xl">account_circle</Icon>
+                }
+                description={'A bit about me and my learning journey.'}
+              />
 
               {/* My Timeline */}
               <Card className="w-full h-full gap-5 items-center justify-center rounded-4xl p-6">
-                <div className="flex items-center text-gray-500 gap-2 text-2xl max-sm:text-xl lg:hidden text-center">
-                  <Icon className="!text-4xl">avg_time</Icon>
+                <div className="flex items-center text-solar gap-2 text-2xl max-sm:text-xl lg:hidden text-center">
+                  <Icon className="!text-4xl ">avg_time</Icon>
                   My learning journey
                 </div>
 
@@ -118,46 +109,57 @@ export default function Home() {
                 )
               })}
             </Card>
-            {/* Description */}
           </div>
         </motion.section>
 
         {/* Skill Cards Section */}
-        <motion.section
+        <section
           id="skill"
           className="relative flex flex-col w-full items-center gap-20 text-solar"
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 120 }}
-          transition={{ duration: 1 }}
         >
           <div className="flex flex-col w-full items-center max-lg:gap-6 gap-20">
             {/* Languages & Frameworks*/}
-            <div className="w-full z-40 max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
+            <motion.div
+              className="w-full z-40 max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4"
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 120 }}
+              transition={{ duration: 1 }}
+            >
               <SectionCard title="Languages & Frameworks" />
 
               {SKILL_CARD_LANGUAGES.map((card) => (
                 <SkillCard key={card.lang} pct={card.pct} title={card.lang} />
               ))}
-            </div>
+            </motion.div>
           </div>
 
           {/* Databases & Infra */}
-          <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
+          <motion.div
+            className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4"
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 120 }}
+            transition={{ duration: 1 }}
+          >
             <SectionCard title="Databases & Infra" />
             {SKILL_CARD_DATABASES_AND_INFRA.map((card) => (
               <SkillCard key={card.lang} title={card.lang} pct={card.pct} />
             ))}
-          </div>
+          </motion.div>
 
           {/* WEB3 Libraries */}
-          <div className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4">
+          <motion.div
+            className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4"
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 120 }}
+            transition={{ duration: 1 }}
+          >
             <SectionCard title="WEB3 Libraries" />
 
             {SKILL_CARD_WEB3.map((card) => (
               <SkillCard key={card.lang} title={card.lang} pct={card.pct} />
             ))}
-          </div>
-        </motion.section>
+          </motion.div>
+        </section>
 
         {/* My projects Section*/}
         <motion.section
@@ -169,26 +171,22 @@ export default function Home() {
         >
           <div className="w-full max-[1350px]:flex flex-col grid max-lg:grid-cols-1 max-desktop-lg:grid-cols-2 grid-cols-2 gap-6">
             <div className="flex flex-col items-center gap-6">
-              <Card
-                variant={'secondary'}
-                className="items-center max-[1350px]:hidden justify-center p-4 h-28 rounded-4xl"
-              >
-                <SectionHeader
-                  title="My Projects"
-                  icon={<Icon className="!text-5xl sm:!text-6xl">work</Icon>}
-                />
-                <span className="text-gray-400">
-                  Projects from 2024 — Present.
-                </span>
-              </Card>
+              <SectionHeader
+                className="max-[1350px]:hidden"
+                title="My Projects"
+                icon={<Icon className=" !text-5xl sm:!text-6xl">work</Icon>}
+                description=" Projects from 2024 — Present."
+              />
 
               {/* Description & Techs tag */}
               <Card className="w-full h-full rounded-4xl p-8">
                 <div className="flex flex-col max-sm:items-center h-full gap-6">
                   {/* Mobile title */}
                   <div className="hidden max-[1350px]:flex flex-col items-center justify-center mb-2 text-gray-500">
-                    <div className="flex items-center gap-2 text-2xl max-sm:text-xl">
-                      <Icon className="!text-4xl">work</Icon>
+                    <div className="flex items-center text-solar gap-2 text-3xl max-sm:text-2xl">
+                      <Icon className="!text-5xl max-sm:!text-4xl">
+                        deployed_code
+                      </Icon>
                       My Projects
                     </div>
                     <span className="text-xs text-gray-400">
@@ -206,6 +204,7 @@ export default function Home() {
                     interactions and blockchain{' '}
                     <span className="text-blue-200">smart contracts</span>.
                   </h3>
+
                   <p className="text-gray-400">
                     Languages, frameworks and platforms I used to build these
                     projects:
@@ -274,7 +273,7 @@ export default function Home() {
         {/* My experience Section */}
         <motion.section
           id="experience"
-          className="flex w-full items-center justify-center gap-20 text-solar"
+          className="relative flex flex-col w-full gap-20 text-solar"
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 120 }}
           transition={{ duration: 1 }}
@@ -282,6 +281,7 @@ export default function Home() {
           <SectionHeader
             title="My Experience"
             icon={<Icon className="!text-5xl sm:!text-6xl">timeline</Icon>}
+            description="From 2024 - Present"
           />
 
           {/* {
@@ -296,3 +296,18 @@ export default function Home() {
     </main>
   )
 }
+
+// {/* <div className="flex w-screen relative p-4">
+//             {/* Card One */}
+//             <Card
+//               className="relative z-10 w-[55vw] p-6 rounded-4xl h-[28rem]"
+//               variant={'gradient'}
+//             ></Card>
+
+//             {/* Card Two */}
+//             <Card
+//               className="z-20 absolute w-[55vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+//                    p-4 rounded-4xl h-[25rem] "
+//               variant={'basic'}
+//             ></Card>
+//           </div> */}
