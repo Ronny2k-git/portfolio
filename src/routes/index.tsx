@@ -8,6 +8,8 @@ import {
   Tag,
   TimelineSection,
 } from '@/home/components'
+import { ExperienceSidebar } from '@/home/subcomponents'
+import { ExperienceCard } from '@/home/subcomponents/ExperienceCard'
 import {
   ABOUT_CARDS,
   HOME_CIRCLE_LOGO,
@@ -169,10 +171,10 @@ export default function Home() {
           initial={{ opacity: 0, y: 120 }}
           transition={{ duration: 1 }}
         >
-          <div className="w-full max-[1350px]:flex flex-col grid max-lg:grid-cols-1 max-desktop-lg:grid-cols-2 grid-cols-2 gap-6">
+          <div className="w-full max-lg:flex flex-col grid max-lg:grid-cols-1 max-desktop-lg:grid-cols-2 grid-cols-2 gap-6">
             <div className="flex flex-col items-center gap-6">
               <SectionHeader
-                className="max-[1350px]:hidden"
+                className="max-lg:hidden"
                 title="My Projects"
                 icon={<Icon className=" !text-5xl sm:!text-6xl">work</Icon>}
                 description=" Projects from 2024 — Present."
@@ -182,7 +184,7 @@ export default function Home() {
               <Card className="w-full h-full rounded-4xl p-8">
                 <div className="flex flex-col max-sm:items-center h-full gap-6">
                   {/* Mobile title */}
-                  <div className="hidden max-[1350px]:flex flex-col items-center justify-center mb-2 text-gray-500">
+                  <div className="hidden max-lg:flex flex-col items-center justify-center mb-2 text-gray-500">
                     <div className="flex items-center text-solar gap-2 text-3xl max-sm:text-2xl">
                       <Icon className="!text-5xl max-sm:!text-4xl">
                         deployed_code
@@ -248,7 +250,7 @@ export default function Home() {
               ))}
             </Card>
 
-            <div className="grid max-[1200px]:grid-cols-1 grid-cols-2 gap-6 col-span-2">
+            <div className="grid max-lg:grid-cols-1 grid-cols-2 gap-6 col-span-2">
               {/* Secondary Projects */}
               {HOME_SECONDARY_PROJECTS.map((project) => (
                 <Card
@@ -273,24 +275,23 @@ export default function Home() {
         {/* My experience Section */}
         <motion.section
           id="experience"
-          className="relative flex flex-col w-full gap-20 text-solar"
+          className="relative grid lg:grid-cols-2 w-full gap-6 text-solar"
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 120 }}
           transition={{ duration: 1 }}
         >
-          <SectionHeader
-            title="My Experience"
-            icon={<Icon className="!text-5xl sm:!text-6xl">timeline</Icon>}
-            description="From 2024 - Present"
-          />
+          <div className="flex flex-col gap-6">
+            <SectionHeader
+              className="max-lg:hidden"
+              title="My Experience"
+              icon={<Icon className="!text-5xl sm:!text-6xl">timeline</Icon>}
+              description="Oct 2024 - Nov 2025"
+            />
 
-          {/* {
+            <ExperienceSidebar />
+          </div>
 
-          1 CREATED A CARD AROUND THE CONTENT WITH A TITLE AND AN ICON(FJORD FOUDNRY) 
-          
-          PROBABLY THIS SECTION WILL BE A LARGE CARD WITH A FJORD'S BANNER AND A DESCRIPTION
-          ABOUT WHAT I DID IN THE COMPANY.
-          } */}
+          <ExperienceCard />
         </motion.section>
       </div>
     </main>

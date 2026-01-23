@@ -10,6 +10,8 @@ export const cardStyle = cva('w-full flex flex-col relative h-auto', {
       secondary: 'bg-gray-800',
       gradient:
         'bg-linear-to-b via-[#1A1E1F] to-[#262A2C] shadow-[0_0_30px_rgba(255,255,255,0.1)]',
+      gradient2:
+        'border border-gray-700 bg-gradient-to-bl from-black via-zinc-900 to-black/50',
     },
   },
 })

@@ -29,7 +29,7 @@ export function ProjectCard({
       )}
     >
       {/* Banner */}
-      <div className="relative rounded-2xl aspect-video min-h-[16rem] h-full w-full max-h-[27rem] overflow-hidden">
+      <div className="relative rounded-2xl aspect-video min-h-[16rem] h-full w-full overflow-hidden">
         <img
           src={image}
           alt={title}
@@ -86,7 +86,7 @@ export function ProjectCard({
 
       {/* Mobile button to show the card description */}
       <button
-        className="absolute max-[1100px]:flex hidden text-blue-300 border bg-gray-900 bottom-2 right-2 text-xs py-1 px-3 
+        className="absolute max-[1025px]:flex hidden text-blue-300 border bg-gray-900 bottom-2 right-2 text-xs py-1 px-3 
       rounded-2xl cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >

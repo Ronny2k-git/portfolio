@@ -1,3 +1,4 @@
+export * from '../subcomponents/ExperienceCard'
 export * from './AboutCard'
 export * from './CardInfo'
 export * from './ProjectCard'
