@@ -84,7 +84,7 @@ export default function Home() {
               />
 
               {/* My Timeline */}
-              <Card className="w-full h-full gap-5 items-center justify-center rounded-4xl p-6">
+              <Card className="w-full gap-5 items-center justify-center rounded-4xl p-4 lg:p-6">
                 <div className="flex items-center text-solar gap-2 text-2xl max-sm:text-xl lg:hidden text-center">
                   <Icon className="!text-4xl ">avg_time</Icon>
                   My learning journey
@@ -250,8 +250,8 @@ export default function Home() {
               ))}
             </Card>
 
+            {/* Secondary Projects */}
             <div className="grid max-lg:grid-cols-1 grid-cols-2 gap-6 col-span-2">
-              {/* Secondary Projects */}
               {HOME_SECONDARY_PROJECTS.map((project) => (
                 <Card
                   key={project.title}
@@ -297,18 +297,3 @@ export default function Home() {
     </main>
   )
 }
-
-// {/* <div className="flex w-screen relative p-4">
-//             {/* Card One */}
-//             <Card
-//               className="relative z-10 w-[55vw] p-6 rounded-4xl h-[28rem]"
-//               variant={'gradient'}
-//             ></Card>
-
-//             {/* Card Two */}
-//             <Card
-//               className="z-20 absolute w-[55vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-//                    p-4 rounded-4xl h-[25rem] "
-//               variant={'basic'}
-//             ></Card>
-//           </div> */}

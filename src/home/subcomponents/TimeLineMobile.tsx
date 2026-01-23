@@ -12,7 +12,7 @@ export function TimeLineMobile() {
         className="relative h-[2.5px] bg-gradient-to-r from-blue-400 via-gray-400 to-blue-400 mb-12"
       />
 
-      <div className="grid max-sm:grid-cols-3 grid-cols-6 gap-4">
+      <div className="grid max-sm:grid-cols-3 grid-cols-6 gap-6">
         {TIMELINE.map((item, index) => (
           <motion.div
             key={item.title}

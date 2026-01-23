@@ -1,3 +1,4 @@
+import { Card } from '@/ui/components'
 import { useEffect, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
@@ -23,10 +24,10 @@ export function SkillCard({ title, pct, className }: SkillCardProps) {
   }, [])
 
   return (
-    <div
+    <Card
       ref={ref}
       className={twMerge(
-        `flex flex-col p-4 items-start py-8 gap-4 rounded-lg bg-black/30`,
+        `flex flex-col p-4 items-start py-8 gap-4 rounded-lg`,
         className,
       )}
     >
@@ -40,6 +41,6 @@ export function SkillCard({ title, pct, className }: SkillCardProps) {
           }}
         />
       </div>
-    </div>
+    </Card>
   )
 }

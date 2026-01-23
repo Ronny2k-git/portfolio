@@ -16,7 +16,7 @@ export function AboutCard({
 }: AboutCardProps) {
   return (
     <Card
-      className={twMerge('p-8 gap-4 rounded-4xl', className)}
+      className={twMerge('p-8 border-0 gap-4 rounded-4xl', className)}
       variant={'basic'}
     >
       <h3 className="text-xl font-bold text-solar">{title}</h3>

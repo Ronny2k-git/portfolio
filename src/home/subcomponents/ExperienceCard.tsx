@@ -2,28 +2,32 @@ import { Card, Icon } from '@/ui/components'
 
 const EXPERIENCE_HIGHLIGHTS = [
   {
-    id: 'ui',
-    text: 'Built reusable and accessible UI components',
+    id: '1',
+    text: 'Built reusable and accessible UI components and integrate them into the site.',
     icon: 'check_circle',
   },
   {
-    id: 'web3',
-    text: 'Integrated Web3 wallets and smart contract interactions',
+    id: '2',
+    text: 'Built new pages and wire it up with backend data.',
     icon: 'check_circle',
   },
   {
-    id: 'collab',
-    text: 'Collaborated with designers and backend engineers',
+    id: '3',
+    text: 'Contributed to the development of the new website version (v4).',
     icon: 'check_circle',
   },
   {
-    id: 'perf',
+    id: '4',
+    text: 'Contributed to the integration of the Solana ecosystem',
+    icon: 'check_circle',
+  },
+
+  {
+    id: '5',
     text: 'Improved performance and overall UX',
     icon: 'check_circle',
   },
 ]
-
-// {UPDATE THE CARD DESCRIPTIONS ("WHAT I DID AND MAIN DESCRIPTION")}
 
 export function ExperienceCard() {
   return (
