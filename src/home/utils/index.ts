@@ -6,7 +6,7 @@ export const HOME_CIRCLE_LOGO = [
     class: 'planet1 translate-x-[19rem] -translate-y-[17rem] size-14',
   },
   {
-    src: '/logos/vite-logo.png',
+    src: '/logos/tag/solana-logo.png',
     class: 'planet1 -translate-y-[13rem] size-14',
   },
   {

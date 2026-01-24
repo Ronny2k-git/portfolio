@@ -291,6 +291,15 @@ export default function Home() {
             <ExperienceSidebar />
           </div>
 
+          {/* {
+            TO DO LATER:
+
+            1 DOUBLE CHECK IF FINISH THE PROJECT
+            2 TEST THE RESPONSIBILITY
+            3 PROBABLY ADD SOMETHING BELOW MY EXPERIENCE SECTION
+            4 UPDATE THE README FILE
+          } */}
+
           <ExperienceCard />
         </motion.section>
       </div>

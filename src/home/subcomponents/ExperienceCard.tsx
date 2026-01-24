@@ -1,33 +1,5 @@
 import { Card, Icon } from '@/ui/components'
-
-const EXPERIENCE_HIGHLIGHTS = [
-  {
-    id: '1',
-    text: 'Built reusable and accessible UI components and integrate them into the site.',
-    icon: 'check_circle',
-  },
-  {
-    id: '2',
-    text: 'Built new pages and wire it up with backend data.',
-    icon: 'check_circle',
-  },
-  {
-    id: '3',
-    text: 'Contributed to the development of the new website version (v4).',
-    icon: 'check_circle',
-  },
-  {
-    id: '4',
-    text: 'Contributed to the integration of the Solana ecosystem',
-    icon: 'check_circle',
-  },
-
-  {
-    id: '5',
-    text: 'Improved performance and overall UX',
-    icon: 'check_circle',
-  },
-]
+import { EXPERIENCE_HIGHLIGHTS } from './utils'
 
 export function ExperienceCard() {
   return (
@@ -36,7 +8,7 @@ export function ExperienceCard() {
       <div className="relative hover:scale-102">
         <img
           src="/home/company-banner.png"
-          className="aspect-square sm:aspect-video  max-h-[25rem] w-full object-cover object-top"
+          className="aspect-square sm:aspect-video  max-h-[25rem] w-full object-cover max-sm:object-right"
         />
         <div className="absolute inset-0 bg-black/20" />
 

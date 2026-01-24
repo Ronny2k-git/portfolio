@@ -48,12 +48,13 @@ export function ProjectCard({
       {/* Content */}
       <div
         className={twMerge(
-          'absolute hidden group-hover:flex flex-col h-full gap-4 p-6 ',
+          'absolute hidden group-hover:flex flex-col h-full gap-4 p-4 sm:p-6 ',
           isOpen && 'flex flex-col transition',
         )}
       >
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2 sm:gap-4">
           <h3 className="text-xl font-semibold text-gray-400">{title}</h3>
+
           <p className="max-sm:text-sm text-base text-gray-300 leading-relaxed">
             {description}
           </p>

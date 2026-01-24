@@ -1,28 +1,15 @@
+import { TwitterIcon } from '@/global/icons'
 import { Card, Icon } from '@/ui/components'
 import { twMerge } from 'tailwind-merge'
 import { Tag } from '../components'
-
-const COMPANY_TECHS = [
-  { label: 'Solidity', icon: '/logos/solidity-logo.png' },
-  { label: 'React', icon: '/logos/tag/react-logo.webp' },
-  { label: 'Wagmi', icon: '/logos/tag/wagmi.png' },
-  { label: 'Viem', icon: '/logos/tag/viem.png' },
-  { label: 'Tailwind', icon: '/logos/tag/tailwind.png' },
-  { label: 'CSS', icon: '/logos/tag/css.png' },
-  { label: 'Radix Ui', icon: '/logos/tag/radix-logo.png' },
-  { label: 'Zod', icon: '/logos/tag/zod.png' },
-  { label: 'PlanetScale', icon: '/logos/tag/planet-scale.png' },
-  { label: 'Local Storage', icon: '/logos/tag/local-storage.png' },
-  { label: 'React hook form', icon: '/logos/tag/hook-form.png' },
-  { label: 'Tanstack Query', icon: '/logos/tag/tanstack.png' },
-]
+import { COMPANY_TECHS } from './utils'
 
 export function ExperienceSidebar({ className = '' }: { className?: string }) {
   return (
     <Card
       variant="basic"
       className={twMerge(
-        'rounded-4xl h-full p-6 xl:p-14 gap-4 lg:gap-8',
+        'rounded-4xl h-full p-6 lg:p-10 xl:p-14 gap-4 lg:gap-8',
         className,
       )}
     >
@@ -45,6 +32,26 @@ export function ExperienceSidebar({ className = '' }: { className?: string }) {
       <div className="flex flex-col lg:gap-2">
         <p className="text-base text-gray-500">Company</p>
         <p className="text-blue-200 max-sm:text-base text-lg">Fjord Foundry</p>
+
+        <div className="flex items-center gap-2 justify-between">
+          <a
+            href="https://www.fjordfoundry.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-blue-200/90 hover:underline"
+          >
+            www.fjordfoundry.com
+          </a>
+
+          <a
+            href="https://twitter.com/fjordfoundry"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border p-2 border-gray-700/80 hover:bg-black/40 rounded-full"
+          >
+            <TwitterIcon className="size-4" />
+          </a>
+        </div>
       </div>
 
       <div className="flex flex-col lg:gap-2">
