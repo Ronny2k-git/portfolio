@@ -146,7 +146,7 @@ export const HOME_METAVAULT_PROJECT = [
     image: '/home/metavault.png',
     github: 'https://github.com/Ronny2k-git/metavault',
     live: 'https://metavault-phi.vercel.app/',
-    class: 'max-[1300px]:col-span-1 col-span-2',
+    class: 'max-desktop-lg:col-span-1 col-span-2',
   },
 ]
 

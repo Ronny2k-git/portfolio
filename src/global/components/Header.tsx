@@ -10,6 +10,8 @@ export default function Header() {
         {NAV_ROUTE_ID.map((route, index) => (
           <a
             key={`${route.id}_${index}`}
+            target="_blank"
+            rel="noopener noreferrer"
             href={route.path ? route.path : undefined}
             className={`${route.class} hover:text-gray-300`}
             onClick={() => {
@@ -26,12 +28,16 @@ export default function Header() {
         <a
           className="brightness-80 hover:brightness-120 "
           href="https://github.com/Ronny2k-git"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <GithubIcon className="hover:scale-3d" />
         </a>
         <a
           className="brightness-80 hover:brightness-120 "
           href="https://x.com/RonnyEdson27329"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <TwitterIcon />
         </a>

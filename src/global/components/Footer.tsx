@@ -22,6 +22,8 @@ export default function Footer() {
             <a
               href="https://github.com/Ronny2k-git"
               className="flex gap-2 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <GithubIcon />
               Github
@@ -29,6 +31,8 @@ export default function Footer() {
             <a
               href="https://x.com/RonnyEdson27329"
               className="flex gap-2 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <TwitterIcon />
               Twitter
