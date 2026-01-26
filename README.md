@@ -1,53 +1,74 @@
-# My space Theme Portfolio using Vite.js, Tanstack Router and Three.js
+# My Portfolio using Vite.js and Tanstack Router.
 
 ## ‼️ Project Folder Structure
 
 ```txt
-📦 portfolio
-├── 📁 .tanstack/                 # TanStack Router cache / generated files
-├── 📁 .vscode/                   # VS Code workspace settings
-├── 📁 node_modules/              # Project dependencies
-├── 📁 public/                    # Static assets
-│   └── 📄 logo.svg
+📦 PORTFOLIO
+├── 📁 .tanstack/
+├── 📁 .vscode/
+├── 📁 dist/
+├── 📁 node_modules/
+├── 📁 public/
 │
 ├── 📁 src/
-│   ├── 📁 components/            # Reusable UI components
-│   │   ├── 📄 CardInfo.tsx
-│   │   ├── 📄 SkillCard.tsx
-│   │   └── 📄 index.ts
-│   │
-│   ├── 📁 global/                # Global layout-related components
+│   ├── 📁 global/
 │   │   └── 📁 components/
+│   │       ├── 📄 Footer.tsx
 │   │       ├── 📄 Header.tsx
-│   │       └── 📄 Footer.tsx
+│   │       └── 📄 index.ts
 │   │
-│   ├── 📁 icons/                 # SVG icon components
+│   ├── 📁 icons/
 │   │   ├── 📄 Github.tsx
 │   │   ├── 📄 Twitter.tsx
 │   │   └── 📄 index.ts
 │   │
-│   ├── 📁 utils/                 # Utility/helper functions
+│   ├── 📁 utils/
 │   │   └── 📄 index.ts
 │   │
-│   ├── 📁 routes/                # TanStack Router routes
-│   │   ├── 📄 __root.tsx
-│   │   └── 📄 index.tsx
+│   ├── 📁 home/
+│   │   ├── 📁 components/
+│   │   │   ├── 📄 AboutCard.tsx
+│   │   │   ├── 📄 CardInfo.tsx
+│   │   │   ├── 📄 ProjectCard.tsx
+│   │   │   ├── 📄 SectionCard.tsx
+│   │   │   ├── 📄 SectionHeader.tsx
+│   │   │   ├── 📄 SkillCard.tsx
+│   │   │   ├── 📄 Tag.tsx
+│   │   │   ├── 📄 TimelineSection.tsx
+│   │   │   └── 📄 index.ts
+│   │   │
+│   │   ├── 📁 subcomponents/
+│   │   │   ├── 📄 ExperienceCard.tsx
+│   │   │   ├── 📄 ExperienceSideBar.tsx
+│   │   │   ├── 📄 TimelineDesktop.tsx
+│   │   │   ├── 📄 TimelineMobile.tsx
+│   │   │   └── 📄 index.ts
+│   │   │
+│   │   └── 📁 utils/
+│   │       ├── _root.tsx
+│   │       ├── index.tsx
 │   │
-│   ├── 📄 main.tsx               # Application entry point
-│   ├── 📄 routeTree.gen.ts       # Auto-generated TanStack route tree
-│   ├── 📄 styles.css             # Global styles (Tailwind entry)
-│   └── 📄 reportWebVitals.ts
+│   ├── 📁 routes/
+│   │
+│   ├── 📁 ui/
+│   │   └── 📁 components/
+│   │       ├── 📄 Card.tsx
+│   │       ├── 📄 Icon.tsx
+│   │       └── 📄 index.ts
+│   │
+│   ├── 📄 logo.svg
+│   ├── 📄 main.tsx
+│   ├── 📄 reportWebVitals.ts
+│   ├── 📄 routeTree.gen.ts
+│   └── 📄 styles.css
 │
+├── 📄 .cta.json
 ├── 📄 .gitignore
 ├── 📄 .prettierignore
 ├── 📄 eslint.config.js
 ├── 📄 index.html
-├── 📄 package.json
 ├── 📄 package-lock.json
-├── 📄 prettier.config.js
-├── 📄 README.md
-├── 📄 tsconfig.json
-└── 📄 vite.config.ts
+├── 📄 package.json
 
 ```
 
@@ -65,6 +86,7 @@
 </p>
 
 **Libraries & Tools**
+
 - React
 - TanStack Router
 - Tailwind CSS
@@ -72,8 +94,8 @@
 - Framer Motion (Animations)
 
 **Languages**
+
 - JavaScript
 - TypeScript
 - HTML5
 - CSS3
-
