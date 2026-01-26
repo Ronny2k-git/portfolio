@@ -73,8 +73,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 120 }}
             transition={{ duration: 1 }}
           >
-            <div className="w-full max-lg:grid-cols-1 grid grid-cols-2 gap-6">
-              <div className="flex flex-col gap-6">
+            <div className="w-full  max-lg:grid-cols-1 grid grid-cols-2 gap-6">
+              <div className="flex flex-col gap-6 ">
                 <SectionHeader
                   className="max-lg:hidden"
                   title="About Me"
@@ -87,7 +87,7 @@ export default function Home() {
                 />
 
                 {/* My Timeline */}
-                <Card className="w-full gap-5 items-center justify-center rounded-4xl p-4 lg:p-6">
+                <Card className="w-full h-full gap-5 items-center justify-center rounded-4xl p-4 lg:p-6">
                   <div className="flex items-center text-solar gap-2 text-2xl max-sm:text-xl lg:hidden text-center">
                     <Icon className="!text-4xl ">avg_time</Icon>
                     My learning journey
@@ -294,13 +294,6 @@ export default function Home() {
 
               <ExperienceSidebar />
             </div>
-
-            {/* {
-            TO DO LATER:
-
-            1 PROBABLY ADD SOMETHING BELOW MY EXPERIENCE SECTION
-            2 UPDATE THE README FILE
-          } */}
 
             <ExperienceCard />
           </motion.section>

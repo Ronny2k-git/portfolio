@@ -122,6 +122,8 @@ export const SKILL_CARD_WEB3 = [
 // MY PROJECTS SECTION
 
 export const HOME_PROJECT_TECHS = [
+  { label: 'Next.js', icon: '/logos/tag/next-js.jpeg' },
+  { label: 'Vite', icon: '/logos/vite-logo.png' },
   { label: 'Solidity', icon: '/logos/solidity-logo.png' },
   { label: 'React', icon: '/logos/tag/react-logo.webp' },
   { label: 'Tanstack', icon: '/logos/tag/tanstack.png' },
@@ -162,7 +164,7 @@ export const HOME_SECONDARY_PROJECTS = [
   {
     title: 'Marketplace',
     description:
-      'A marketplace where you can buy products, add them to the cart and create you own product on the website. I worked on this project for two weeks. It was one of my first projects when I started studying programming in 2023.',
+      'A marketplace where you can buy products, add them to the cart and create you own product on the website. I worked on this project for two weeks in the past and recently refactored it.',
     image: '/home/marketplace.png',
     github: 'https://github.com/Ronny2k-git/marketplace',
     class: 'col-span-1',

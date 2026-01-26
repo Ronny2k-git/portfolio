@@ -22,11 +22,11 @@ export function AboutCard({
       <h3 className="text-xl font-bold text-solar">{title}</h3>
 
       {description && (
-        <p className="text-sm leading-relaxed text-gray-400">{description}</p>
+        <p className="text-base leading-relaxed text-gray-400">{description}</p>
       )}
 
       {items && (
-        <ul className="flex flex-col gap-2 text-sm text-gray-400">
+        <ul className="flex flex-col gap-2 text-base text-gray-400">
           {items.map((item) => (
             <li key={item}>• {item}</li>
           ))}

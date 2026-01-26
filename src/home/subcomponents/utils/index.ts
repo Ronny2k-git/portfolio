@@ -28,6 +28,8 @@ export const EXPERIENCE_HIGHLIGHTS = [
 ]
 
 export const COMPANY_TECHS = [
+  { label: 'Next.js', icon: '/logos/tag/next-js.jpeg' },
+  { label: 'Vite', icon: '/logos/vite-logo.png' },
   { label: 'Solidity', icon: '/logos/solidity-logo.png' },
   { label: 'Solana', icon: '/logos/tag/solana-logo.png' },
   { label: 'React', icon: '/logos/tag/react-logo.webp' },
@@ -38,6 +40,7 @@ export const COMPANY_TECHS = [
   { label: 'Radix Ui', icon: '/logos/tag/radix-logo.png' },
   { label: 'Zod', icon: '/logos/tag/zod.png' },
   { label: 'PlanetScale', icon: '/logos/tag/planet-scale.png' },
+  { label: 'Docker', icon: '/logos/tag/docker.png' },
   { label: 'Local Storage', icon: '/logos/tag/local-storage.png' },
   { label: 'React hook form', icon: '/logos/tag/hook-form.png' },
   { label: 'Tanstack Query', icon: '/logos/tag/tanstack.png' },
