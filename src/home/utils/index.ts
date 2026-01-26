@@ -23,8 +23,7 @@ export const HOME_CIRCLE_LOGO = [
   },
   {
     src: 'profile.png',
-    class:
-      'planet1 -translate-x-[31rem] -translate-y-[6rem] size-42 border-2 border-blue-300',
+    class: 'planet1 -translate-x-[31rem] -translate-y-[6rem] size-42',
   },
 ]
 

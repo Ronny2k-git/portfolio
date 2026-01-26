@@ -35,7 +35,7 @@ export function CardInfo() {
     <Card
       className="
         relative z-50 justify-center
-        max-sm:max-w-[20.4rem]
+        max-sm:max-w-[19.5rem]
         size-[27rem]
         py-6 sm:rounded-full rounded-4xl
 
@@ -54,7 +54,7 @@ export function CardInfo() {
           key={animationKey}
           className="
             px-4 text-5xl sm:text-6xl font-name font-bold text-solar 
-            drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)] hover:scale-110"
+            drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)] hover:scale-110 whitespace-nowrap"
         >
           {currentName.split('').map((char, index) => (
             <span
