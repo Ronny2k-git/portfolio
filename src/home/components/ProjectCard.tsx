@@ -33,14 +33,21 @@ export function ProjectCard({
         <img
           src={image}
           alt={title}
-          className="h-full w-full rounded-2xl object-cover object-top transition duration-500 group-hover:scale-105"
+          className="h-full w-full rounded-2xl object-cover object-top transition duration-500 lg:group-hover:scale-105"
         />
 
-        {/* Overlay */}
+        {/* Desktop overlay (hover only) */}
+        <div
+          className={
+            'max-lg:hidden absolute inset-0 bg-black/75 opacity-0 transition duration-300 group-hover:opacity-100'
+          }
+        />
+
+        {/* Mobile overlay (state only) */}
         <div
           className={twMerge(
-            'absolute inset-0 bg-black/75 opacity-0 transition duration-300 group-hover:opacity-100',
-            isOpen && 'opacity-100',
+            'absolute inset-0 bg-black/75 lg:hidden',
+            isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none',
           )}
         />
       </div>
@@ -48,8 +55,9 @@ export function ProjectCard({
       {/* Content */}
       <div
         className={twMerge(
-          'absolute hidden group-hover:flex flex-col h-full gap-4 p-4 sm:p-6 ',
-          isOpen && 'flex flex-col transition',
+          'absolute flex flex-col h-full gap-4 p-4 sm:p-6 ',
+          !isOpen && 'opacity-0 pointer-events-none lg:pointer-events-auto',
+          'lg:opacity-0 lg:group-hover:opacity-100',
         )}
       >
         <div className="flex flex-col gap-2 sm:gap-4">
@@ -62,7 +70,7 @@ export function ProjectCard({
 
         {/* Actions */}
         <div className="flex h-full justify-between items-end gap-4 text-sm">
-          <div className="">
+          <div className="flex gap-4">
             {github && (
               <a
                 href={github}
