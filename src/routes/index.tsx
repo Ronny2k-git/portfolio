@@ -216,7 +216,10 @@ export default function Home() {
                       projects:
                     </p>
                     {/* Tags */}
-                    <ul className="flex flex-wrap max-sm:justify-center gap-2 text-black cursor-pointer">
+                    <ul
+                      className="flex flex-wrap gap-2 text-black cursor-pointer"
+                      translate="no"
+                    >
                       {HOME_PROJECT_TECHS.map((tech, index) => {
                         return (
                           <Tag

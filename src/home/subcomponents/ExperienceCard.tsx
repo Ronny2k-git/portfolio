@@ -19,7 +19,9 @@ export function ExperienceCard() {
           />
 
           <div>
-            <h3 className="text-2xl text-indigo-300">Fjord Foundry</h3>
+            <h3 className="text-2xl text-indigo-300" translate="no">
+              Fjord Foundry
+            </h3>
             <p className="text-sm text-gray-400">
               Frontend Developer · Oct 2024 — Nov 2025
             </p>

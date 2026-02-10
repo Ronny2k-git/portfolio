@@ -65,7 +65,10 @@ export function ExperienceSidebar({ className = '' }: { className?: string }) {
       <div className="flex flex-col gap-4">
         <p className="text-gray-400">Tech Stack</p>
 
-        <ul className="flex flex-wrap gap-2 text-black cursor-pointer">
+        <ul
+          className="flex flex-wrap gap-2 text-black cursor-pointer"
+          translate="no"
+        >
           {COMPANY_TECHS.map((tech, index) => {
             return (
               <Tag
