@@ -45,7 +45,7 @@ export const ABOUT_CARDS = [
   },
   {
     title: 'Focus',
-    items: ['Web3', 'Frontend', 'UX', 'Performance'],
+    items: ['Web/Web3', 'Frontend', 'UI/UX', 'Performance'],
   },
 ]
 
@@ -139,8 +139,27 @@ export const HOME_PROJECT_TECHS = [
   { label: 'React hook form', icon: '/logos/tag/hook-form.png' },
 ]
 
+export const MY_PROJECTS_TIMELINE = [
+  {
+    id: 'marketplace',
+    img: '/home/marketplace.png',
+    date: 'Nov 2024',
+  },
+  {
+    id: 'vault-marketplace',
+    img: '/home/vault-marketplace.png',
+    date: 'Jan 2025',
+  },
+  {
+    id: 'metavault',
+    img: '/home/metavault.png',
+    date: 'Oct 2025',
+  },
+]
+
 export const HOME_METAVAULT_PROJECT = [
   {
+    id: 'metavault',
     title: 'Metavault',
     description:
       'A decentralized Web3 platform where users can create on-chain vaults, execute trades, monitor active and completed vaults, and manage their profiles directly on the blockchain. I worked on this project for 3 months.',
@@ -153,19 +172,21 @@ export const HOME_METAVAULT_PROJECT = [
 
 export const HOME_SECONDARY_PROJECTS = [
   {
-    title: 'Vault Marketplace',
-    description:
-      'A decentralized web3 marketplace when you can create your own vault on the blockchain to save your tokens and manage them on sepolia network, allowing users to deposit, withdraw, and explore active or finalized vaults',
-    image: '/home/vault-marketplace.png',
-    github: 'https://github.com/Ronny2k-git/vault-marketplace',
-    class: 'col-span-1',
-  },
-  {
+    id: 'marketplace',
     title: 'Marketplace',
     description:
       'A marketplace where you can buy products, add them to the cart and create you own product on the website. I worked on this project for two weeks in the past and recently refactored it.',
     image: '/home/marketplace.png',
     github: 'https://github.com/Ronny2k-git/marketplace',
+    class: 'col-span-1',
+  },
+  {
+    id: 'vault-marketplace',
+    title: 'Vault Marketplace',
+    description:
+      'A decentralized web3 marketplace when you can create your own vault on the blockchain to save your tokens and manage them on sepolia network, allowing users to deposit, withdraw, and explore active or finalized vaults',
+    image: '/home/vault-marketplace.png',
+    github: 'https://github.com/Ronny2k-git/vault-marketplace',
     class: 'col-span-1',
   },
 ]

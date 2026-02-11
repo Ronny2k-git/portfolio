@@ -1,3 +1,4 @@
+import { scrollToContainer } from '@/global/utils'
 import {
   AboutCard,
   CardInfo,
@@ -16,6 +17,7 @@ import {
   HOME_METAVAULT_PROJECT,
   HOME_PROJECT_TECHS,
   HOME_SECONDARY_PROJECTS,
+  MY_PROJECTS_TIMELINE,
   SKILL_CARD_DATABASES_AND_INFRA,
   SKILL_CARD_LANGUAGES,
   SKILL_CARD_WEB3,
@@ -240,22 +242,56 @@ export default function Home() {
               </div>
 
               {/* Main Project */}
-              <Card
-                variant={'basic'}
-                className="grid max-desktop-lg:col-span-1 max-desktop-lg:grid-cols-1 grid-cols-2 gap-6 p-4 rounded-4xl"
-              >
-                {HOME_METAVAULT_PROJECT.map((project) => (
-                  <ProjectCard
-                    className={`${project.class}`}
-                    key={project.title}
-                    image={project.image}
-                    title={project.title}
-                    description={project.description}
-                    github={project.github}
-                    live={project.live}
-                  />
-                ))}
-              </Card>
+              <div className="flex flex-col items-center gap-6">
+                {/* Projects Time Line */}
+                <Card
+                  className="hidden lg:flex items-center gap-1 justify-center min-h-28 px-6 py-4 rounded-4xl"
+                  variant={'secondary'}
+                >
+                  <div className="flex gap-4">
+                    {MY_PROJECTS_TIMELINE.map((project, index) => (
+                      <div className="flex items-center gap-2">
+                        <button
+                          className="flex flex-col items-center gap-2"
+                          onClick={() => scrollToContainer(project.id)}
+                        >
+                          <img
+                            className="w-26 h-12 border border-gray-600 rounded-xl object-cover hover:scale-105 cursor-pointer"
+                            src={project.img}
+                          />
+                          <span className="text-xs text-gray-400">
+                            {project.date}
+                          </span>
+                        </button>
+
+                        {/* Line between the projects*/}
+                        {index < MY_PROJECTS_TIMELINE.length - 1 && (
+                          <div className="w-10 mx-2 -mt-4 h-px bg-gray-400"></div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </Card>
+
+                {/* Description & Techs tag */}
+                <Card
+                  variant={'basic'}
+                  className="h-full grid max-desktop-lg:col-span-1 max-desktop-lg:grid-cols-1 grid-cols-2 gap-6 p-4 rounded-4xl"
+                >
+                  {HOME_METAVAULT_PROJECT.map((project) => (
+                    <ProjectCard
+                      id={project.id}
+                      className={`${project.class}`}
+                      key={project.title}
+                      image={project.image}
+                      title={project.title}
+                      description={project.description}
+                      github={project.github}
+                      live={project.live}
+                    />
+                  ))}
+                </Card>
+              </div>
 
               {/* Secondary Projects */}
               <div className="grid max-lg:grid-cols-1 grid-cols-2 gap-6 col-span-2">
@@ -266,6 +302,7 @@ export default function Home() {
                     className="p-4 rounded-4xl"
                   >
                     <ProjectCard
+                      id={project.id}
                       className={`${project.class}`}
                       key={project.title}
                       image={project.image}

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 type ProjectCardProps = {
+  id?: string
   title: string
   description: string
   image: string
@@ -12,6 +13,7 @@ type ProjectCardProps = {
 }
 
 export function ProjectCard({
+  id,
   title,
   description,
   image,
@@ -23,6 +25,7 @@ export function ProjectCard({
 
   return (
     <Card
+      id={id}
       className={twMerge(
         'group w-full relative rounded-4xl backdrop-blur-sm transition',
         className,
