@@ -6,8 +6,8 @@ export const HOME_CIRCLE_LOGO = [
     class: 'planet1 translate-x-[19rem] -translate-y-[17rem] size-14',
   },
   {
-    src: '/logos/tag/solana-logo.png',
-    class: 'planet1 -translate-y-[13rem] size-14',
+    src: '/logos/node-js.png',
+    class: 'planet1 -translate-y-[13.2rem] size-14',
   },
   {
     src: '/logos/ts-logo.png',
@@ -32,12 +32,13 @@ export const ABOUT_CARDS = [
   {
     title: 'Who I Am',
     description:
-      'I’m Ronny, a Web Developer from Brazil focused on modern frontend and Web3 applications. Over the last two years, I’ve been actively working with blockchain technologies, smart contracts, and Web3 ecosystems.',
+      'I’m Ronny, a Fullstack Developer from Brazil focused on building scalable and modern web applications. Over the last two years, I’ve developed user interfaces, blockchain integrations, smart contracts, and decentralized applications (dApps).',
   },
   {
     title: 'What I Do',
     items: [
-      'Frontend architecture',
+      'Frontend (JS/TS)',
+      'Backend (Node.js)',
       'Web3 integrations',
       'UI performance optimization',
       'Clean & scalable code',
@@ -45,7 +46,13 @@ export const ABOUT_CARDS = [
   },
   {
     title: 'Focus',
-    items: ['Web/Web3', 'Frontend', 'UI/UX', 'Performance'],
+    items: [
+      'Web/Web3',
+      'Frontend',
+      'Backend (Node.js)',
+      'UI/UX',
+      'Performance',
+    ],
   },
 ]
 
@@ -76,9 +83,9 @@ export const TIMELINE = [
   },
   {
     code: 5,
-    title: 'Database',
+    title: 'DB / Node.js',
     description: 'Data modeling and backend integrations',
-    img: '/logos/database.png',
+    img: '/logos/node-db.png',
   },
   {
     code: 6,
@@ -135,6 +142,7 @@ export const HOME_PROJECT_TECHS = [
   { label: 'PlanetScale', icon: '/logos/tag/planet-scale.png' },
   { label: 'Neon', icon: '/logos/tag/neon.png' },
   { label: 'i18next', icon: '/logos/tag/i18next.png' },
+  { label: 'Prisma', icon: '/logos/tag/prisma-orm.png' },
   { label: 'Local Storage', icon: '/logos/tag/local-storage.png' },
   { label: 'React hook form', icon: '/logos/tag/hook-form.png' },
 ]

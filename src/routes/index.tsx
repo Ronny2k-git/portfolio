@@ -89,8 +89,8 @@ export default function Home() {
                 />
 
                 {/* My Timeline */}
-                <Card className="w-full h-full gap-5 items-center justify-center rounded-4xl p-4 lg:p-6">
-                  <div className="flex items-center text-solar gap-2 text-2xl max-sm:text-xl lg:hidden text-center">
+                <Card className="w-full h-full gap-5 items-center rounded-4xl p-4 lg:p-6">
+                  <div className="flex items-center text-solar gap-2 text-2xl max-sm:text-xl lg:mb-10 text-center">
                     <Icon className="!text-4xl ">avg_time</Icon>
                     My learning journey
                   </div>
@@ -213,10 +213,12 @@ export default function Home() {
                       <span className="text-blue-200">smart contracts</span>.
                     </h3>
 
-                    <p className="text-gray-400">
-                      Languages, frameworks and platforms I used to build these
-                      projects:
-                    </p>
+                    <h4 className="text-gray-400">
+                      <span className="text-blue-200">Languages</span>,{' '}
+                      <span className="text-blue-200">frameworks</span> and{' '}
+                      <span className="text-blue-200">tools</span> I used to
+                      build these projects:
+                    </h4>
                     {/* Tags */}
                     <ul
                       className="flex flex-wrap gap-2 text-black cursor-pointer"

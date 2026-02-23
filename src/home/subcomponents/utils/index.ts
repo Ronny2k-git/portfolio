@@ -40,6 +40,7 @@ export const COMPANY_TECHS = [
   { label: 'Radix Ui', icon: '/logos/tag/radix-logo.png' },
   { label: 'Zod', icon: '/logos/tag/zod.png' },
   { label: 'PlanetScale', icon: '/logos/tag/planet-scale.png' },
+  { label: 'Prisma.io', icon: '/logos/tag/prisma-orm.png' },
   { label: 'Docker', icon: '/logos/tag/docker.png' },
   { label: 'Local Storage', icon: '/logos/tag/local-storage.png' },
   { label: 'React hook form', icon: '/logos/tag/hook-form.png' },

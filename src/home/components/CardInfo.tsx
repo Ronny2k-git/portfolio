@@ -11,10 +11,10 @@ const MAIN_STACK = [
   { label: 'CSS3', icon: '/logos/tag/css.png' },
   { label: 'Tailwind', icon: '/logos/tag/tailwind.png' },
   { label: 'Solidity', icon: '/logos/solidity-logo.png' },
-  { label: 'Rust', icon: '/logos/tag/rust-logo.png' },
+  { label: 'Node.js', icon: '/logos/node-js.png' },
 ]
 
-const NAMES = ['Ronny EDM', 'Web Dev']
+const NAMES = ['Ronny EDM', 'Fullstack Dev']
 
 export function CardInfo() {
   const [nameIndex, setNameIndex] = useState(0)
@@ -35,8 +35,8 @@ export function CardInfo() {
     <Card
       className="
         relative z-50 justify-center
-        max-sm:max-w-[19.5rem]
-        size-[27rem]
+        max-sm:max-w-[20rem]
+        size-[27.5rem]
         py-6 sm:rounded-full rounded-4xl
 
       "
@@ -71,7 +71,7 @@ export function CardInfo() {
         <div className=" h-px w-full bg-gray-400" />
         {/* Role */}
         <p className="text-base sm:text-xl text-gray-400 max-sm:text-gray-400 rounded-full">
-          Frontend Web Developer
+          Fullstack Developer
         </p>
         {/* Stack */}
         <div className="sm:hidden mt-4 flex flex-col items-center">
