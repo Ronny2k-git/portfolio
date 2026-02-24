@@ -1,4 +1,4 @@
-import { GithubIcon, TwitterIcon } from '../icons'
+import { GithubIcon, LinkedInIcon, TwitterIcon } from '../icons'
 import { NAV_ROUTE_ID, scrollToContainer } from '../utils'
 
 export default function Header() {
@@ -40,6 +40,14 @@ export default function Header() {
           rel="noopener noreferrer"
         >
           <TwitterIcon />
+        </a>
+        <a
+          className="brightness-80 hover:brightness-120 "
+          href="https://www.linkedin.com/in/ronny-edson-duarte-bb092b25a/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedInIcon />
         </a>
       </div>
     </header>

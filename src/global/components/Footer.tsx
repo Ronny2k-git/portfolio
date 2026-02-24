@@ -1,4 +1,5 @@
 import { GithubIcon, TwitterIcon } from '../icons'
+import { LinkedInIcon } from '../icons/Linkedin'
 
 export default function Footer() {
   return (
@@ -36,6 +37,15 @@ export default function Footer() {
             >
               <TwitterIcon />
               Twitter
+            </a>
+            <a
+              href="https://github.com/Ronny2k-git"
+              className="flex items-start gap-2 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon />
+              Linkedin
             </a>
           </div>
 
