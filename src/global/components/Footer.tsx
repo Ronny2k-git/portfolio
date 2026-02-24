@@ -39,7 +39,7 @@ export default function Footer() {
               Twitter
             </a>
             <a
-              href="https://github.com/Ronny2k-git"
+              href="https://www.linkedin.com/in/ronny-edson-duarte-bb092b25a/"
               className="flex items-start gap-2 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
