@@ -26,10 +26,11 @@ export function TimeLineMobile() {
 
             <div className="flex items-center justify-center size-12 rounded-full bg-black/60 border border-white/10 shadow-[0_0_20px_rgba(96,165,250,0.25)]">
               <img
-                className="!text-2xl rounded-full text-blue-300"
+                className="!text-2xl rounded-full size-12 text-blue-300"
                 src={item.img}
               />
             </div>
+
             <h4 className="text-sm font-semibold text-solar">{item.title}</h4>
             <p className="text-xs text-gray-400 max-w-[140px]">
               {item.description}

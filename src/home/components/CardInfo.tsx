@@ -35,7 +35,7 @@ export function CardInfo() {
     <Card
       className="
         relative z-50 justify-center
-        max-sm:max-w-[20rem]
+        max-sm:max-w-[19.8rem]
         size-[27.5rem]
         py-6 sm:rounded-full rounded-4xl
 
@@ -53,7 +53,7 @@ export function CardInfo() {
         <span
           key={animationKey}
           className="
-            px-4 text-5xl sm:text-6xl font-name font-bold text-solar 
+            px-4 text-[44px] sm:text-6xl font-name font-bold text-solar 
             drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)] hover:scale-110 whitespace-nowrap"
           translate="no"
         >
@@ -70,7 +70,7 @@ export function CardInfo() {
         {/* Divider */}
         <div className=" h-px w-full bg-gray-400" />
         {/* Role */}
-        <p className="text-base sm:text-xl text-gray-400 max-sm:text-gray-400 rounded-full">
+        <p className="text-lg sm:text-xl text-gray-400 max-sm:text-gray-400 rounded-full">
           Fullstack Developer
         </p>
         {/* Stack */}
@@ -99,7 +99,7 @@ export function CardInfo() {
           </ul>
         </div>
 
-        <p className="max-sm:hidden text-sm text-gray-400/90 max-sm:text-black/70">
+        <p className="max-sm:hidden text-base text-gray-400/90 max-sm:text-black/70">
           Building modern, performant, and decentralized web applications
         </p>
       </section>

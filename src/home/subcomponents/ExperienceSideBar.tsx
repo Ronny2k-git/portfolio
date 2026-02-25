@@ -9,7 +9,7 @@ export function ExperienceSidebar({ className = '' }: { className?: string }) {
     <Card
       variant="basic"
       className={twMerge(
-        'rounded-4xl h-full p-6 lg:p-10 xl:p-14 gap-4 lg:gap-8',
+        'rounded-4xl h-full p-8 max-sm:p-4 lg:p-10 xl:p-14 gap-4 lg:gap-8',
         className,
       )}
     >
@@ -31,7 +31,9 @@ export function ExperienceSidebar({ className = '' }: { className?: string }) {
 
       <div className="flex flex-col lg:gap-2">
         <p className="text-base text-gray-500">Company</p>
-        <p className="text-blue-200 max-sm:text-base text-lg">Fjord Foundry</p>
+        <p translate="no" className="text-blue-200 max-sm:text-base text-lg">
+          Fjord Foundry
+        </p>
 
         <div className="flex items-center gap-2 justify-between">
           <a
@@ -66,7 +68,7 @@ export function ExperienceSidebar({ className = '' }: { className?: string }) {
         <p className="text-gray-400">Tech Stack</p>
 
         <ul
-          className="flex flex-wrap gap-2 text-black cursor-pointer"
+          className="flex flex-wrap max-sm:justify-center gap-2 text-black cursor-pointer"
           translate="no"
         >
           {COMPANY_TECHS.map((tech, index) => {

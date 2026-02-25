@@ -41,7 +41,7 @@ export default function Home() {
         <div className="flex flex-col w-full gap-40 ">
           {/* First Section  */}
           <section
-            className="relative rounded-4xl mb-10 flex w-full h-[44rem] justify-center items-center 
+            className="relative rounded-4xl flex w-full h-[44rem] justify-center items-center 
           overflow-x-clip"
           >
             <div
@@ -102,7 +102,7 @@ export default function Home() {
               {/* About me Cards */}
               <Card
                 variant={'basic'}
-                className="p-6 h-full items-center justify-center gap-4 rounded-4xl"
+                className="p-4 sm:p-6 h-full items-center justify-center gap-4 rounded-4xl"
               >
                 {ABOUT_CARDS.map((card, index) => {
                   return (
@@ -186,8 +186,8 @@ export default function Home() {
                 />
 
                 {/* Description & Techs tag */}
-                <Card className="w-full h-full rounded-4xl p-8">
-                  <div className="flex flex-col max-sm:items-center h-full gap-6">
+                <Card className="w-full h-full rounded-4xl p-4 sm:p-8">
+                  <div className="flex flex-col h-full gap-6">
                     {/* Mobile title */}
                     <div className="hidden max-lg:flex flex-col items-center justify-center mb-2 text-gray-500">
                       <div className="flex items-center text-solar gap-2 text-3xl max-sm:text-2xl">
@@ -221,7 +221,7 @@ export default function Home() {
                     </h4>
                     {/* Tags */}
                     <ul
-                      className="flex flex-wrap gap-2 text-black cursor-pointer"
+                      className="flex flex-wrap gap-2 max-sm:justify-center text-black cursor-pointer"
                       translate="no"
                     >
                       {HOME_PROJECT_TECHS.map((tech, index) => {
