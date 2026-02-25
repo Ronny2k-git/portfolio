@@ -2,7 +2,7 @@
 
 export const HOME_CIRCLE_LOGO = [
   {
-    src: '/logos/solidity-logo.png',
+    src: '/logos/aws.jpeg',
     class: 'planet1 translate-x-[19rem] -translate-y-[17rem] size-14',
   },
   {
@@ -10,8 +10,8 @@ export const HOME_CIRCLE_LOGO = [
     class: 'planet1 -translate-y-[13.2rem] size-14',
   },
   {
-    src: '/logos/ts-logo.png',
-    class: 'planet1 translate-x-[25.5rem] -translate-y-[1rem] size-14',
+    src: '/logos/js-ts-logo.png',
+    class: 'planet1 translate-x-[25.2rem] -translate-y-[1rem] size-15',
   },
   {
     src: '/logos/eth-logo.png',
