@@ -186,6 +186,7 @@ export const HOME_SECONDARY_PROJECTS = [
       'A marketplace where you can buy products, add them to the cart and create you own product on the website. I worked on this project for two weeks in the past and recently refactored it.',
     image: '/home/marketplace.png',
     github: 'https://github.com/Ronny2k-git/marketplace',
+    live: 'https://marketplace-pc.vercel.app/',
     class: 'col-span-1',
   },
   {

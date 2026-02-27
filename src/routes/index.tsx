@@ -311,6 +311,7 @@ export default function Home() {
                       title={project.title}
                       description={project.description}
                       github={project.github}
+                      live={project.live}
                     />
                   </Card>
                 ))}
