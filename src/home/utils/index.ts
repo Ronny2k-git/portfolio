@@ -186,7 +186,7 @@ export const HOME_SECONDARY_PROJECTS = [
       'A website where users can create their products to manage inventory and track updates. All data is stored in local storage. I worked on this project for two weeks in the past and recently refactored it.',
     image: '/home/manager.webp',
     github: 'https://github.com/Ronny2k-git/marketplace',
-    live: 'https://marketplace-pc.vercel.app/',
+    live: 'https://product-manager2k.vercel.app/',
     class: 'col-span-1',
   },
   {
