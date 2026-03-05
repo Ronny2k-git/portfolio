@@ -149,8 +149,8 @@ export const HOME_PROJECT_TECHS = [
 
 export const MY_PROJECTS_TIMELINE = [
   {
-    id: 'marketplace',
-    img: '/home/marketplace.png',
+    id: 'manager',
+    img: '/home/manager.webp',
     date: 'Nov 2024',
   },
   {
@@ -180,11 +180,11 @@ export const HOME_METAVAULT_PROJECT = [
 
 export const HOME_SECONDARY_PROJECTS = [
   {
-    id: 'marketplace',
-    title: 'Marketplace',
+    id: 'manager',
+    title: 'Product Manager',
     description:
-      'A marketplace where you can buy products, add them to the cart and create you own product on the website. I worked on this project for two weeks in the past and recently refactored it.',
-    image: '/home/marketplace.png',
+      'A website where users can create their products to manage inventory and track updates. All data is stored in local storage. I worked on this project for two weeks in the past and recently refactored it.',
+    image: '/home/manager.webp',
     github: 'https://github.com/Ronny2k-git/marketplace',
     live: 'https://marketplace-pc.vercel.app/',
     class: 'col-span-1',
