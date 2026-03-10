@@ -25,6 +25,7 @@ export function TimeLineDesktop() {
                   <img
                     className=" text-blue-300 rounded-full size-11"
                     src={item.img}
+                    alt={item.alt}
                   />
                 </div>
               </div>

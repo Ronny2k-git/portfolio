@@ -28,6 +28,7 @@ export function TimeLineMobile() {
               <img
                 className="!text-2xl rounded-full size-12 text-blue-300"
                 src={item.img}
+                alt={item.alt}
               />
             </div>
 

@@ -14,6 +14,7 @@ export default function Header() {
             rel="noopener noreferrer"
             href={route.path ? route.path : undefined}
             className={`${route.class} hover:text-gray-300`}
+            aria-label={route.ariaLabel}
             onClick={() => {
               requestAnimationFrame(() => scrollToContainer(route.id!))
             }}
@@ -27,6 +28,7 @@ export default function Header() {
       <div className="flex items-center gap-4 text-gray-400 cursor-pointer">
         <a
           className="brightness-80 hover:brightness-120 "
+          aria-label="View my github profile (new tab)"
           href="https://github.com/Ronny2k-git"
           target="_blank"
           rel="noopener noreferrer"
@@ -35,6 +37,7 @@ export default function Header() {
         </a>
         <a
           className="brightness-80 hover:brightness-120 "
+          aria-label="View my twitter profile (new tab)"
           href="https://x.com/RonnyEdson27329"
           target="_blank"
           rel="noopener noreferrer"
@@ -43,6 +46,7 @@ export default function Header() {
         </a>
         <a
           className="brightness-80 hover:brightness-120 "
+          aria-label="View my linkedin profile (new tab)"
           href="https://www.linkedin.com/in/ronny-edson-duarte-bb092b25a/"
           target="_blank"
           rel="noopener noreferrer"

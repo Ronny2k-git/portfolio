@@ -8,6 +8,7 @@ export function ExperienceCard() {
       <div className="relative hover:scale-102">
         <img
           src="/home/company-banner.png"
+          alt="The company's banner"
           className="aspect-square sm:aspect-video  max-h-[25rem] w-full object-cover max-sm:object-right"
         />
         <div className="absolute inset-0 bg-black/20" />
@@ -15,6 +16,7 @@ export function ExperienceCard() {
         <div className="absolute bottom-6 left-6 flex items-center gap-4">
           <img
             src="/home/company-logo.png"
+            alt="The company's logo"
             className="border border-indigo-300 min-h-15 min-w-15 max-h-15 max-w-15 rounded-full bg-black/40"
           />
 
@@ -39,7 +41,7 @@ export function ExperienceCard() {
         </p>
 
         <div className="flex flex-col gap-8">
-          <h4 className="text-xl text-indigo-300">What I did</h4>
+          <span className="text-xl text-indigo-300">What I did</span>
 
           <ul className="flex flex-col gap-3">
             {EXPERIENCE_HIGHLIGHTS.map((item) => (

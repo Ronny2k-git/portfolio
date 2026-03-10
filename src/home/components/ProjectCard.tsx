@@ -79,6 +79,7 @@ export function ProjectCard({
                 href={github}
                 target="_blank"
                 className="text-orange-300 hover:text-solar transition"
+                aria-label={`View the projects's source code`}
               >
                 GitHub →
               </a>
@@ -88,6 +89,7 @@ export function ProjectCard({
                 href={live}
                 target="_blank"
                 className="text-orange-300 hover:text-solar transition"
+                aria-label={`View the project live`}
               >
                 Live →
               </a>

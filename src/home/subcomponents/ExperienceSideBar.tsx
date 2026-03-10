@@ -41,6 +41,7 @@ export function ExperienceSidebar({ className = '' }: { className?: string }) {
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-blue-200/90 hover:underline"
+            aria-label={`View the company's site`}
           >
             www.fjordfoundry.com
           </a>
@@ -50,6 +51,7 @@ export function ExperienceSidebar({ className = '' }: { className?: string }) {
             target="_blank"
             rel="noopener noreferrer"
             className="border p-2 border-gray-700/80 hover:bg-black/40 rounded-full"
+            aria-label={`View the company's twitter`}
           >
             <TwitterIcon className="size-4" />
           </a>
@@ -62,8 +64,8 @@ export function ExperienceSidebar({ className = '' }: { className?: string }) {
           Oct 2024 - Nov 2025
         </p>
       </div>
-      {/* Tech Stack */}
 
+      {/* Tech Stack */}
       <div className="flex flex-col gap-4">
         <p className="text-gray-400">Tech Stack</p>
 
@@ -73,11 +75,18 @@ export function ExperienceSidebar({ className = '' }: { className?: string }) {
         >
           {COMPANY_TECHS.map((tech, index) => {
             return (
-              <Tag
-                key={index}
-                text={tech.label}
-                icon={<img className="size-4 rounded-full" src={tech.icon} />}
-              />
+              <li key={index}>
+                <Tag
+                  text={tech.label}
+                  icon={
+                    <img
+                      className="size-4 rounded-full"
+                      src={tech.icon}
+                      alt={tech.alt}
+                    />
+                  }
+                />
+              </li>
             )
           })}
         </ul>

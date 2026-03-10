@@ -55,6 +55,7 @@ export default function Home() {
                   {HOME_CIRCLE_LOGO.map((logo) => (
                     <img
                       key={logo.src}
+                      alt={logo.alt}
                       src={logo.src}
                       className={`${logo.class} rounded-full object-cover`}
                     />
@@ -233,6 +234,7 @@ export default function Home() {
                               <img
                                 className="size-4 rounded-full"
                                 src={tech.icon}
+                                alt={tech.alt}
                               />
                             }
                           />

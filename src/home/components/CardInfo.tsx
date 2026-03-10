@@ -1,18 +1,7 @@
 import { Card } from '@/ui/components'
 import { useEffect, useState } from 'react'
+import { MAIN_STACK } from '../utils'
 import { Tag } from './Tag'
-
-const MAIN_STACK = [
-  { label: 'JavaScript', icon: '/logos/js-logo.png' },
-  { label: 'TypeScript', icon: '/logos/ts-logo.png' },
-  { label: 'React', icon: '/logos/tag/react-logo.webp' },
-  { label: 'SolidJS', icon: '/logos/tag/solid-js.png' },
-  { label: 'Next.js', icon: '/logos/tag/next-js.jpeg' },
-  { label: 'CSS3', icon: '/logos/tag/css.png' },
-  { label: 'Tailwind', icon: '/logos/tag/tailwind.png' },
-  { label: 'Solidity', icon: '/logos/solidity-logo.png' },
-  { label: 'Node.js', icon: '/logos/node-js.png' },
-]
 
 const NAMES = ['Ronny EDM', 'Frontend Dev']
 
@@ -84,17 +73,19 @@ export function CardInfo() {
             translate="no"
           >
             {MAIN_STACK.map((tech, index) => (
-              <Tag
-                key={index}
-                text={tech.label}
-                icon={
-                  <img
-                    className="size-4 rounded-full object-center object-cover"
-                    src={tech.icon}
-                  />
-                }
-                className="text-sm cursor-pointer"
-              />
+              <li key={index}>
+                <Tag
+                  text={tech.label}
+                  icon={
+                    <img
+                      className="size-4 rounded-full object-center object-cover"
+                      src={tech.icon}
+                      alt={tech.alt}
+                    />
+                  }
+                  className="text-sm cursor-pointer"
+                />
+              </li>
             ))}
           </ul>
         </div>
