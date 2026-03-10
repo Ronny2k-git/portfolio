@@ -3,7 +3,7 @@ import { LinkedInIcon } from '../icons/Linkedin'
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-black/90">
+    <footer className="w-full">
       {/* Footer content with borders */}
       <div
         className="

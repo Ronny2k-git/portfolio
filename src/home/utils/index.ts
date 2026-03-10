@@ -32,7 +32,7 @@ export const ABOUT_CARDS = [
   {
     title: 'Who I Am',
     description:
-      'I’m Ronny, a Fullstack Developer from Brazil focused on building scalable and modern web applications. Over the last two years, I’ve developed user interfaces, blockchain integrations, smart contracts, and decentralized applications (dApps).',
+      'I’m Ronny, a Frontend Developer from Brazil focused on building scalable and modern web applications. Over the last two years, I’ve developed user interfaces, blockchain integrations, smart contracts, and decentralized applications (dApps).',
   },
   {
     title: 'What I Do',

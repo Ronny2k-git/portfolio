@@ -4,9 +4,6 @@ import { useEffect, useState } from 'react'
 export function ScrollToTop() {
   const [visible, setVisible] = useState(false)
 
-  {
-    ;/ *Only show the button when the scroll */
-  }
   useEffect(() => {
     const onScroll = () => {
       setVisible(window.scrollY > 900)

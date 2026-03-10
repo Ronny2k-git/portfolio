@@ -14,7 +14,7 @@ const MAIN_STACK = [
   { label: 'Node.js', icon: '/logos/node-js.png' },
 ]
 
-const NAMES = ['Ronny EDM', 'Fullstack Dev']
+const NAMES = ['Ronny EDM', 'Frontend Dev']
 
 export function CardInfo() {
   const [nameIndex, setNameIndex] = useState(0)
@@ -71,7 +71,7 @@ export function CardInfo() {
         <div className=" h-px w-full bg-gray-400" />
         {/* Role */}
         <p className="text-lg sm:text-xl text-gray-400 max-sm:text-gray-400 rounded-full">
-          Fullstack Developer
+          Frontend Developer
         </p>
         {/* Stack */}
         <div className="sm:hidden mt-4 flex flex-col items-center">

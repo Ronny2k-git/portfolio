@@ -32,13 +32,13 @@ export const Route = createFileRoute('/')({
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen flex flex-col items-center justify-center bg-black/90 overflow-x-hidden">
-      <div className="w-full max-w-[3440px] h-full py-30 px-4 lg:px-8 xl:px-40">
+    <main className="w-full min-h-screen flex flex-col items-center justify-center overflow-x-hidden">
+      <div className="w-full border max-w-[3440px] h-full py-30 px-4 lg:px-8 xl:px-40">
         <h1 className="z-10 lg:hidden mb-20 max-md:text-2xl text-4xl text-gray-400 text-center">
           View on Desktop for a better experience
         </h1>
 
-        <div className="flex flex-col w-full gap-40 ">
+        <div className="flex flex-col w-full gap-40">
           {/* First Section  */}
           <section
             className="relative rounded-4xl flex w-full h-[44rem] justify-center items-center 
