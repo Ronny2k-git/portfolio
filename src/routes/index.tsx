@@ -71,7 +71,7 @@ export default function Home() {
           {/* About me Section*/}
           <motion.section
             id="about"
-            className="flex flex-col w-full items-center justify-center gap-20 text-solar"
+            className="scroll-mt-[12rem] flex flex-col w-full items-center justify-center gap-20 text-solar"
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 120 }}
             transition={{ duration: 1 }}
@@ -123,7 +123,7 @@ export default function Home() {
           {/* Skill Cards Section */}
           <section
             id="skill"
-            className="relative flex flex-col w-full items-center gap-20 text-solar"
+            className="scroll-mt-[5rem] relative flex flex-col w-full items-center gap-20 text-solar"
           >
             <div className="flex flex-col w-full items-center max-lg:gap-6 gap-20">
               {/* Languages & Frameworks*/}
@@ -172,7 +172,7 @@ export default function Home() {
           {/* My projects Section*/}
           <motion.section
             id="project"
-            className="flex w-full flex-col items-center gap-20 text-solar"
+            className="scroll-mt-[12rem] flex w-full flex-col items-center gap-20 text-solar"
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 120 }}
             transition={{ duration: 1 }}
@@ -324,7 +324,7 @@ export default function Home() {
           {/* My experience Section */}
           <motion.section
             id="experience"
-            className="relative grid lg:grid-cols-2 w-full gap-6 text-solar"
+            className="scroll-mt-[12rem] relative grid lg:grid-cols-2 w-full gap-6 text-solar"
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 120 }}
             transition={{ duration: 1 }}

@@ -1,23 +1,19 @@
 import { GithubIcon, LinkedInIcon, TwitterIcon } from '../icons'
-import { NAV_ROUTE_ID, scrollToContainer } from '../utils'
+import { NAV_ROUTE_ID } from '../utils'
 
 export default function Header() {
   return (
     <header className="flex items-center justify-between fixed backdrop-blur-xs z-50 w-full p-4 lg:px-14 2xl:px-40 border-b border-gray-700/30">
       {/* Nav Bar */}
-
       <nav className="flex gap-x-12 font-display items-center text-gray-400 cursor-pointer">
         {NAV_ROUTE_ID.map((route, index) => (
           <a
             key={`${route.id}_${index}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            href={route.path ? route.path : undefined}
+            href={route.path ?? `#${route.id}`}
             className={`${route.class} hover:text-gray-300`}
             aria-label={route.ariaLabel}
-            onClick={() => {
-              requestAnimationFrame(() => scrollToContainer(route.id!))
-            }}
+            target={route.path ? '_blank' : undefined}
+            rel={route.path ? 'noopener noreferrer' : undefined}
           >
             {route.label}
           </a>

@@ -25,6 +25,7 @@ export default function Footer() {
               className="flex gap-2 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View my github profile"
             >
               <GithubIcon />
               Github
@@ -34,6 +35,7 @@ export default function Footer() {
               className="flex gap-2 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View my twitter profile"
             >
               <TwitterIcon />
               Twitter
@@ -43,6 +45,7 @@ export default function Footer() {
               className="flex items-start gap-2 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View my linkedin profile"
             >
               <LinkedInIcon />
               Linkedin
