@@ -32,7 +32,10 @@ export function TimeLineMobile() {
               />
             </div>
 
-            <h4 className="text-sm font-semibold text-solar">{item.title}</h4>
+            <span className="text-sm font-semibold text-solar">
+              {item.title}
+            </span>
+
             <p className="text-xs text-gray-400 max-w-[140px]">
               {item.description}
             </p>

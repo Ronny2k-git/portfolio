@@ -214,12 +214,13 @@ export default function Home() {
                       <span className="text-blue-200">smart contracts</span>.
                     </h3>
 
-                    <h4 className="text-gray-400">
+                    <div className="text-gray-400">
                       <span className="text-blue-200">Languages</span>,{' '}
                       <span className="text-blue-200">frameworks</span> and{' '}
                       <span className="text-blue-200">tools</span> I used to
                       build these projects:
-                    </h4>
+                    </div>
+
                     {/* Tags */}
                     <ul
                       className="flex flex-wrap gap-2 max-sm:justify-center text-black cursor-pointer"
@@ -227,17 +228,18 @@ export default function Home() {
                     >
                       {HOME_PROJECT_TECHS.map((tech, index) => {
                         return (
-                          <Tag
-                            key={index}
-                            text={tech.label}
-                            icon={
-                              <img
-                                className="size-4 rounded-full"
-                                src={tech.icon}
-                                alt={tech.alt}
-                              />
-                            }
-                          />
+                          <li key={index}>
+                            <Tag
+                              text={tech.label}
+                              icon={
+                                <img
+                                  className="size-4 rounded-full"
+                                  src={tech.icon}
+                                  alt={tech.alt}
+                                />
+                              }
+                            />
+                          </li>
                         )
                       })}
                     </ul>
@@ -262,6 +264,7 @@ export default function Home() {
                           <img
                             className="w-26 h-12 border border-gray-600 rounded-xl object-cover hover:scale-105 cursor-pointer"
                             src={project.img}
+                            alt={project.alt}
                           />
                           <span className="text-xs text-gray-400">
                             {project.date}

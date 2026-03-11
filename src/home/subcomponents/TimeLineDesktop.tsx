@@ -46,10 +46,11 @@ export function TimeLineDesktop() {
                 >
                   <span>{item.code}</span>
 
-                  <h4 className="text-base font-semibold text-solar">
+                  <span className="text-base font-semibold text-solar">
                     {item.title}
-                  </h4>
+                  </span>
                 </div>
+
                 <p className="mt-1 text-xs text-gray-400 max-w-xs ml-auto">
                   {item.description}
                 </p>
