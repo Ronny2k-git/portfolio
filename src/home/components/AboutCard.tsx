@@ -19,7 +19,7 @@ export function AboutCard({
       className={twMerge('p-6 sm:p-8 border-0 gap-4 rounded-4xl', className)}
       variant={'basic'}
     >
-      <h3 className="text-xl font-bold text-solar">{title}</h3>
+      <span className="text-xl font-bold text-solar">{title}</span>
 
       {description && (
         <p className="text-base leading-relaxed text-gray-400">{description}</p>

@@ -7,7 +7,7 @@ export function ExperienceCard() {
       {/* Banner */}
       <div className="relative hover:scale-102">
         <img
-          src="/home/company-banner.png"
+          src="/home/company-banner.webp"
           alt="The company's banner"
           className="aspect-square sm:aspect-video  max-h-[25rem] w-full object-cover max-sm:object-right"
         />
@@ -15,7 +15,7 @@ export function ExperienceCard() {
 
         <div className="absolute bottom-6 left-6 flex items-center gap-4">
           <img
-            src="/home/company-logo.png"
+            src="/home/company-logo.webp"
             alt="The company's logo"
             className="border border-indigo-300 min-h-15 min-w-15 max-h-15 max-w-15 rounded-full bg-black/40"
           />

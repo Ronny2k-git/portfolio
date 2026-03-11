@@ -202,7 +202,7 @@ export default function Home() {
                       </span>
                     </div>
 
-                    <h3 className="text-gray-400">
+                    <p className="text-gray-400">
                       <span className="text-blue-200">Personal</span> projects
                       created to explore{' '}
                       <span className="text-blue-200">new</span> technologies
@@ -212,7 +212,7 @@ export default function Home() {
                       <span className="text-blue-200">database</span>{' '}
                       interactions and blockchain{' '}
                       <span className="text-blue-200">smart contracts</span>.
-                    </h3>
+                    </p>
 
                     <div className="text-gray-400">
                       <span className="text-blue-200">Languages</span>,{' '}

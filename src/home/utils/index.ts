@@ -1,32 +1,32 @@
 // CIRCLES SECTION
 export const HOME_CIRCLE_LOGO = [
   {
-    src: '/logos/aws.jpeg',
+    src: '/logos/aws.webp',
     alt: 'AWS logo',
     class: 'planet1 translate-x-[19rem] -translate-y-[17rem] size-14',
   },
   {
-    src: '/logos/node-js.png',
+    src: '/logos/node-js.webp',
     alt: 'Node.js logo',
     class: 'planet1 -translate-y-[13.2rem] size-14',
   },
   {
-    src: '/logos/js-ts-logo.png',
+    src: '/logos/js-ts-logo.webp',
     alt: 'Javascript and Typescript logo',
     class: 'planet1 translate-x-[25.2rem] -translate-y-[1rem] size-15',
   },
   {
-    src: '/logos/eth-logo.png',
+    src: '/logos/eth-logo.webp',
     alt: 'Ethereum logo',
     class: 'planet2 translate-x-[4rem] translate-y-[15.5rem] size-14',
   },
   {
-    src: '/logos/react-logo.png',
+    src: '/logos/react-logo.webp',
     alt: 'React logo',
     class: 'planet2 -translate-x-[18rem] translate-y-[11rem] size-16',
   },
   {
-    src: 'profile.png',
+    src: 'profile.webp',
     alt: 'Ronny Edson profile photo',
     class: 'planet1 -translate-x-[31rem] -translate-y-[6rem] size-42',
   },
@@ -34,19 +34,23 @@ export const HOME_CIRCLE_LOGO = [
 
 // MY STACKS
 export const MAIN_STACK = [
-  { label: 'JavaScript', icon: '/logos/js-logo.png', alt: 'JavaScript logo' },
-  { label: 'TypeScript', icon: '/logos/ts-logo.png', alt: 'TypeScript logo' },
+  { label: 'JavaScript', icon: '/logos/js-logo.webp', alt: 'JavaScript logo' },
+  { label: 'TypeScript', icon: '/logos/ts-logo.webp', alt: 'TypeScript logo' },
   { label: 'React', icon: '/logos/tag/react-logo.webp', alt: 'React logo' },
-  { label: 'SolidJS', icon: '/logos/tag/solid-js.png', alt: 'SolidJS logo' },
-  { label: 'Next.js', icon: '/logos/tag/next-js.jpeg', alt: 'Next.js logo' },
-  { label: 'CSS3', icon: '/logos/tag/css.png', alt: 'CSS3 logo' },
+  { label: 'SolidJS', icon: '/logos/tag/solid-js.webp', alt: 'SolidJS logo' },
+  { label: 'Next.js', icon: '/logos/tag/next-js.webp', alt: 'Next.js logo' },
+  { label: 'CSS3', icon: '/logos/tag/css.webp', alt: 'CSS3 logo' },
   {
     label: 'Tailwind',
-    icon: '/logos/tag/tailwind.png',
+    icon: '/logos/tag/tailwind.webp',
     alt: 'Tailwind CSS logo',
   },
-  { label: 'Solidity', icon: '/logos/solidity-logo.png', alt: 'Solidity logo' },
-  { label: 'Node.js', icon: '/logos/node-js.png', alt: 'Node.js logo' },
+  {
+    label: 'Solidity',
+    icon: '/logos/solidity-logo.webp',
+    alt: 'Solidity logo',
+  },
+  { label: 'Node.js', icon: '/logos/node-js.webp', alt: 'Node.js logo' },
 ]
 
 // ABOUT ME SECTION
@@ -83,42 +87,42 @@ export const TIMELINE = [
     code: 1,
     title: 'HTML / CSS',
     description: 'Semantic, layouts, responsibility, design systems etc',
-    img: '/logos/html-css-logo.png',
+    img: '/logos/html-css-logo.webp',
     alt: 'HTML and CSS logos',
   },
   {
     code: 2,
     title: 'JS / TS',
     description: 'Logic, state management, scalable codebases etc',
-    img: '/logos/js-ts-logo.png',
+    img: '/logos/js-ts-logo.webp',
     alt: 'JavaScript and TypeScript logos',
   },
   {
     code: 3,
     title: 'React / Next',
     description: 'Reusable components, states, UI, and SSR',
-    img: '/logos/react-logo.png',
+    img: '/logos/react-logo.webp',
     alt: 'React logo',
   },
   {
     code: 4,
     title: 'Frameworks',
     description: 'Using frameworks: vite, tanstack, solid etc',
-    img: '/logos/framework-logo.png',
+    img: '/logos/framework-logo.webp',
     alt: 'Frameworks logo',
   },
   {
     code: 5,
     title: 'DB / Node.js',
     description: 'Data modeling and backend integrations',
-    img: '/logos/node-db.png',
+    img: '/logos/node-db.webp',
     alt: 'Node.js and database logo',
   },
   {
     code: 6,
     title: 'Web3',
     description: 'Smart contracts and blockchain interactions',
-    img: '/logos/web3-logo.png',
+    img: '/logos/web3-logo.webp',
     alt: 'Web3 logo',
   },
 ]
@@ -154,41 +158,45 @@ export const SKILL_CARD_WEB3 = [
 
 // MY PROJECTS SECTION
 export const HOME_PROJECT_TECHS = [
-  { label: 'Next.js', icon: '/logos/tag/next-js.jpeg', alt: 'Next.js logo' },
-  { label: 'Vite', icon: '/logos/vite-logo.png', alt: 'Vite logo' },
-  { label: 'Solidity', icon: '/logos/solidity-logo.png', alt: 'Solidity logo' },
+  { label: 'Next.js', icon: '/logos/tag/next-js.webp', alt: 'Next.js logo' },
+  { label: 'Vite', icon: '/logos/vite-logo.webp', alt: 'Vite logo' },
+  {
+    label: 'Solidity',
+    icon: '/logos/solidity-logo.webp',
+    alt: 'Solidity logo',
+  },
   { label: 'React', icon: '/logos/tag/react-logo.webp', alt: 'React logo' },
-  { label: 'Tanstack', icon: '/logos/tag/tanstack.png', alt: 'TanStack logo' },
-  { label: 'Wagmi', icon: '/logos/tag/wagmi.png', alt: 'Wagmi logo' },
-  { label: 'Viem', icon: '/logos/tag/viem.png', alt: 'Viem logo' },
+  { label: 'Tanstack', icon: '/logos/tag/tanstack.webp', alt: 'TanStack logo' },
+  { label: 'Wagmi', icon: '/logos/tag/wagmi.webp', alt: 'Wagmi logo' },
+  { label: 'Viem', icon: '/logos/tag/viem.webp', alt: 'Viem logo' },
   {
     label: 'Tailwind',
-    icon: '/logos/tag/tailwind.png',
+    icon: '/logos/tag/tailwind.webp',
     alt: 'Tailwind CSS logo',
   },
-  { label: 'CSS', icon: '/logos/tag/css.png', alt: 'CSS logo' },
-  { label: 'Zod', icon: '/logos/tag/zod.png', alt: 'Zod logo' },
-  { label: 'MySQL', icon: '/logos/tag/mysql.png', alt: 'MySQL logo' },
+  { label: 'CSS', icon: '/logos/tag/css.webp', alt: 'CSS logo' },
+  { label: 'Zod', icon: '/logos/tag/zod.webp', alt: 'Zod logo' },
+  { label: 'MySQL', icon: '/logos/tag/mysql.webp', alt: 'MySQL logo' },
   {
     label: 'PlanetScale',
-    icon: '/logos/tag/planet-scale.png',
+    icon: '/logos/tag/planet-scale.webp',
     alt: 'PlanetScale logo',
   },
-  { label: 'Neon', icon: '/logos/tag/neon.png', alt: 'Neon database logo' },
-  { label: 'i18next', icon: '/logos/tag/i18next.png', alt: 'i18next logo' },
+  { label: 'Neon', icon: '/logos/tag/neon.webp', alt: 'Neon database logo' },
+  { label: 'i18next', icon: '/logos/tag/i18next.webp', alt: 'i18next logo' },
   {
     label: 'Prisma',
-    icon: '/logos/tag/prisma-orm.png',
+    icon: '/logos/tag/prisma-orm.webp',
     alt: 'Prisma ORM logo',
   },
   {
     label: 'Local Storage',
-    icon: '/logos/tag/local-storage.png',
+    icon: '/logos/tag/local-storage.webp',
     alt: 'Local storage icon',
   },
   {
     label: 'React hook form',
-    icon: '/logos/tag/hook-form.png',
+    icon: '/logos/tag/hook-form.webp',
     alt: 'React Hook Form logo',
   },
 ]
@@ -202,13 +210,13 @@ export const MY_PROJECTS_TIMELINE = [
   },
   {
     id: 'vault-marketplace',
-    img: '/home/vault-marketplace.png',
+    img: '/home/vault-marketplace.webp',
     alt: 'Vault Marketplace project preview',
     date: 'Jan 2025',
   },
   {
     id: 'metavault',
-    img: '/home/metavault.png',
+    img: '/home/metavault.webp',
     alt: 'Metavault project preview',
     date: 'Oct 2025',
   },
@@ -220,7 +228,7 @@ export const HOME_METAVAULT_PROJECT = [
     title: 'Metavault',
     description:
       'A decentralized Web3 platform where users can create on-chain vaults, execute trades, monitor active and completed vaults, and manage their profiles directly on the blockchain. I worked on this project for 3 months.',
-    image: '/home/metavault.png',
+    image: '/home/metavault.webp',
     alt: 'Metavault Web3 platform interface',
     github: 'https://github.com/Ronny2k-git/metavault',
     live: 'https://metavault-phi.vercel.app/',
@@ -245,7 +253,7 @@ export const HOME_SECONDARY_PROJECTS = [
     title: 'Vault Marketplace',
     description:
       'A decentralized web3 marketplace when you can create your own vault on the blockchain to save your tokens and manage them on sepolia network, allowing users to deposit, withdraw, and explore active or finalized vaults',
-    image: '/home/vault-marketplace.png',
+    image: '/home/vault-marketplace.webp',
     alt: 'Vault Marketplace Web3 interface',
     github: 'https://github.com/Ronny2k-git/vault-marketplace',
     class: 'col-span-1',
