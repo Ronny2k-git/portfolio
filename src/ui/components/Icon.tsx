@@ -34,3 +34,19 @@ export function Icon({
     </span>
   )
 }
+
+// Use this tags below on index.html
+//  <!-- Preconnect Google Fonts -->
+// <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+// <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+
+// <!-- Material Symbols -->
+// <!-- <link
+//   rel="preload"
+//   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&display=swap:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0..200"
+//   as="style"
+//   onload="
+//     this.onload = null
+//     this.rel = 'stylesheet'
+//   "
+// /> -->

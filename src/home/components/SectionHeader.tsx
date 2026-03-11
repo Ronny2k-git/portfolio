@@ -17,12 +17,12 @@ export function SectionHeader({
   return (
     <Card
       className={twMerge(
-        'flex items-center p-4 min-h-28 justify-center gap- rounded-4xl',
+        'flex items-center p-4 min-h-28 gap-2 justify-center gap- rounded-4xl',
         className,
       )}
       variant={'secondary'}
     >
-      <div className="flex items-center gap-2">
+      <div className="flex items-end gap-2">
         {icon && <span>{icon}</span>}
 
         <h2 className="text-3xl sm:text-4xl max-sm:text-center font-bold font-display text-solar">

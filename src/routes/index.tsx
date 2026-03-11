@@ -22,9 +22,10 @@ import {
   SKILL_CARD_LANGUAGES,
   SKILL_CARD_WEB3,
 } from '@/home/utils'
-import { Card, Icon } from '@/ui/components'
+import { Card } from '@/ui/components'
 import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
+import { Briefcase, Clock, Code, TrendingUp, UserCircle } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -76,23 +77,19 @@ export default function Home() {
             initial={{ opacity: 0, y: 120 }}
             transition={{ duration: 1 }}
           >
-            <div className="w-full  max-lg:grid-cols-1 grid grid-cols-2 gap-6">
+            <div className="w-full max-lg:grid-cols-1 grid grid-cols-2 gap-6">
               <div className="flex flex-col gap-6 ">
                 <SectionHeader
                   className="max-lg:hidden"
                   title="About Me"
-                  icon={
-                    <Icon className="!text-5xl sm:!text-6xl">
-                      account_circle
-                    </Icon>
-                  }
+                  icon={<UserCircle className="h-11 w-11" />}
                   description={'A bit about me and my learning journey.'}
                 />
 
                 {/* My Timeline */}
                 <Card className="w-full h-full gap-5 items-center rounded-4xl p-4 lg:p-6">
                   <div className="flex items-center text-solar gap-2 text-2xl max-sm:text-xl lg:mb-10 text-center">
-                    <Icon className="!text-4xl ">avg_time</Icon>
+                    <Clock className="h-7 w-7 sm:h-8 sm:w-8" />
                     My learning journey
                   </div>
 
@@ -182,7 +179,7 @@ export default function Home() {
                 <SectionHeader
                   className="max-lg:hidden"
                   title="My Projects"
-                  icon={<Icon className=" !text-5xl sm:!text-6xl">work</Icon>}
+                  icon={<Briefcase className=" h-11 w-11" />}
                   description=" Projects from 2024 — Present."
                 />
 
@@ -190,11 +187,9 @@ export default function Home() {
                 <Card className="w-full h-full rounded-4xl p-4 sm:p-8">
                   <div className="flex flex-col h-full gap-6">
                     {/* Mobile title */}
-                    <div className="hidden max-lg:flex flex-col items-center justify-center mb-2 text-gray-500">
+                    <div className="hidden max-lg:flex flex-col items-center justify-center mb-2 gap-2 text-gray-500">
                       <div className="flex items-center text-solar gap-2 text-3xl max-sm:text-2xl">
-                        <Icon className="!text-5xl max-sm:!text-4xl">
-                          deployed_code
-                        </Icon>
+                        <Code className="h-8 w-8 sm:h-10 sm:w-10" />
                         My Projects
                       </div>
                       <span className="text-xs text-gray-400">
@@ -336,7 +331,7 @@ export default function Home() {
               <SectionHeader
                 className="max-lg:hidden"
                 title="My Experience"
-                icon={<Icon className="!text-5xl sm:!text-6xl">timeline</Icon>}
+                icon={<TrendingUp className="h-10 w-10" />}
                 description="Oct 2024 - Nov 2025"
               />
 

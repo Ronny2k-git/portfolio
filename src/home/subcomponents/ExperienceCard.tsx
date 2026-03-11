@@ -1,4 +1,5 @@
-import { Card, Icon } from '@/ui/components'
+import { Card } from '@/ui/components'
+import { CheckCircle } from 'lucide-react'
 import { EXPERIENCE_HIGHLIGHTS } from './utils'
 
 export function ExperienceCard() {
@@ -46,7 +47,7 @@ export function ExperienceCard() {
           <ul className="flex flex-col gap-3">
             {EXPERIENCE_HIGHLIGHTS.map((item) => (
               <li key={item.id} className="flex gap-3 text-gray-400">
-                <Icon className="text-indigo-300">{item.icon}</Icon>
+                <CheckCircle className="min-h-6 min-w-6 text-indigo-300" />
                 {item.text}
               </li>
             ))}

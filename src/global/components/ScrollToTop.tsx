@@ -1,4 +1,4 @@
-import { Icon } from '@/ui/components'
+import { ArrowUp } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 export function ScrollToTop() {
@@ -22,7 +22,7 @@ export function ScrollToTop() {
       aria-label="Scroll to top"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
-      <Icon className="!text-4xl cursor-pointer">arrow_upward</Icon>
+      <ArrowUp height={30} width={30} className="cursor-pointer" />
     </button>
   )
 }

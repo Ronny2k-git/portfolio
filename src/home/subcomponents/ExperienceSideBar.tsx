@@ -1,5 +1,6 @@
 import { TwitterIcon } from '@/global/icons'
-import { Card, Icon } from '@/ui/components'
+import { Card } from '@/ui/components'
+import { TrendingUp } from 'lucide-react'
 import { twMerge } from 'tailwind-merge'
 import { Tag } from '../components'
 import { COMPANY_TECHS } from './utils'
@@ -16,7 +17,7 @@ export function ExperienceSidebar({ className = '' }: { className?: string }) {
       {/* Mobile Heading */}
       <div className="hidden max-lg:flex flex-col items-center text-gray-500">
         <div className="flex items-center text-solar gap-2 text-3xl max-sm:text-2xl">
-          <Icon className="!text-5xl max-sm:!text-4xl">timeline</Icon>
+          <TrendingUp />
           My Experience
         </div>
         <span className="text-xs text-gray-400">Oct 2024 - Nov 2025</span>
