@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { MAIN_STACK } from '../utils'
 import { Tag } from './Tag'
 
-const NAMES = ['Ronny EDM', 'Frontend Dev']
+const NAMES = ['Ronny EDM', 'Frontend']
 
 export function CardInfo() {
   const [nameIndex, setNameIndex] = useState(0)
@@ -13,7 +13,7 @@ export function CardInfo() {
     const interval = setInterval(() => {
       setNameIndex((prev) => (prev + 1) % NAMES.length)
       setAnimationKey((k) => k + 1)
-    }, 2500)
+    }, 2000)
 
     return () => clearInterval(interval)
   }, [])
@@ -25,8 +25,8 @@ export function CardInfo() {
       className="
         relative z-50 justify-center
         max-sm:max-w-[19.8rem]
-        size-[27.5rem]
-        py-6 sm:rounded-full rounded-4xl
+        sm:size-[25.5rem]
+        sm:rounded-full rounded-4xl
 
       "
       variant={'gradient'}
@@ -43,7 +43,7 @@ export function CardInfo() {
           key={animationKey}
           className="
             px-4 text-[44px] sm:text-6xl font-name font-bold text-solar 
-            drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)] hover:scale-110 whitespace-nowrap"
+            hover:scale-110 whitespace-nowrap"
           translate="no"
         >
           {currentName.split('').map((char, index) => (
@@ -57,7 +57,7 @@ export function CardInfo() {
           ))}
         </span>
         {/* Divider */}
-        <div className=" h-px w-full bg-gray-400" />
+        <div className=" h-[1.5px] w-full bg-linear-to-r via-gray-700" />
         {/* Role */}
         <p className="text-lg sm:text-xl text-gray-400 max-sm:text-gray-400 rounded-full">
           Frontend Developer
@@ -90,7 +90,7 @@ export function CardInfo() {
           </ul>
         </div>
 
-        <p className="max-sm:hidden text-base text-gray-400/90 max-sm:text-black/70">
+        <p className="max-sm:hidden text-[15px] text-gray-500 max-sm:text-black/70">
           Building modern, performant, and decentralized web applications
         </p>
       </section>

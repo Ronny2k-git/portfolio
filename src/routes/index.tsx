@@ -25,7 +25,7 @@ import {
 import { Card } from '@/ui/components'
 import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
-import { Briefcase, Clock, Code, TrendingUp, UserCircle } from 'lucide-react'
+import { Clock, Code } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -34,7 +34,7 @@ export const Route = createFileRoute('/')({
 export default function Home() {
   return (
     <main className="w-full min-h-screen flex flex-col items-center justify-center overflow-x-hidden">
-      <div className="w-full border max-w-[3440px] h-full py-30 px-4 lg:px-8 xl:px-40">
+      <div className="w-full max-w-[1800px] h-full py-30 px-4 lg:px-8 xl:px-20">
         <h1 className="z-10 lg:hidden mb-20 max-md:text-2xl text-4xl text-gray-400 text-center">
           View on Desktop for a better experience
         </h1>
@@ -81,9 +81,10 @@ export default function Home() {
               <div className="flex flex-col gap-6 ">
                 <SectionHeader
                   className="max-lg:hidden"
-                  title="About Me"
-                  icon={<UserCircle className="h-11 w-11" />}
-                  description={'A bit about me and my learning journey.'}
+                  section="About"
+                  number={1}
+                  title="My Learning Journey"
+                  description={'A litle bit about me and my learning journey.'}
                 />
 
                 {/* My Timeline */}
@@ -122,7 +123,14 @@ export default function Home() {
             id="skill"
             className="scroll-mt-[5rem] relative flex flex-col w-full items-center gap-20 text-solar"
           >
-            <div className="flex flex-col w-full items-center max-lg:gap-6 gap-20">
+            <div className="flex flex-col w-full max-lg:gap-6 gap-20">
+              <SectionHeader
+                className="max-lg:hidden"
+                section="Skills"
+                number={2}
+                title="Technical Toolkit"
+              />
+
               {/* Languages & Frameworks*/}
               <motion.div
                 className="w-full z-40 max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4"
@@ -178,9 +186,10 @@ export default function Home() {
               <div className="flex flex-col items-center gap-6">
                 <SectionHeader
                   className="max-lg:hidden"
-                  title="My Projects"
-                  icon={<Briefcase className=" h-11 w-11" />}
-                  description=" Projects from 2024 — Present."
+                  section="Projects"
+                  number={3}
+                  title="Selected Projects"
+                  description="Personal projects built to explore new technologies — 2024 to present."
                 />
 
                 {/* Description & Techs tag */}
@@ -251,7 +260,7 @@ export default function Home() {
                 >
                   <div className="flex gap-4">
                     {MY_PROJECTS_TIMELINE.map((project, index) => (
-                      <div className="flex items-center gap-2">
+                      <div key={project.id} className="flex items-center gap-2">
                         <button
                           className="flex flex-col items-center gap-2"
                           onClick={() => scrollToContainer(project.id)}
@@ -329,10 +338,10 @@ export default function Home() {
           >
             <div className="flex flex-col gap-6">
               <SectionHeader
-                className="max-lg:hidden"
+                section="Career"
+                number={4}
                 title="My Experience"
-                icon={<TrendingUp className="h-10 w-10" />}
-                description="Oct 2024 - Nov 2025"
+                description="Oct 2024 – Now"
               />
 
               <ExperienceSidebar />
