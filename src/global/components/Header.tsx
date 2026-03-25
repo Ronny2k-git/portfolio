@@ -27,7 +27,7 @@ export default function Header() {
       </a>
 
       {/* Nav Bar */}
-      <nav className="flex gap-x-10 uppercase tracking-[0.12em] items-center text-muted-hi cursor-pointer">
+      <nav className="flex max-lg:hidden gap-x-10 uppercase tracking-[0.12em] items-center text-muted-hi cursor-pointer">
         {NAV_ROUTE_ID.map((route, index) => (
           <div
             key={`${route.id}_${index}`}

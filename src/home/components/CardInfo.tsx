@@ -22,17 +22,12 @@ export function CardInfo() {
 
   return (
     <Card
-      className="
-        relative z-50 justify-center
-        max-sm:max-w-[19.8rem]
-        sm:size-[25.5rem]
-        sm:rounded-full rounded-4xl
-
-      "
+      className=" relative z-50 flex items-center justify-center max-sm:max-w-[19.8rem] sm:size-[25.5rem] 
+      rounded-[32px] sm:rounded-full "
       variant={'gradient'}
     >
       {/* Content */}
-      <section className="w-full p-4 sm:p-8 relative z-10 flex flex-col items-center gap-6 max-sm:gap-8 text-center">
+      <div className="w-full p-4 sm:p-8 relative z-10 flex flex-col items-center gap-6 max-sm:gap-8 text-center">
         {/* Label */}
         <p className="sm:hidden text-sm uppercase tracking-widest font-semiboldold text-gray-400">
           {nameIndex === 0 ? 'My name is' : 'I am a'}
@@ -42,7 +37,7 @@ export function CardInfo() {
         <span
           key={animationKey}
           className="
-            px-4 text-[44px] sm:text-6xl font-name font-bold text-solar 
+            text-5xl sm:text-[3.7rem] font-serif leading-[1.05] text-solar tracking-tight
             hover:scale-110 whitespace-nowrap"
           translate="no"
         >
@@ -56,15 +51,17 @@ export function CardInfo() {
             </span>
           ))}
         </span>
+
         {/* Divider */}
-        <div className=" h-[1.5px] w-full bg-linear-to-r via-gray-700" />
+        <div className="w-full h-px bg-linear-to-r via-solar my-2" />
+
         {/* Role */}
-        <p className="text-lg sm:text-xl text-gray-400 max-sm:text-gray-400 rounded-full">
-          Frontend Developer
+        <p className="text-lg text-muted font-mono tracking-wide">
+          // Frontend Developer
         </p>
         {/* Stack */}
         <div className="sm:hidden mt-4 flex flex-col items-center">
-          <span className="text-sm uppercase tracking-widest text-gray-500">
+          <span className="text-sm uppercase tracking-widest text-muted-hi">
             Main stack
           </span>
 
@@ -90,10 +87,13 @@ export function CardInfo() {
           </ul>
         </div>
 
-        <p className="max-sm:hidden text-[15px] text-gray-500 max-sm:text-black/70">
-          Building modern, performant, and decentralized web applications
+        <p className="max-sm:hidden text-sm max-w-[260px] text-muted-hi">
+          Building <span className="text-white/85">scalable</span>,{' '}
+          <span className="text-white/85">high-performance</span> web
+          applications and <span className="text-white/85">decentralized</span>{' '}
+          systems.
         </p>
-      </section>
+      </div>
     </Card>
   )
 }
