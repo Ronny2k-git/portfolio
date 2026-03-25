@@ -3,24 +3,46 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
+@import 'tailwindcss';
+
 @theme {
   --font-display: 'Oxanium', system-ui, sans-serif;
   --font-serif: 'DM Serif Display', serif;
   --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --font-name: 'Nunito Sans';
-  --color-solar: #f6a04d;
-  --color-card-basic: #1b1d1e;
+
+  --color-bg-border: rgba(201, 160, 60, 0.13);
+  --color-border-hi: rgba(201, 160, 60, 0.35);
+  --color-muted: #7a7060;
+  --color-muted-hi: #a89880;
+
+  --color-solar: #c9a03c;
+  --color-solar-dim: #8a6b22;
+  --color-solar-glow: rgba(201, 160, 60, 0.12);
+  --color-card-basic: #111009;
+  --color-background: #0a0906;
+
   --breakpoint-desktop-lg: 1300px;
 }
 
-@import 'tailwindcss';
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-solar);
+  border-radius: 99px;
+}
 
 body {
   @apply m-0;
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
 }
 
 code {

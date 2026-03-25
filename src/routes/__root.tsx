@@ -8,7 +8,7 @@ import Header from '../global/components/Header'
 
 export const Route = createRootRoute({
   component: () => (
-    <div className="min-h-screen bg-black/90">
+    <main>
       {/* Project Header */}
       <Header />
 
@@ -31,7 +31,7 @@ export const Route = createRootRoute({
           },
         ]}
       />
-    </div>
+    </main>
   ),
   notFoundComponent: () => <NotFound />,
 })

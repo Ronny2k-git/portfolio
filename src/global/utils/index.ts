@@ -1,39 +1,27 @@
 export const NAV_ROUTE_ID = [
   {
-    id: 'card-info',
-    label: 'Ronny2k',
-    ariaLabel: 'Go to home section',
-    class: 'text-3xl text-solar hover:text-orange-400',
-  },
-  {
     id: 'about',
     label: 'About Me',
     ariaLabel: 'Go to About Me section',
-    class: 'text-lg max-lg:hidden',
+    class: 'text-[13px] font-semibold max-lg:hidden',
   },
   {
     id: 'skill',
     label: 'Skills',
     ariaLabel: 'Go to Skills section',
-    class: 'text-lg max-lg:hidden',
+    class: 'text-[13px] font-semibold max-lg:hidden',
   },
   {
     id: 'project',
     label: 'Projects',
     ariaLabel: 'Go to Projects section',
-    class: 'text-lg max-lg:hidden',
+    class: 'text-[13px] font-semibold max-lg:hidden',
   },
   {
     id: 'experience',
     label: 'Experience',
     ariaLabel: 'Go to Experience section',
-    class: 'text-lg max-lg:hidden',
-  },
-  {
-    label: 'Source Code',
-    ariaLabel: 'Open portfolio source code on GitHub',
-    class: 'text-lg max-lg:hidden',
-    path: 'https://github.com/Ronny2k-git/portfolio',
+    class: 'text-[13px] font-semibold max-lg:hidden',
   },
 ]
 

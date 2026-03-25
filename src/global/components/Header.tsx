@@ -1,54 +1,68 @@
 import { GithubIcon, LinkedInIcon, TwitterIcon } from '../icons'
 import { NAV_ROUTE_ID } from '../utils'
 
+const socials = [
+  {
+    path: 'https://github.com/Ronny2k-git',
+    aria: 'View my github profile (new tab)',
+    icon: <GithubIcon className="size-4 " />,
+  },
+  {
+    path: 'https://x.com/RonnyEdson27329',
+    aria: 'View my twitter profile (new tab)',
+    icon: <TwitterIcon className="size-4 " />,
+  },
+  {
+    path: 'https://www.linkedin.com/in/ronny-edson-duarte-bb092b25a/',
+    aria: 'View my linkedin profile (new tab)',
+    icon: <LinkedInIcon className="size-4 " />,
+  },
+]
+
 export default function Header() {
   return (
-    <header className="flex items-center justify-between fixed backdrop-blur-xs z-50 w-full p-4 lg:px-14 2xl:px-40 border-b border-gray-700/30">
+    <header className="flex h-18 items-center justify-between fixed backdrop-blur-md z-50 w-full px-6 lg:px-16 border-b border-bg-border">
+      <a href="/#hero" aria-label="Go to hero section">
+        <span className="text-2xl text-solar font-serif ">Ronny2k</span>
+      </a>
+
       {/* Nav Bar */}
-      <nav className="flex gap-x-12 font-display items-center text-gray-400 cursor-pointer">
+      <nav className="flex gap-x-10 uppercase tracking-[0.12em] items-center text-muted-hi cursor-pointer">
         {NAV_ROUTE_ID.map((route, index) => (
-          <a
+          <div
             key={`${route.id}_${index}`}
-            href={route.path ?? `#${route.id}`}
-            className={`${route.class} hover:text-gray-300`}
-            aria-label={route.ariaLabel}
-            target={route.path ? '_blank' : undefined}
-            rel={route.path ? 'noopener noreferrer' : undefined}
+            className="group flex flex-col relative"
           >
-            {route.label}
-          </a>
+            <a
+              href={`/#${route.id}`}
+              className={`${route.class} hover:text-white/90`}
+              aria-label={route.ariaLabel}
+            >
+              {route.label}
+            </a>
+
+            <span
+              className="w-full absolute bottom-0 left-0 h-[0.5px] origin-center scale-x-0 bg-solar group-hover:scale-x-100 
+              animation duration-300"
+            />
+          </div>
         ))}
       </nav>
 
       {/* Socials */}
       <div className="flex items-center gap-4 text-gray-400 cursor-pointer">
-        <a
-          className="brightness-80 hover:brightness-120 "
-          aria-label="View my github profile (new tab)"
-          href="https://github.com/Ronny2k-git"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubIcon className="hover:scale-3d" />
-        </a>
-        <a
-          className="brightness-80 hover:brightness-120 "
-          aria-label="View my twitter profile (new tab)"
-          href="https://x.com/RonnyEdson27329"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <TwitterIcon />
-        </a>
-        <a
-          className="brightness-80 hover:brightness-120 "
-          aria-label="View my linkedin profile (new tab)"
-          href="https://www.linkedin.com/in/ronny-edson-duarte-bb092b25a/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedInIcon />
-        </a>
+        {socials.map((s) => (
+          <a
+            className=" border border-bg-border hover:text-solar hover:border-solar hover:bg-solar-glow 
+            p-2 rounded-full"
+            aria-label={s.aria}
+            href={s.path}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {s.icon}
+          </a>
+        ))}
       </div>
     </header>
   )

@@ -1,19 +1,15 @@
 import { scrollToContainer } from '@/global/utils'
 import {
-  AboutCard,
-  CardInfo,
   ProjectCard,
   SectionCard,
   SectionHeader,
   SkillCard,
   Tag,
-  TimelineSection,
 } from '@/home/components'
+import { AboutSection, HeroSection } from '@/home/sections'
 import { ExperienceSidebar } from '@/home/subcomponents'
 import { ExperienceCard } from '@/home/subcomponents/ExperienceCard'
 import {
-  ABOUT_CARDS,
-  HOME_CIRCLE_LOGO,
   HOME_METAVAULT_PROJECT,
   HOME_PROJECT_TECHS,
   HOME_SECONDARY_PROJECTS,
@@ -25,13 +21,21 @@ import {
 import { Card } from '@/ui/components'
 import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
-import { Clock, Code } from 'lucide-react'
+import { Code } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
   component: Home,
 })
 
 export default function Home() {
+  // TO DO TOMORROW MORNING:
+
+  // 1 SEPARATE THE CODE BY SECTION COMPONENTS
+  // 2 UPDATE THE WHOLE WEBSITE DESIGN
+  // 3 UPDATE MYEXPERIENCE SECTION AND ADD TABS
+  // 4
+  // 5
+
   return (
     <main className="w-full min-h-screen flex flex-col items-center justify-center overflow-x-hidden">
       <div className="w-full max-w-[1800px] h-full py-30 px-4 lg:px-8 xl:px-20">
@@ -41,82 +45,10 @@ export default function Home() {
 
         <div className="flex flex-col w-full gap-40">
           {/* First Section  */}
-          <section
-            className="relative rounded-4xl flex w-full h-[44rem] justify-center items-center 
-          overflow-x-clip"
-          >
-            <div
-              id="card-info"
-              className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-[43rem] h-[43rem] border-2 
-           border-dashed border-gray-700/50 rounded-full"
-            >
-              <div className="flex items-center justify-center w-[36rem] h-[36rem] border-2 border-dashed border-gray-700 rounded-full">
-                {/* Orbiting */}
-                <div className="z-0 orbit absolute flex items-center justify-center ">
-                  {HOME_CIRCLE_LOGO.map((logo) => (
-                    <img
-                      key={logo.src}
-                      alt={logo.alt}
-                      src={logo.src}
-                      className={`${logo.class} rounded-full object-cover`}
-                    />
-                  ))}
-                </div>
+          <HeroSection />
 
-                {/* Main Card */}
-                <CardInfo />
-              </div>
-            </div>
-          </section>
-
-          {/* About me Section*/}
-          <motion.section
-            id="about"
-            className="scroll-mt-[12rem] flex flex-col w-full items-center justify-center gap-20 text-solar"
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 120 }}
-            transition={{ duration: 1 }}
-          >
-            <div className="w-full max-lg:grid-cols-1 grid grid-cols-2 gap-6">
-              <div className="flex flex-col gap-6 ">
-                <SectionHeader
-                  className="max-lg:hidden"
-                  section="About"
-                  number={1}
-                  title="My Learning Journey"
-                  description={'A litle bit about me and my learning journey.'}
-                />
-
-                {/* My Timeline */}
-                <Card className="w-full h-full gap-5 items-center rounded-4xl p-4 lg:p-6">
-                  <div className="flex items-center text-solar gap-2 text-2xl max-sm:text-xl lg:mb-10 text-center">
-                    <Clock className="h-7 w-7 sm:h-8 sm:w-8" />
-                    My learning journey
-                  </div>
-
-                  <TimelineSection />
-                </Card>
-              </div>
-
-              {/* About me Cards */}
-              <Card
-                variant={'basic'}
-                className="p-4 sm:p-6 h-full items-center justify-center gap-4 rounded-4xl"
-              >
-                {ABOUT_CARDS.map((card, index) => {
-                  return (
-                    <AboutCard
-                      className="min-h-[13rem]"
-                      key={index}
-                      title={card.title}
-                      description={card.description}
-                      items={card.items}
-                    />
-                  )
-                })}
-              </Card>
-            </div>
-          </motion.section>
+          {/* About Section*/}
+          <AboutSection />
 
           {/* Skill Cards Section */}
           <section
