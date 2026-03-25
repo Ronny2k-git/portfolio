@@ -24,9 +24,7 @@ export function SectionHeader({
         {title}
       </h2>
 
-      {description && (
-        <p className="text-[15px] text-neutral-400">{description}</p>
-      )}
+      {description && <p className="text-[15px] text-muted">{description}</p>}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { TIMELINE } from '../utils'
 
-export function TimeLineMobile() {
+export function MobileTimeline() {
   return (
     <>
       <motion.div
@@ -9,7 +9,7 @@ export function TimeLineMobile() {
         whileInView={{ width: '100%' }}
         transition={{ duration: 1.2, ease: 'easeInOut' }}
         viewport={{ once: true }}
-        className="relative h-[2.5px] bg-gradient-to-r from-blue-400 via-gray-400 to-blue-400 mb-12"
+        className="relative mb-12 h-[2.5px] bg-gradient-to-r from-solar via-solar-dim to-solar "
       />
 
       <div className="grid max-sm:grid-cols-3 grid-cols-6 gap-6">
@@ -22,21 +22,21 @@ export function TimeLineMobile() {
             viewport={{ once: true }}
             className="flex flex-col items-center text-center gap-3"
           >
-            <span className="text-gray-400 text-xs">{item.code}</span>
+            <span className="text-muted-hi text-xs">{item.code}</span>
 
-            <div className="flex items-center justify-center size-12 rounded-full bg-black/60 border border-white/10 shadow-[0_0_20px_rgba(96,165,250,0.25)]">
+            <div className="flex items-center justify-center size-12 rounded-full shadow-glow-solar/30">
               <img
-                className="!text-2xl rounded-full size-12 text-blue-300"
+                className="!text-2xl rounded-full size-12"
                 src={item.img}
                 alt={item.alt}
               />
             </div>
 
-            <span className="text-sm font-semibold text-solar">
+            <span className="text-sm font-semibold text-solar uppercase font-display">
               {item.title}
             </span>
 
-            <p className="text-xs text-gray-400 max-w-[140px]">
+            <p className="text-xs text-muted-hi max-w-[140px]">
               {item.description}
             </p>
           </motion.div>

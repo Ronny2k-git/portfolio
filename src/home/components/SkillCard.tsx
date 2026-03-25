@@ -12,7 +12,7 @@ export function SkillCard({ title, pct, className }: SkillCardProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
 
-  // Animate the knowledge bar only if the user is
+  // Animate the knowledge bar
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => entry.isIntersecting && setVisible(true),

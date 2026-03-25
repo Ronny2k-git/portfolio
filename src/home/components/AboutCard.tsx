@@ -1,7 +1,9 @@
 import { Card } from '@/ui/components'
+import type { LucideIcon } from 'lucide-react'
 import { twMerge } from 'tailwind-merge'
 
 type AboutCardProps = {
+  icon: LucideIcon
   title: string
   description?: string
   items?: Array<string>
@@ -9,6 +11,7 @@ type AboutCardProps = {
 }
 
 export function AboutCard({
+  icon: Icon,
   title,
   description,
   items,
@@ -16,17 +19,25 @@ export function AboutCard({
 }: AboutCardProps) {
   return (
     <Card
-      className={twMerge('p-6 sm:p-8 border-0 gap-4 rounded-4xl', className)}
+      className={twMerge('p-6 gap-4 rounded-4xl', className)}
       variant={'basic'}
     >
-      <span className="text-xl font-bold text-solar">{title}</span>
+      <div className="flex items-center gap-2">
+        <Icon className="w-5 h-5 text-solar shrink-0" />
+
+        <span className="text-base font-bold text-solar uppercase font-display">
+          {title}
+        </span>
+      </div>
 
       {description && (
-        <p className="text-base leading-relaxed text-gray-400">{description}</p>
+        <p className="text-[15px] leading-relaxed text-muted-hi">
+          {description}
+        </p>
       )}
 
       {items && (
-        <ul className="flex flex-col gap-2 text-base text-gray-400">
+        <ul className="flex flex-col gap-1 text-base text-muted-hi">
           {items.map((item) => (
             <li key={item}>• {item}</li>
           ))}

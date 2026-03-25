@@ -5,10 +5,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="
-        relative flex w-full h-[44rem] justify-center items-center
-        overflow-hidden
-      "
+      className="scroll-mt-[5rem] relative flex w-full h-[44rem] justify-center items-center overflow-hidden "
     >
       {/* Background glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

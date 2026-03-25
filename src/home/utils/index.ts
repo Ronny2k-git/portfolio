@@ -1,3 +1,5 @@
+import { Target, User, Wrench } from 'lucide-react'
+
 // CIRCLES SECTION
 export const HOME_CIRCLE_LOGO = [
   {
@@ -56,11 +58,13 @@ export const MAIN_STACK = [
 // ABOUT ME SECTION
 export const ABOUT_CARDS = [
   {
+    icon: User,
     title: 'Who I Am',
     description:
-      'I’m Ronny, a Frontend Developer from Brazil focused on building scalable and modern web applications. Over the last two years, I’ve developed user interfaces, blockchain integrations, smart contracts, and decentralized applications (dApps).',
+      'I’m Ronny, a Frontend Developer with 2+ years of experience, specializing in React, TypeScript, and Node.js. I have experience building production-ready web applications, integrating APIs, and implementing Web3 features.',
   },
   {
+    icon: Wrench,
     title: 'What I Do',
     items: [
       'Frontend (JS/TS)',
@@ -71,6 +75,7 @@ export const ABOUT_CARDS = [
     ],
   },
   {
+    icon: Target,
     title: 'Focus',
     items: [
       'Web/Web3',

@@ -10,7 +10,7 @@ export function TimeLineDesktop() {
         whileInView={{ height: '100%' }}
         transition={{ duration: 1.2, ease: 'easeInOut' }}
         viewport={{ once: true }}
-        className="absolute h-full w-[2.5px] bg-gradient-to-b from-blue-400 via-gray-400 to-blue-400"
+        className="absolute h-full w-[2.5px] bg-gradient-to-b from-solar via-solar-dim to-solar"
       />
 
       <div className="flex flex-col gap-4">
@@ -21,9 +21,12 @@ export function TimeLineDesktop() {
             <div key={item.title} className="relative flex items-center w-full">
               {/* Skills */}
               <div className="absolute left-1/2 -translate-x-1/2 z-10 hover:scale-110">
-                <div className="size-12 rounded-full bg-black/70 flex items-center justify-center shadow-[0_0_20px_rgba(96,165,250,0.35)]">
+                <div
+                  className="size-12 rounded-full bg-card-gradient flex items-center justify-center 
+                   shadow-glow-solar/30 hover:shadow-glow-solar/70"
+                >
                   <img
-                    className=" text-blue-300 rounded-full size-11"
+                    className="rounded-full size-11"
                     src={item.img}
                     alt={item.alt}
                   />
@@ -32,7 +35,7 @@ export function TimeLineDesktop() {
 
               {/* Horizontal line */}
               <div
-                className={`absolute top-1/2 h-[2px] bg-white/5
+                className={`absolute top-1/2 h-[2px] bg-bg-border
                   ${isLeft ? 'right-1/2 w-[50%]' : 'left-1/2 w-[50%]'}`}
               />
 
@@ -46,12 +49,12 @@ export function TimeLineDesktop() {
                 >
                   <span>{item.code}</span>
 
-                  <span className="text-base font-semibold text-solar">
+                  <span className="text-base font-semibold text-solar uppercase font-display">
                     {item.title}
                   </span>
                 </div>
 
-                <p className="mt-1 text-xs text-gray-400 max-w-xs ml-auto">
+                <p className="mt-1 text-xs text-muted-hi max-w-xs ml-auto">
                   {item.description}
                 </p>
               </div>

@@ -1,12 +1,6 @@
 import { scrollToContainer } from '@/global/utils'
-import {
-  ProjectCard,
-  SectionCard,
-  SectionHeader,
-  SkillCard,
-  Tag,
-} from '@/home/components'
-import { AboutSection, HeroSection } from '@/home/sections'
+import { ProjectCard, SectionHeader, Tag } from '@/home/components'
+import { AboutSection, HeroSection, SkillsSection } from '@/home/sections'
 import { ExperienceSidebar } from '@/home/subcomponents'
 import { ExperienceCard } from '@/home/subcomponents/ExperienceCard'
 import {
@@ -14,9 +8,6 @@ import {
   HOME_PROJECT_TECHS,
   HOME_SECONDARY_PROJECTS,
   MY_PROJECTS_TIMELINE,
-  SKILL_CARD_DATABASES_AND_INFRA,
-  SKILL_CARD_LANGUAGES,
-  SKILL_CARD_WEB3,
 } from '@/home/utils'
 import { Card } from '@/ui/components'
 import { createFileRoute } from '@tanstack/react-router'
@@ -38,8 +29,8 @@ export default function Home() {
 
   return (
     <main className="w-full min-h-screen flex flex-col items-center justify-center overflow-x-hidden">
-      <div className="w-full max-w-[1800px] h-full py-30 px-4 lg:px-8 xl:px-20">
-        <h1 className="z-10 lg:hidden mb-20 max-md:text-2xl text-4xl text-gray-400 text-center">
+      <div className="w-full max-w-7xl h-full py-30 px-4 lg:px-8 xl:px-20">
+        <h1 className="z-10 lg:hidden mb-20 max-md:text-2xl text-4xl text-muted-hi text-center">
           View on Desktop for a better experience
         </h1>
 
@@ -51,60 +42,7 @@ export default function Home() {
           <AboutSection />
 
           {/* Skill Cards Section */}
-          <section
-            id="skill"
-            className="scroll-mt-[5rem] relative flex flex-col w-full items-center gap-20 text-solar"
-          >
-            <div className="flex flex-col w-full max-lg:gap-6 gap-20">
-              <SectionHeader
-                className="max-lg:hidden"
-                section="Skills"
-                number={2}
-                title="Technical Toolkit"
-              />
-
-              {/* Languages & Frameworks*/}
-              <motion.div
-                className="w-full z-40 max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4"
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: 120 }}
-                transition={{ duration: 1 }}
-              >
-                <SectionCard title="Languages & Frameworks" />
-
-                {SKILL_CARD_LANGUAGES.map((card) => (
-                  <SkillCard key={card.lang} pct={card.pct} title={card.lang} />
-                ))}
-              </motion.div>
-            </div>
-
-            {/* Databases & Infra */}
-            <motion.div
-              className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4"
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 120 }}
-              transition={{ duration: 1 }}
-            >
-              <SectionCard title="Databases & Infra" />
-              {SKILL_CARD_DATABASES_AND_INFRA.map((card) => (
-                <SkillCard key={card.lang} title={card.lang} pct={card.pct} />
-              ))}
-            </motion.div>
-
-            {/* WEB3 Libraries */}
-            <motion.div
-              className="w-full max-md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid grid-cols-3 xl:grid-cols-4 gap-4"
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 120 }}
-              transition={{ duration: 1 }}
-            >
-              <SectionCard title="WEB3 Libraries" />
-
-              {SKILL_CARD_WEB3.map((card) => (
-                <SkillCard key={card.lang} title={card.lang} pct={card.pct} />
-              ))}
-            </motion.div>
-          </section>
+          <SkillsSection />
 
           {/* My projects Section*/}
           <motion.section

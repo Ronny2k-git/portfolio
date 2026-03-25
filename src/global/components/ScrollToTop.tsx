@@ -18,7 +18,7 @@ export function ScrollToTop() {
   return (
     <button
       className="size-12 bottom-10 fixed flex justify-center items-center right-4 z-50 text-gray-400/90 border
-     border-gray-700/60 hover:bg-black/20 rounded-2xl"
+     border-border-hi hover:border-solar/70 bg-card-basic rounded-2xl"
       aria-label="Scroll to top"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >

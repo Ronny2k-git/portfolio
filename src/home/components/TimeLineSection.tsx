@@ -1,4 +1,4 @@
-import { TimeLineDesktop, TimeLineMobile } from '../subcomponents'
+import { MobileTimeline, TimeLineDesktop } from '../subcomponents'
 
 export function TimelineSection() {
   return (
@@ -8,7 +8,7 @@ export function TimelineSection() {
       </div>
 
       <div className="block lg:hidden w-full">
-        <TimeLineMobile />
+        <MobileTimeline />
       </div>
     </>
   )
