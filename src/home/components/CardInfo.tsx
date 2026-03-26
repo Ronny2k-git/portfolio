@@ -30,7 +30,7 @@ export function CardInfo() {
       <div className="w-full p-4 sm:p-8 relative z-10 flex flex-col items-center gap-6 max-sm:gap-8 text-center">
         {/* Label */}
         <p className="sm:hidden text-sm uppercase tracking-widest font-semiboldold text-gray-400">
-          {nameIndex === 0 ? 'My name is' : 'I am a'}
+          {nameIndex === 0 ? 'My name is' : 'Working with'}
         </p>
 
         {/* Animated name */}
@@ -53,12 +53,14 @@ export function CardInfo() {
         </span>
 
         {/* Divider */}
-        <div className="w-full h-px bg-linear-to-r via-solar my-2" />
+        <div className="w-full h-px bg-linear-to-r via-solar/70 my-2" />
 
         {/* Role */}
         <p className="text-lg text-muted font-mono tracking-wide">
           // Frontend Developer
+          <span className="text-solar/75 block">2+ years exp</span>
         </p>
+
         {/* Stack */}
         <div className="sm:hidden mt-4 flex flex-col items-center">
           <span className="text-sm uppercase tracking-widest text-muted-hi">

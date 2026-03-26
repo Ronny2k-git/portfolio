@@ -20,7 +20,7 @@ export function SectionHeader({
         <span className="uppercase">{section}</span>
       </div>
 
-      <h2 className="text-5xl max-w-[17rem] leading-tight font-bold font-serif text-white/90">
+      <h2 className="max-sm:text-4xl text-5xl max-w-[17rem] leading-tight font-bold font-serif text-white/90">
         {title}
       </h2>
 

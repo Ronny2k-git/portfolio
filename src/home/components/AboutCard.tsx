@@ -37,7 +37,7 @@ export function AboutCard({
       )}
 
       {items && (
-        <ul className="flex flex-col gap-1 text-base text-muted-hi">
+        <ul className="flex flex-col gap-1 text-[15px] text-muted-hi">
           {items.map((item) => (
             <li key={item}>• {item}</li>
           ))}

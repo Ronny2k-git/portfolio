@@ -27,15 +27,18 @@ export function SkillCard({ title, pct, className }: SkillCardProps) {
     <Card
       ref={ref}
       className={twMerge(
-        `flex flex-col p-4 items-start py-8 gap-4 rounded-lg`,
+        `flex flex-col p-4 items-start gap-4 rounded-2xl`,
         className,
       )}
     >
-      <span className="text-lg font-bol text-gray-400">{title}</span>
+      <span className="text-[15px] font-semibold font- text-white/85">
+        {title}
+      </span>
+
       {/* Knowledge bar container*/}
-      <div className="w-full max-w-[15rem] h-5 rounded-sm bg-gray-800/70 overflow-hidden">
+      <div className="w-full max-w-[15rem] h-1 rounded-sm bg-bg-border overflow-hidden">
         <div
-          className="w-full h-full bg-neutral-400 transition-all duration-1000 ease-out"
+          className="w-full h-full bg-linear-to-l to-solar-dim via-solar/85 from-solar/85 transition-all duration-1000 ease-out"
           style={{
             width: visible ? `${pct}%` : '0%',
           }}

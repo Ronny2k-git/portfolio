@@ -1,5 +1,5 @@
 export * from './AboutSection'
 export * from './ExperienceSection'
 export * from './HeroSection'
-export * from './ProjectsSection'
-export * from './SkillsSection'
+export * from './ProjectSection'
+export * from './SkillSection'

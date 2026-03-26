@@ -119,5 +119,5 @@ code {
 
 .animate-letter {
   opacity: 0;
-  animation: letterFadeUp 0.45s ease-out forwards;
+  animation: letterFadeUp 0.65s ease-out forwards;
 }
