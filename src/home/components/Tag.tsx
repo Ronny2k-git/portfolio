@@ -10,7 +10,7 @@ export function Tag({ icon, text, className }: TagProps) {
   return (
     <div
       className={twMerge(
-        'rounded-full flex items-center gap-2 py-1 px-3 text-gray-300 bg-gray-800 border border-gray-500 backdrop-blur-sm hover:bg-gray-800/70 hover:scale-105 transition ',
+        'rounded-lg flex items-center gap-2 py-1 px-3 text-white/80 bg-bg-border/80 border border-border-hi hover:scale-105 transition',
         className,
       )}
     >

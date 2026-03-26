@@ -24,7 +24,7 @@ export function HeroSection() {
             flex items-center justify-center w-[36rem] h-[36rem] border border-bg-border/90 rounded-full "
         >
           {/* Inner dashed rotating ring */}
-          <div className=" absolute w-[30rem] h-[30rem] border border-dashed border-bg-border rounded-full " />
+          <div className=" absolute w-[30rem] h-[30rem] border border-dashed border-border-hi/80 rounded-full " />
 
           {/* Orbiting logos */}
           <div className="z-50 will-change-transform orbit absolute flex items-center justify-center ">

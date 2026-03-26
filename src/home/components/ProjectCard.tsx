@@ -27,12 +27,12 @@ export function ProjectCard({
     <Card
       id={id}
       className={twMerge(
-        'group w-full relative rounded-4xl backdrop-blur-sm transition',
+        'group w-full relative rounded-4xl backdrop-blur-sm border-0 transition',
         className,
       )}
     >
       {/* Banner */}
-      <div className="relative rounded-2xl aspect-video min-h-[16rem] h-full w-full overflow-hidden">
+      <div className="relative rounded-2xl aspect-video min-h-[15rem] h-full w-full overflow-hidden">
         <img
           src={image}
           alt={title}
@@ -64,21 +64,21 @@ export function ProjectCard({
         )}
       >
         <div className="flex flex-col gap-2 sm:gap-4">
-          <h3 className="text-xl font-semibold text-gray-400">{title}</h3>
+          <h3 className="text-xl font-semibold text-white/80">{title}</h3>
 
-          <p className="max-sm:text-sm text-base text-gray-300 leading-relaxed">
+          <p className="max-sm:text-sm text-[15px] lg:text-base text-gray-300">
             {description}
           </p>
         </div>
 
         {/* Actions */}
         <div className="flex h-full justify-between items-end gap-4 text-sm">
-          <div className="flex gap-4">
+          <div className="flex text-xs font-semibold gap-4 uppercase font-display">
             {github && (
               <a
                 href={github}
                 target="_blank"
-                className="text-orange-300 hover:text-solar transition"
+                className="text-orange-300/90 hover:text-solar border-b transition"
                 aria-label={`View the projects's source code`}
               >
                 GitHub →
@@ -88,7 +88,7 @@ export function ProjectCard({
               <a
                 href={live}
                 target="_blank"
-                className="text-orange-300 hover:text-solar transition"
+                className="text-orange-300/90 border-b transition"
                 aria-label={`View the project live`}
               >
                 Live →
@@ -100,7 +100,7 @@ export function ProjectCard({
 
       {/* Mobile button to show the card description */}
       <button
-        className="absolute max-[1025px]:flex hidden text-blue-300 border bg-gray-900 bottom-2 right-2 text-xs py-1 px-3 
+        className="absolute max-[1025px]:flex hidden text-white/85 border border-solar/90 bg-solar-dim/70 0 bottom-2 right-2 text-xs py-1 px-3 
       rounded-2xl cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >

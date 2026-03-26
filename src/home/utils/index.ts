@@ -60,8 +60,7 @@ export const ABOUT_CARDS = [
   {
     icon: User,
     title: 'Who I Am',
-    description:
-      'I’m Ronny, a Frontend Developer with 2+ years of experience, specializing in React, TypeScript, and Node.js. I have experience building production-ready web applications, integrating APIs, and implementing Web3 features.',
+    description: true,
   },
   {
     icon: Wrench,
@@ -136,14 +135,14 @@ export const TIMELINE = [
 export const SKILLS = [
   {
     id: '1',
-    title: 'Languages & Frameworks',
+    title: 'Languages, Frameworks & Runtimes',
     items: [
       { lang: 'JavaScript / TypeScript', pct: 80 },
-      { lang: 'React / NextJS', pct: 90 },
-      { lang: 'Solid / SolidJS', pct: 65 },
+      { lang: 'React / Next.js', pct: 85 },
+      { lang: 'Node.js (Express)', pct: 75 },
+      { lang: 'SolidJS', pct: 65 },
       { lang: 'Vite / Tanstack Start', pct: 85 },
-      { lang: 'CSS3', pct: 80 },
-      { lang: 'HTML5', pct: 85 },
+      { lang: 'CSS3 / HTML5', pct: 80 },
       { lang: 'Tailwind CSS', pct: 85 },
       { lang: 'Solidity', pct: 35 },
       { lang: 'Rust', pct: 20 },
@@ -164,11 +163,10 @@ export const SKILLS = [
     id: '3',
     title: 'Web3 Libraries',
     items: [
-      { lang: 'Ethers.js', pct: 40 },
-      { lang: 'Web3JS', pct: 40 },
       { lang: 'Wagmi', pct: 80 },
-      { lang: 'Viem', pct: 80 },
+      { lang: 'Viem', pct: 75 },
       { lang: 'RainbowKit', pct: 85 },
+      { lang: 'Ethers.js', pct: 40 },
     ],
   },
 ]
@@ -177,11 +175,7 @@ export const SKILLS = [
 export const HOME_PROJECT_TECHS = [
   { label: 'Next.js', icon: '/logos/tag/next-js.webp', alt: 'Next.js logo' },
   { label: 'Vite', icon: '/logos/vite-logo.webp', alt: 'Vite logo' },
-  {
-    label: 'Solidity',
-    icon: '/logos/solidity-logo.webp',
-    alt: 'Solidity logo',
-  },
+
   { label: 'React', icon: '/logos/tag/react-logo.webp', alt: 'React logo' },
   { label: 'Tanstack', icon: '/logos/tag/tanstack.webp', alt: 'TanStack logo' },
   { label: 'Wagmi', icon: '/logos/tag/wagmi.webp', alt: 'Wagmi logo' },
@@ -239,7 +233,7 @@ export const MY_PROJECTS_TIMELINE = [
   },
 ]
 
-export const HOME_METAVAULT_PROJECT = [
+export const PROJECTS = [
   {
     id: 'metavault',
     title: 'Metavault',
@@ -251,9 +245,6 @@ export const HOME_METAVAULT_PROJECT = [
     live: 'https://metavault-phi.vercel.app/',
     class: 'max-desktop-lg:col-span-1 col-span-2',
   },
-]
-
-export const HOME_SECONDARY_PROJECTS = [
   {
     id: 'manager',
     title: 'Product Manager',

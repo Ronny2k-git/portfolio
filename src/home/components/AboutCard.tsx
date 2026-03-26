@@ -5,7 +5,7 @@ import { twMerge } from 'tailwind-merge'
 type AboutCardProps = {
   icon: LucideIcon
   title: string
-  description?: string
+  description?: boolean
   items?: Array<string>
   className?: string
 }
@@ -32,7 +32,17 @@ export function AboutCard({
 
       {description && (
         <p className="text-[15px] leading-relaxed text-muted-hi">
-          {description}
+          I’m Ronny, a{' '}
+          <span className="text-white/80 font-semibold">
+            Frontend Developer
+          </span>{' '}
+          with{' '}
+          <span className="text-white/80 font-semibold">
+            2+ years of experience
+          </span>
+          , specializing in React, TypeScript, and Node.js. I have experience
+          building production-ready web applications, integrating APIs, and
+          implementing Web3 features.
         </p>
       )}
 
