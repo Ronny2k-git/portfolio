@@ -1,58 +1,29 @@
-import { GithubIcon, TwitterIcon } from '../icons'
-import { LinkedInIcon } from '../icons/Linkedin'
+import { socials } from './Header'
 
 export default function Footer() {
   return (
     <footer className="w-full">
-      {/* Footer content with borders */}
-      <div
-        className="
-          flex
-          items-center
-          justify-center
-          py-4
-          border-y-2
-          border-dashed
-          border-gray-700/60
-        "
-      >
-        <div className="flex flex-col items-center font-display gap-6 text-lg text-gray-400">
-          <p className="text-3xl text-solar">Ronny2k</p>
+      {/* Footer content and borders */}
+      <div className="flex items-center justify-center py-4 border-y-2 border-dashed border-muted/30">
+        <div className="flex flex-col items-center font-display gap-6">
+          <p className="text-3xl text-solar font-serif">Ronny2k</p>
 
-          <div className="flex gap-4 text-base font-normal cursor-pointer">
-            <a
-              href="https://github.com/Ronny2k-git"
-              className="flex gap-2 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View my github profile"
-            >
-              <GithubIcon />
-              Github
-            </a>
-            <a
-              href="https://x.com/RonnyEdson27329"
-              className="flex gap-2 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View my twitter profile"
-            >
-              <TwitterIcon />
-              Twitter
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ronny-edson-duarte-bb092b25a/"
-              className="flex items-start gap-2 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View my linkedin profile"
-            >
-              <LinkedInIcon />
-              Linkedin
-            </a>
+          <div className="flex gap-4 text-base text-muted-hi cursor-pointer">
+            {socials.map((social) => (
+              <a
+                href={social.path}
+                className="flex items-center gap-2 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.aria}
+              >
+                {social.icon}
+                {social.label}
+              </a>
+            ))}
           </div>
 
-          <span className="text-sm text-gray-400/90 font-normal">
+          <span className="text-sm text-muted">
             © Ronny Edson 2026 Inc. All rights reserved.
           </span>
         </div>

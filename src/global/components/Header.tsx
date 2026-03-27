@@ -1,18 +1,21 @@
 import { GithubIcon, LinkedInIcon, TwitterIcon } from '../icons'
 import { NAV_ROUTE_ID } from '../utils'
 
-const socials = [
+export const socials = [
   {
+    label: 'Github',
     path: 'https://github.com/Ronny2k-git',
     aria: 'View my github profile (new tab)',
     icon: <GithubIcon className="size-4 " />,
   },
   {
+    label: 'Twitter',
     path: 'https://x.com/RonnyEdson27329',
     aria: 'View my twitter profile (new tab)',
     icon: <TwitterIcon className="size-4 " />,
   },
   {
+    label: 'Linkedin',
     path: 'https://www.linkedin.com/in/ronny-edson-duarte-bb092b25a/',
     aria: 'View my linkedin profile (new tab)',
     icon: <LinkedInIcon className="size-4 " />,

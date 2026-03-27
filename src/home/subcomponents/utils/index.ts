@@ -1,24 +1,31 @@
-export const EXPERIENCE_HIGHLIGHTS = [
+export const MY_EXPERIENCE = [
   {
-    id: '1',
-    text: 'Built reusable and accessible UI components and integrate them into the site.',
+    id: 1,
+    value: 'freelance',
+    logo: '',
+    company: 'Freelance',
+    role: '',
+    date: '',
+    firstDescription: '',
+    tech: [],
+    contributions: [],
   },
   {
-    id: '2',
-    text: 'Built new pages and wire it up with backend data.',
-  },
-  {
-    id: '3',
-    text: 'Contributed to the development of the new website version (v4).',
-  },
-  {
-    id: '4',
-    text: 'Contributed to the integration of the Solana ecosystem',
-  },
-
-  {
-    id: '5',
-    text: 'Improved performance and overall UX',
+    id: 1,
+    value: 'fjord',
+    logo: '',
+    company: 'Fjord Foundry',
+    role: '',
+    date: '',
+    firstDescription: '',
+    tech: [],
+    contributions: [
+      'Built reusable and accessible UI components and integrated them into the site.',
+      'Built new pages and wired them up with backend data.',
+      'Contributed to the development of the new website version (v4).',
+      'Contributed to the integration of the Solana ecosystem.',
+      'Improved performance and overall UX.',
+    ],
   },
 ]
 

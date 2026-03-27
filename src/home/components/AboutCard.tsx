@@ -1,3 +1,4 @@
+import { getYearsOfExperience } from '@/global/utils/getYearsOfExperience'
 import { Card } from '@/ui/components'
 import type { LucideIcon } from 'lucide-react'
 import { twMerge } from 'tailwind-merge'
@@ -31,14 +32,14 @@ export function AboutCard({
       </div>
 
       {description && (
-        <p className="text-[15px] leading-relaxed text-muted-hi">
+        <p className="text-[15px] text-muted-hi">
           I’m Ronny, a{' '}
           <span className="text-white/80 font-semibold">
             Frontend Developer
           </span>{' '}
           with{' '}
           <span className="text-white/80 font-semibold">
-            2+ years of experience
+            {getYearsOfExperience('2024-03-01')}+ years of experience
           </span>
           , specializing in React, TypeScript, and Node.js. I have experience
           building production-ready web applications, integrating APIs, and
@@ -47,7 +48,7 @@ export function AboutCard({
       )}
 
       {items && (
-        <ul className="flex flex-col gap-1 text-[15px] text-muted-hi">
+        <ul className="flex flex-col gap-[1px] text-[15px] text-muted-hi">
           {items.map((item) => (
             <li key={item}>• {item}</li>
           ))}
