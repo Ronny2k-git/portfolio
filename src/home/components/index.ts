@@ -1,6 +1,6 @@
 export * from '../subcomponents/ExperienceCard'
 export * from './AboutCard'
-export * from './CardInfo'
+export * from './HeroCardInfo'
 export * from './ProjectCard'
 export * from './SectionHeader'
 export * from './SkillCard'

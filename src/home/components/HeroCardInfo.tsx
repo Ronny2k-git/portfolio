@@ -5,7 +5,7 @@ import { Tag } from './Tag'
 
 const NAMES = ['Ronny EDM', 'Frontend']
 
-export function CardInfo() {
+export function HeroCardInfo() {
   const [nameIndex, setNameIndex] = useState(0)
   const [animationKey, setAnimationKey] = useState(0)
 

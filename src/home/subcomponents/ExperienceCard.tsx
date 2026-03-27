@@ -1,5 +1,6 @@
 import { Card } from '@/ui/components'
-import { CheckCircle } from 'lucide-react'
+import { MoveRight } from 'lucide-react'
+import { Tag } from '../components'
 
 export type ExperienceCardProps = {
   id?: number
@@ -9,7 +10,7 @@ export type ExperienceCardProps = {
   role: string
   date: string
   firstDescription: string
-  tech?: Array<string>
+  tech?: [{ label: string; icon: string; alt: '' }]
   contributions?: Array<string>
 }
 
@@ -61,13 +62,23 @@ export function ExperienceCard({
             Skills used
           </span>
 
-          <ul>
+          <ul className="flex flex-wrap gap-2">
             {tech?.map((item, index) => (
               <li
                 key={index}
                 className="flex max-sm:text-center flex-wrap gap-2"
               >
-                {item}
+                <Tag
+                  text={item.label}
+                  icon={
+                    <img
+                      className="size-4 rounded-full object-center object-cover"
+                      src={item.icon}
+                      alt={item.alt}
+                    />
+                  }
+                  className="text-sm cursor-pointer"
+                />
               </li>
             ))}
           </ul>
@@ -77,7 +88,7 @@ export function ExperienceCard({
           <ul className="flex flex-col gap-3">
             {contributions?.map((item, index) => (
               <li key={index} className="flex gap-3 text-gray-400">
-                <CheckCircle className="min-h-6 min-w-6 text-indigo-300" />
+                <MoveRight className="size-3 text-solar" />
                 {item}
               </li>
             ))}

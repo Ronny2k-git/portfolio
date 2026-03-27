@@ -1,11 +1,11 @@
-import { CardInfo } from '../components'
+import { HeroCardInfo } from '../components'
 import { HOME_CIRCLE_LOGO } from '../utils'
 
 export function HeroSection() {
   return (
     <section
       id="hero"
-      className="scroll-mt-[5rem] relative flex w-full h-[44rem] justify-center items-center overflow-hidden "
+      className="scroll-mt-[5rem] relative flex w-full h-[44rem] justify-center items-center "
     >
       {/* Background glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -16,15 +16,15 @@ export function HeroSection() {
       <div
         className="
           absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-[43rem] h-[43rem] 
-          border border-bg-border rounded-full "
+          border border-border-hi/50 rounded-full "
       >
         {/* Middle ring */}
         <div
           className="
-            flex items-center justify-center w-[36rem] h-[36rem] border border-bg-border/90 rounded-full "
+            flex items-center justify-center w-[36rem] h-[36rem] border border-border-hi/40 rounded-full "
         >
           {/* Inner dashed rotating ring */}
-          <div className=" absolute w-[30rem] h-[30rem] border border-dashed border-border-hi/80 rounded-full " />
+          <div className=" absolute w-[30rem] h-[30rem] border border-dashed border-border-hi/60 rounded-full " />
 
           {/* Orbiting logos */}
           <div className="z-50 will-change-transform orbit absolute flex items-center justify-center ">
@@ -39,7 +39,7 @@ export function HeroSection() {
           </div>
 
           {/* Main Card */}
-          <CardInfo />
+          <HeroCardInfo />
         </div>
       </div>
     </section>

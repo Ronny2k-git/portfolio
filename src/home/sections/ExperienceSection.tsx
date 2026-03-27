@@ -1,8 +1,8 @@
-import { Card } from '@/ui/components'
 import { motion } from 'framer-motion'
 import { Tabs } from 'radix-ui'
 import { SectionHeader } from '../components'
 import { ExperienceCard } from '../subcomponents'
+import { MY_EXPERIENCE } from '../subcomponents/utils'
 
 const experienceTabs = [
   { id: 1, value: 'freelance', label: 'Freelance', role: 'Frontend Developer' },
@@ -30,18 +30,11 @@ export function ExperienceSection() {
         description="A summary of my experience and growth as a developer."
       />
 
-      <div className="flex gap-6">
-        <div className="flex flex-col gap-2">
-          {Array.from({ length: 3 }).map((_, index) => (
-            <Card className="w-[30rem] h-20 rounded-2xl" variant={'basic'} />
-          ))}
-        </div>
-
-        <ExperienceCard />
-      </div>
-
-      <Tabs.Root className="w-full flex gap-6">
-        <Tabs.List className="w-full flex flex-col gap-2">
+      <Tabs.Root
+        className="w-full flex max-md:flex-col gap-6"
+        defaultValue={'freelance'}
+      >
+        <Tabs.List className="w-full md:w-1/2 md:min-w-[20rem] flex flex-col gap-2">
           {experienceTabs.map((tab) => (
             <Tabs.Trigger
               className="bg-card-basic p-4 rounded-xl border border-bg-border cursor-pointer"
@@ -54,8 +47,19 @@ export function ExperienceSection() {
         </Tabs.List>
 
         {/* Experience Cards */}
-        {}
-        <Tabs.Content value=""></Tabs.Content>
+        {MY_EXPERIENCE.map((card) => (
+          <Tabs.Content value={card.value}>
+            <ExperienceCard
+              logo={card.logo}
+              company={card.company}
+              role={card.role}
+              date={card.date}
+              firstDescription={card.firstDescription}
+              // tech={card.tech}
+              contributions={card.contributions}
+            />
+          </Tabs.Content>
+        ))}
       </Tabs.Root>
     </motion.section>
   )

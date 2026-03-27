@@ -23,6 +23,8 @@ export default function Home() {
           {/* Hero Section  */}
           <HeroSection />
 
+          <div className="h-px w-full bg-border-hi" />
+
           {/* About Section*/}
           <AboutSection />
 
