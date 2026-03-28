@@ -30,32 +30,45 @@ export function ExperienceSection() {
         description="A summary of my experience and growth as a developer."
       />
 
+      {/* Experience Content */}
       <Tabs.Root
         className="w-full flex max-md:flex-col gap-6"
         defaultValue={'freelance'}
       >
-        <Tabs.List className="w-full md:w-1/2 md:min-w-[20rem] flex flex-col gap-2">
+        <Tabs.List className="flex flex-col gap-2 max-sm:gap-4 w-full md:min-w-[15rem] md:max-w-[27rem] ">
           {experienceTabs.map((tab) => (
             <Tabs.Trigger
-              className="bg-card-basic p-4 rounded-xl border border-bg-border cursor-pointer"
+              className="group flex gap-4 bg-card-basic p-4 rounded-xl border border-bg-border animation duration-300 cursor-pointer
+              data-[state=active]:border-solar "
               key={tab.id}
               value={tab.value}
             >
-              {tab.label}
+              {/* Circle Check */}
+              <div
+                className="size-2 mt-1.5 rounded-full bg-bg-border group-data-[state=active]:bg-solar 
+               group-data-[state=active]:shadow-solar-sm"
+              />
+
+              <div className="flex flex-col gap-1 items-start">
+                <span className="font-display font-semibold text-white-glow">
+                  {tab.label}
+                </span>
+                <span className="text-xs font-mono text-muted">{tab.role}</span>
+              </div>
             </Tabs.Trigger>
           ))}
         </Tabs.List>
 
         {/* Experience Cards */}
         {MY_EXPERIENCE.map((card) => (
-          <Tabs.Content value={card.value}>
+          <Tabs.Content className="w-full md:min-w-[26rem]" value={card.value}>
             <ExperienceCard
               logo={card.logo}
               company={card.company}
               role={card.role}
               date={card.date}
               firstDescription={card.firstDescription}
-              // tech={card.tech}
+              tech={card.tech}
               contributions={card.contributions}
             />
           </Tabs.Content>

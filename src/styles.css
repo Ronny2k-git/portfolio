@@ -22,8 +22,11 @@
   --color-muted: #7a7060;
   --color-muted-hi: #afa08a;
   --color-solar: #c9a03c;
+  --color-solar-active: rgba(201, 160, 60, 0.6);
   --color-solar-dim: #8a6b22;
-  --color-solar-glow: rgba(201, 160, 60, 0.12);
+  --color-solar-glow: rgba(201, 160, 60, 0.15);
+  --shadow-solar-sm: 0 0 6px 2px rgba(201, 160, 60, 0.6);
+  --color-white-glow: #f5f0e8;
   --color-card-basic: #111009;
   --color-card-gradient: #15130d;
   --color-background: #0a0906;

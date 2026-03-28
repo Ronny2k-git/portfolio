@@ -1,3 +1,4 @@
+import { SectionDivider } from '@/home/components'
 import {
   AboutSection,
   ExperienceSection,
@@ -23,16 +24,22 @@ export default function Home() {
           {/* Hero Section  */}
           <HeroSection />
 
-          <div className="h-px w-full bg-border-hi" />
+          <SectionDivider title={'About'} />
 
           {/* About Section*/}
           <AboutSection />
 
+          <SectionDivider title={'Skills'} />
+
           {/* Skill Cards Section */}
           <SkillSection />
 
+          <SectionDivider title={'Projects'} />
+
           {/* My projects Section*/}
           <ProjectSection />
+
+          <SectionDivider title={'Experiences'} />
 
           {/* My experience Section */}
           <ExperienceSection />

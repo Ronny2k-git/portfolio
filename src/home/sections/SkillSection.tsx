@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { SectionHeader, SkillCard, SkillSectionHeader } from '../components'
+import { SectionDivider, SectionHeader, SkillCard } from '../components'
 import { SKILLS } from '../utils'
 
 export function SkillSection() {
@@ -21,9 +21,10 @@ export function SkillSection() {
       {SKILLS.map((section, index) => (
         <div className="flex flex-col gap-6">
           {/* Section Title */}
-          <SkillSectionHeader
+          <SectionDivider
             key={`${section.id}_${index}`}
             title={section.title}
+            textStyle="secondary"
           />
 
           <div className="w-full z-40 gap-4 grid grid-cols-[repeat(auto-fit,minmax(210px,1fr))]">

@@ -10,7 +10,7 @@ export type ExperienceCardProps = {
   role: string
   date: string
   firstDescription: string
-  tech?: [{ label: string; icon: string; alt: '' }]
+  tech?: Array<{ label: string; icon: string; alt: string }>
   contributions?: Array<string>
 }
 
@@ -24,38 +24,35 @@ export function ExperienceCard({
   contributions,
 }: ExperienceCardProps) {
   return (
-    <Card variant="secondary" className="rounded-4xl overflow-hidden ">
-      {/* Banner */}
-      <div className="relative hover:scale-102">
+    <Card
+      variant="secondary"
+      className="rounded-4xl p-4 sm:p-8 overflow-hidden "
+    >
+      {/* HEADER */}
+      <div className=" flex gap-4">
         <img
-          src="/home/company-banner.webp"
-          alt="The company's banner"
-          className="aspect-square sm:aspect-video  max-h-[25rem] w-full object-cover max-sm:object-right"
+          src={logo}
+          alt="The company's logo"
+          className="border border-border-hi/55 min-h-12 min-w-12 max-h-12 max-w-12 sm:min-h-15 
+           sm:min-w-15 sm:max-h-15 sm:max-w-15 rounded-2xl "
         />
-        <div className="absolute inset-0 bg-black/20" />
 
-        <div className="absolute bottom-6 left-6 flex items-center gap-4">
-          <img
-            src={logo}
-            alt="The company's logo"
-            className="border border-indigo-300 min-h-15 min-w-15 max-h-15 max-w-15 rounded-full bg-black/40"
-          />
+        <div className="flex flex-col gap-2 font-mono">
+          <span
+            className="text-2xl font-display font-semibold text-white-glow"
+            translate="no"
+          >
+            {company}
+          </span>
 
-          <div>
-            <span className="text-2xl text-indigo-300" translate="no">
-              {company}
-            </span>
-
-            <p className="text-sm text-gray-400">
-              {role} · {date}
-            </p>
-          </div>
+          <span className="text-xs">{role} </span>
+          <span className="text-xs text-muted">{date}</span>
         </div>
       </div>
 
-      {/* Content */}
-      <div className="p-6 flex flex-col gap-8">
-        <p className="text-gray-400">{firstDescription}</p>
+      {/* CONTENT */}
+      <div className="p-6 flex flex-col gap-4 sm:gap-8">
+        <p className="text-muted text-[15px]">{firstDescription}</p>
 
         <div className="flex flex-col gap-2 text-muted">
           <span className="text-[13px] uppercase font-display">
@@ -84,11 +81,19 @@ export function ExperienceCard({
           </ul>
         </div>
 
-        <div className="flex flex-col gap-8">
-          <ul className="flex flex-col gap-3">
+        {/* CONTRIBUTIONS */}
+        <div className="flex flex-col gap-2">
+          <span className="text-[13px] text-muted uppercase font-display">
+            Activities
+          </span>
+
+          <ul className="flex flex-col gap-1">
             {contributions?.map((item, index) => (
-              <li key={index} className="flex gap-3 text-gray-400">
-                <MoveRight className="size-3 text-solar" />
+              <li
+                key={index}
+                className="flex items-center gap-2 text-muted-hi text-[15px]"
+              >
+                <MoveRight className="min-h-3 min-w-3 max-h-3 max-w-3 text-solar" />
                 {item}
               </li>
             ))}
@@ -98,23 +103,3 @@ export function ExperienceCard({
     </Card>
   )
 }
-
-// <div className="p-6 flex flex-col gap-8">
-//       <p className="text-gray-400 leading-relaxed">
-//         Worked on Web3-focused applications, contributing to frontend
-//         architecture, UI development, and blockchain integrations. Focused on
-//         building scalable, maintainable interfaces and improving user
-//         experience in production-level products.
-//       </p>
-
-//       <div className="flex flex-col gap-8">
-//         <ul className="flex flex-col gap-3">
-//           {EXPERIENCE_HIGHLIGHTS.map((item) => (
-//             <li key={item.id} className="flex gap-3 text-gray-400">
-//               <CheckCircle className="min-h-6 min-w-6 text-indigo-300" />
-//               {item.text}
-//             </li>
-//           ))}
-//         </ul>
-//       </div>
-//     </div>

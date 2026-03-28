@@ -2,11 +2,12 @@ export const MY_EXPERIENCE = [
   {
     id: 1,
     value: 'freelance',
-    logo: '',
+    logo: '/home/freelance-logo.webp',
     company: 'Freelance',
-    role: '',
-    date: '',
-    firstDescription: '',
+    role: 'Frontend Developer (Freelance)',
+    date: 'Nov 2025 - Present',
+    firstDescription:
+      'Developing modern web applications for clients, focusing on scalable frontend architecture, API integration, and production-ready deployments.',
     tech: [
       {
         label: 'JS/TS',
@@ -21,39 +22,37 @@ export const MY_EXPERIENCE = [
         alt: 'Next.js logo',
       },
       { label: 'Vite', icon: '/logos/vite-logo.webp', alt: 'Vite logo' },
-      { label: 'Wagmi', icon: '/logos/tag/wagmi.webp', alt: 'Wagmi logo' },
-      {
-        label: 'Tailwind',
-        icon: '/logos/tag/tailwind.webp',
-        alt: 'Tailwind CSS logo',
-      },
-      {
-        label: 'Prisma.io',
-        icon: '/logos/tag/prisma-orm.webp',
-        alt: 'Prisma ORM logo',
-      },
+
       {
         label: 'MySQL',
         icon: '/logos/tag/mysql.webp',
         alt: 'Prisma ORM logo',
       },
     ],
-    contributions: ['', '', '', '', ''],
+    contributions: [
+      'Web interface development using React, TypeScript, Next.js and Vite.',
+      'Consuming REST APIs and database integrations.',
+      'Frontend tests using frameworks such: Vitest, Cypress etc',
+      'API development using Node.js and Express.',
+      'Application deployment using Vercel, Github or other cloud services.',
+    ],
   },
   {
     id: 1,
     value: 'fjord',
-    logo: '',
+    logo: '/home/fjord-logo.webp',
     company: 'Fjord Foundry',
-    role: '',
-    date: '',
-    firstDescription: '',
+    role: 'Junior Frontend Developer',
+    date: 'Oct 2024 - Nov 2025',
+    firstDescription:
+      'Worked on production-level Web3 applications, contributing to frontend architecture, UI development, and blockchain integrations within a fast-paced team environment.',
     tech: [
       {
         label: 'Next.js',
         icon: '/logos/tag/next-js.webp',
         alt: 'Next.js logo',
       },
+      { label: 'React', icon: '/logos/tag/react-logo.webp', alt: 'React logo' },
       { label: 'Vite', icon: '/logos/vite-logo.webp', alt: 'Vite logo' },
       {
         label: 'Solidity',
@@ -65,27 +64,15 @@ export const MY_EXPERIENCE = [
         icon: '/logos/tag/solana-logo.webp',
         alt: 'Solana logo',
       },
-      { label: 'React', icon: '/logos/tag/react-logo.webp', alt: 'React logo' },
-      { label: 'Wagmi', icon: '/logos/tag/wagmi.webp', alt: 'Wagmi logo' },
-      {
-        label: 'Tailwind',
-        icon: '/logos/tag/tailwind.webp',
-        alt: 'Tailwind CSS logo',
-      },
+      { label: 'Docker', icon: '/logos/tag/docker.webp', alt: 'Docker logo' },
       {
         label: 'PlanetScale',
         icon: '/logos/tag/planet-scale.webp',
         alt: 'PlanetScale logo',
       },
-      {
-        label: 'Prisma.io',
-        icon: '/logos/tag/prisma-orm.webp',
-        alt: 'Prisma ORM logo',
-      },
-      { label: 'Docker', icon: '/logos/tag/docker.webp', alt: 'Docker logo' },
     ],
     contributions: [
-      'Built reusable and accessible UI components and integrated them into the site.',
+      'Built reusable and accessible UI components.',
       'Built new pages and wired them up with backend data.',
       'Contributed to the development of the new website version (v4).',
       'Contributed to the integration of the Solana ecosystem.',
