@@ -7,6 +7,7 @@ export type ExperienceCardProps = {
   value?: 'freelance'
   logo: string
   company: string
+  website?: string
   role: string
   date: string
   firstDescription: string
@@ -17,6 +18,7 @@ export type ExperienceCardProps = {
 export function ExperienceCard({
   logo,
   company,
+  website,
   role,
   date,
   firstDescription,
@@ -38,12 +40,25 @@ export function ExperienceCard({
         />
 
         <div className="flex flex-col gap-2 font-mono">
-          <span
-            className="text-2xl font-display font-semibold text-white-glow"
-            translate="no"
-          >
-            {company}
-          </span>
+          <div className="flex flex-wrap items-center gap-4">
+            <span
+              className="text-2xl font-display font-semibold text-white-glow"
+              translate="no"
+            >
+              {company}
+            </span>
+
+            {website && (
+              <a
+                href={website}
+                target="_blank"
+                aria-label="Go to the company website (new tab)"
+                className="text-muted-hi text-xs hover:text-solar border-b"
+              >
+                ⟶ Website
+              </a>
+            )}
+          </div>
 
           <span className="text-xs">{role} </span>
           <span className="text-xs text-muted">{date}</span>

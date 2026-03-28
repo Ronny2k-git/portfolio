@@ -65,6 +65,7 @@ export function ExperienceSection() {
             <ExperienceCard
               logo={card.logo}
               company={card.company}
+              website={card.website}
               role={card.role}
               date={card.date}
               firstDescription={card.firstDescription}

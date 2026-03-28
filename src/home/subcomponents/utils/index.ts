@@ -42,6 +42,7 @@ export const MY_EXPERIENCE = [
     value: 'fjord',
     logo: '/home/fjord-logo.webp',
     company: 'Fjord Foundry',
+    website: 'https://www.fjordfoundry.com/',
     role: 'Junior Frontend Developer',
     date: 'Oct 2024 - Nov 2025',
     firstDescription:
