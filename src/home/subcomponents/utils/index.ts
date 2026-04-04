@@ -22,11 +22,15 @@ export const MY_EXPERIENCE = [
         alt: 'Next.js logo',
       },
       { label: 'Vite', icon: '/logos/vite-logo.webp', alt: 'Vite logo' },
-
       {
         label: 'MySQL',
         icon: '/logos/tag/mysql.webp',
-        alt: 'Prisma ORM logo',
+        alt: 'MySQL logo',
+      },
+      {
+        label: 'Vercel',
+        icon: '/logos/tag/vercel-logo.webp',
+        alt: 'Vercel logo',
       },
     ],
     contributions: [
