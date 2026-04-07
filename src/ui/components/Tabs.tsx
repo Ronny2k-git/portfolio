@@ -2,9 +2,10 @@ import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 import { Tabs as PrimitiveTabs } from 'radix-ui'
 import type { ReactNode } from 'react'
+import { twMerge } from 'tailwind-merge'
 import { Divider } from './Divider'
 
-const tabsListVariants = cva('flex w-full gap-2 sm:gap-4 cursor-pointer', {
+const tabsListVariants = cva('flex w-full gap-2 sm:gap-4', {
   variants: {
     direction: {
       vertical: 'flex-col',
@@ -17,7 +18,7 @@ const tabsListVariants = cva('flex w-full gap-2 sm:gap-4 cursor-pointer', {
 })
 
 const tabsTriggerVariants = cva(
-  'group flex gap-4 rounded-xl border border-bg-border transition-colors',
+  'group flex gap-4 rounded-xl border border-bg-border cursor-pointer transition-colors',
   {
     variants: {
       variant: {
@@ -44,6 +45,7 @@ export type TabsProps = {
   defaultValue: string
   direction: 'vertical' | 'horizontal'
   children?: ReactNode
+  tabListStyle?: string
   tabList?: Array<{
     id: number
     value: string
@@ -63,6 +65,7 @@ export function Tabs({
   size,
   direction,
   children,
+  tabListStyle,
   tabList,
   tabContent,
 }: TabsProps) {
@@ -70,17 +73,28 @@ export function Tabs({
     <PrimitiveTabs.Root className="w-full" defaultValue={defaultValue}>
       <div className="flex max-md:flex-col gap-6">
         {/* Left column */}
-        <div className="flex flex-col gap-6 md:min-w-[15rem] md:max-w-[27rem]">
-          {children}
+        <div className="flex flex-col gap-6">
+          {children && (
+            <div className="flex flex-col gap-6">
+              {children}
 
-          <PrimitiveTabs.List className={tabsListVariants({ direction })}>
+              <Divider className="md:hidden " />
+            </div>
+          )}
+
+          <PrimitiveTabs.List
+            className={twMerge(tabsListVariants({ direction }), tabListStyle)}
+          >
             {tabList?.map((tab) => (
               <PrimitiveTabs.Trigger
                 key={tab.id}
                 value={tab.value}
                 className={tabsTriggerVariants({ variant, size, direction })}
               >
-                <div className="size-2 mt-1.5 rounded-full bg-bg-border group-data-[state=active]:bg-solar" />
+                <div
+                  className="size-2 mt-1.5 rounded-full bg-bg-border group-data-[state=active]:bg-solar 
+                  sm:group-data-[state=active]:shadow-solar-sm"
+                />
 
                 <div className="flex flex-col gap-1 items-start">
                   <span className="font-display font-semibold text-white-glow">
@@ -104,7 +118,7 @@ export function Tabs({
           </PrimitiveTabs.List>
         </div>
 
-        <Divider className="sm:hidden opacity-70" />
+        <Divider className="md:hidden " />
 
         {/* Right column */}
         <div className="w-full md:min-w-[26rem]">

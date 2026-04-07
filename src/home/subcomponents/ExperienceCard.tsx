@@ -66,7 +66,7 @@ export function ExperienceCard({
       </div>
 
       {/* Overview */}
-      <p className="text-muted text-[15px] mt-4 p-2 sm:p-4">
+      <p className="text-muted text-[15px] max-sm:mt-4 p-2 sm:p-4">
         {firstDescription}
       </p>
 
@@ -126,7 +126,6 @@ export function ExperienceCard({
       </div>
 
       {/* Desktop Content */}
-
       <div className="hidden sm:flex p-6  flex-col gap-4 sm:gap-8">
         <div className="flex flex-col gap-2 text-muted">
           <span className="text-[13px] uppercase font-display">

@@ -27,7 +27,7 @@ export function ProjectSection() {
         description="Personal projects built to explore new technologies — 2024 to present."
       />
 
-      <div className="w-full flex flex-col">
+      <div className="w-full flex flex-col ">
         {/* Description */}
         {/* <div className="flex flex-col gap-6">
           <Card className="w-full h-full gap-4 rounded-4xl p-4 sm:p-8">
@@ -49,6 +49,7 @@ export function ProjectSection() {
           defaultValue="metavault"
           direction="vertical"
           tabList={projectTabs}
+          tabListStyle="w-full md:min-w-[18rem] lg:min-w-[27rem] md:max-w-[27rem]"
           tabContent={PROJECTS.map((project) => ({
             value: project.id,
             content: (
@@ -65,7 +66,7 @@ export function ProjectSection() {
             ),
           }))}
           children={
-            <Card className="w-full h-full max-h-[15rem] lg:h-[12rem] gap-4 rounded-4xl p-4 sm:p-8">
+            <Card className="w-full h-full md:max-w-[27rem] gap-4 rounded-4xl p-4 sm:p-8">
               <span className="text-sm font-semibold font-display uppercase text-muted-hi/80">
                 Overview ( 2024 — Present )
               </span>
