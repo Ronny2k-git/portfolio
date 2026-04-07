@@ -244,6 +244,7 @@ export const PROJECTS = [
     github: 'https://github.com/Ronny2k-git/metavault',
     live: 'https://metavault-phi.vercel.app/',
     class: 'max-desktop-lg:col-span-1 col-span-2',
+    date: 'Oct 2025',
   },
   {
     id: 'manager',
@@ -255,6 +256,7 @@ export const PROJECTS = [
     github: 'https://github.com/Ronny2k-git/marketplace',
     live: 'https://product-manager2k.vercel.app/',
     class: 'col-span-1',
+    date: 'Nov 2024',
   },
   {
     id: 'vault-marketplace',
@@ -265,5 +267,6 @@ export const PROJECTS = [
     alt: 'Vault Marketplace Web3 interface',
     github: 'https://github.com/Ronny2k-git/vault-marketplace',
     class: 'col-span-1',
+    date: 'Jan 2025',
   },
 ]

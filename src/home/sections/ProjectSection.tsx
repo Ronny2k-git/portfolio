@@ -1,7 +1,14 @@
-import { Card } from '@/ui/components'
+import { Card, Tabs } from '@/ui/components'
 import { motion } from 'framer-motion'
-import { ProjectCard, SectionHeader, Tag } from '../components'
-import { HOME_PROJECT_TECHS, PROJECTS } from '../utils'
+import { SectionHeader } from '../components'
+import { PROJECTS } from '../utils'
+
+const projectTabs = PROJECTS.map((project, index) => ({
+  id: index,
+  value: project.id,
+  label: project.title,
+  year: project.date,
+}))
 
 export function ProjectSection() {
   return (
@@ -20,24 +27,64 @@ export function ProjectSection() {
         description="Personal projects built to explore new technologies — 2024 to present."
       />
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="w-full">
         {/* Description */}
-        <Card className="w-full h-full gap-4 rounded-4xl p-4 sm:p-8">
-          <span className="text-sm font-semibold font-display uppercase text-muted-hi/80">
-            Overview ( 2024 — Present )
-          </span>
+        {/* <div className="flex flex-col gap-6">
+          <Card className="w-full h-full gap-4 rounded-4xl p-4 sm:p-8">
+            <span className="text-sm font-semibold font-display uppercase text-muted-hi/80">
+              Overview ( 2024 — Present )
+            </span>
 
-          <p className="text-[15px] leading-relaxed text-muted-hi">
-            <span className="text-solar">Personal</span> projects created to
-            explore new technologies and ideas, primarily for{' '}
-            <span className="text-solar">study</span> purposes. With a focus on{' '}
-            <span className="text-solar">database</span> interactions and
-            blockchain <span className="text-solar">smart contracts</span>.
-          </p>
-        </Card>
+            <p className="text-[15px] leading-relaxed text-muted-hi">
+              <span className="text-solar">Personal</span> projects created to
+              explore new technologies and ideas, primarily for{' '}
+              <span className="text-solar">study</span> purposes. With a focus
+              on <span className="text-solar">database</span> interactions and
+              blockchain <span className="text-solar">smart contracts</span>.
+            </p>
+          </Card>
+        </div> */}
+
+        <Tabs
+          tabList={projectTabs}
+          children={
+            <Card className="w-full h-full max-h-[15rem] lg:h-[12rem] gap-4 rounded-4xl p-4 sm:p-8">
+              <span className="text-sm font-semibold font-display uppercase text-muted-hi/80">
+                Overview ( 2024 — Present )
+              </span>
+
+              <p className="text-[15px] leading-relaxed text-muted-hi">
+                <span className="text-solar">Personal</span> projects created to
+                explore new technologies and ideas, primarily for{' '}
+                <span className="text-solar">study</span> purposes. With a focus
+                on <span className="text-solar">database</span> interactions and
+                blockchain <span className="text-solar">smart contracts</span>.
+              </p>
+            </Card>
+          }
+        />
+
+        {/* {PROJECTS.map((project) => (
+          <Card
+            key={project.title}
+            variant={'basic'}
+            className="p-4 rounded-4xl"
+          >
+            <ProjectCard
+              id={project.id}
+              className={`${project.class}`}
+              key={project.title}
+              image={project.image}
+              title={project.title}
+              description={project.description}
+              github={project.github}
+              live={project.live}
+            />
+          </Card>
+        ))} */}
 
         {/* Projects Stack */}
-        <Card
+        {/* <Card
           className="flex items-center justify-center p-4 sm:p-8 rounded-4xl"
           variant={'basic'}
         >
@@ -46,7 +93,7 @@ export function ProjectSection() {
               Technologies used in these projects:
             </span>
 
-            {/* Tags */}
+            
             <ul
               className="flex flex-wrap gap-2 max-sm:justify-center "
               translate="no"
@@ -70,10 +117,10 @@ export function ProjectSection() {
               })}
             </ul>
           </div>
-        </Card>
+        </Card> */}
 
         {/* Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:col-span-2">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:col-span-2">
           {PROJECTS.map((project) => (
             <Card
               key={project.title}
@@ -92,7 +139,7 @@ export function ProjectSection() {
               />
             </Card>
           ))}
-        </div>
+        </div> */}
       </div>
     </motion.section>
   )
