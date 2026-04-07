@@ -246,6 +246,18 @@ export const PROJECTS = [
     class: 'max-desktop-lg:col-span-1 col-span-2',
     date: 'Oct 2025',
   },
+
+  {
+    id: 'vault-marketplace',
+    title: 'Vault Marketplace',
+    description:
+      'A decentralized web3 marketplace when you can create your own vault on the blockchain to save your tokens and manage them on sepolia network, allowing users to deposit, withdraw, and explore active or finalized vaults',
+    image: '/home/vault-marketplace.webp',
+    alt: 'Vault Marketplace Web3 interface',
+    github: 'https://github.com/Ronny2k-git/vault-marketplace',
+    class: 'col-span-1',
+    date: 'Jan 2025',
+  },
   {
     id: 'manager',
     title: 'Product Manager',
@@ -257,16 +269,5 @@ export const PROJECTS = [
     live: 'https://product-manager2k.vercel.app/',
     class: 'col-span-1',
     date: 'Nov 2024',
-  },
-  {
-    id: 'vault-marketplace',
-    title: 'Vault Marketplace',
-    description:
-      'A decentralized web3 marketplace when you can create your own vault on the blockchain to save your tokens and manage them on sepolia network, allowing users to deposit, withdraw, and explore active or finalized vaults',
-    image: '/home/vault-marketplace.webp',
-    alt: 'Vault Marketplace Web3 interface',
-    github: 'https://github.com/Ronny2k-git/vault-marketplace',
-    class: 'col-span-1',
-    date: 'Jan 2025',
   },
 ]

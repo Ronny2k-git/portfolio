@@ -4,15 +4,12 @@ import { SectionHeader } from '../components'
 import { ExperienceCard } from '../subcomponents'
 import { MY_EXPERIENCE } from '../subcomponents/utils'
 
-const experienceTabs = [
-  { id: 1, value: 'freelance', label: 'Freelance', role: 'Frontend Developer' },
-  {
-    id: 2,
-    value: 'fjord',
-    label: 'Fjord Foundry',
-    role: 'Junior Frontend Developer',
-  },
-]
+const experienceTabs = MY_EXPERIENCE.map((exp, index) => ({
+  id: index,
+  value: exp.value,
+  label: exp.company,
+  role: exp.role,
+}))
 
 export function ExperienceSection() {
   return (

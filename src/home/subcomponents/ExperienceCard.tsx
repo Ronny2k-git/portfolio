@@ -1,10 +1,10 @@
-import { Card } from '@/ui/components'
+import { Card, Divider, Tabs } from '@/ui/components'
 import { MoveRight } from 'lucide-react'
 import { Tag } from '../components'
 
 export type ExperienceCardProps = {
   id?: number
-  value?: 'freelance'
+  value?: string
   logo: string
   company: string
   website?: string
@@ -65,10 +65,69 @@ export function ExperienceCard({
         </div>
       </div>
 
-      {/* CONTENT */}
-      <div className="p-6 flex flex-col gap-4 sm:gap-8">
-        <p className="text-muted text-[15px]">{firstDescription}</p>
+      {/* Overview */}
+      <p className="text-muted text-[15px] mt-4 p-2 sm:p-4">
+        {firstDescription}
+      </p>
 
+      {/* Mobile Content */}
+      <div className="sm:hidden mt-4">
+        <Divider className="mb-4 opacity-70" />
+
+        <Tabs
+          direction="vertical"
+          variant={'basic2'}
+          size={'sm'}
+          defaultValue="activities"
+          tabList={[
+            { id: 1, value: 'activities', label: 'Activities' },
+            { id: 2, value: 'skills', label: 'Skills Used' },
+          ]}
+          tabContent={[
+            {
+              value: 'skills',
+              content: (
+                <ul className="flex flex-wrap gap-2">
+                  {tech?.map((item, index) => (
+                    <li key={index}>
+                      <Tag
+                        text={item.label}
+                        icon={
+                          <img
+                            className="size-4 rounded-full"
+                            src={item.icon}
+                            alt={item.alt}
+                          />
+                        }
+                      />
+                    </li>
+                  ))}
+                </ul>
+              ),
+            },
+            {
+              value: 'activities',
+              content: (
+                <ul className="flex flex-col gap-2">
+                  {contributions?.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center gap-2 text-muted text-sm"
+                    >
+                      <MoveRight className="size-3 text-solar" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              ),
+            },
+          ]}
+        />
+      </div>
+
+      {/* Desktop Content */}
+
+      <div className="hidden sm:flex p-6  flex-col gap-4 sm:gap-8">
         <div className="flex flex-col gap-2 text-muted">
           <span className="text-[13px] uppercase font-display">
             Skills used

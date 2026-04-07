@@ -1,6 +1,6 @@
 import { Card, Tabs } from '@/ui/components'
 import { motion } from 'framer-motion'
-import { SectionHeader } from '../components'
+import { ProjectCard, SectionHeader } from '../components'
 import { PROJECTS } from '../utils'
 
 const projectTabs = PROJECTS.map((project, index) => ({
@@ -27,7 +27,7 @@ export function ProjectSection() {
         description="Personal projects built to explore new technologies — 2024 to present."
       />
 
-      <div className="w-full">
+      <div className="w-full flex flex-col">
         {/* Description */}
         {/* <div className="flex flex-col gap-6">
           <Card className="w-full h-full gap-4 rounded-4xl p-4 sm:p-8">
@@ -46,7 +46,24 @@ export function ProjectSection() {
         </div> */}
 
         <Tabs
+          defaultValue="metavault"
+          direction="vertical"
           tabList={projectTabs}
+          tabContent={PROJECTS.map((project) => ({
+            value: project.id,
+            content: (
+              <ProjectCard
+                id={project.id}
+                className={`${project.class}`}
+                key={project.title}
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                github={project.github}
+                live={project.live}
+              />
+            ),
+          }))}
           children={
             <Card className="w-full h-full max-h-[15rem] lg:h-[12rem] gap-4 rounded-4xl p-4 sm:p-8">
               <span className="text-sm font-semibold font-display uppercase text-muted-hi/80">
