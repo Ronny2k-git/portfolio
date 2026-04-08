@@ -103,11 +103,7 @@ code {
   animation: orbit 12s linear infinite;
 }
 
-.planet1 {
-  animation: counter-rotate 12s linear infinite;
-}
-
-.planet2 {
+.planet-speed {
   animation: counter-rotate 12s linear infinite;
 }
 

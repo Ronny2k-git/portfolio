@@ -39,7 +39,7 @@ export function ExperienceCard({
            sm:min-w-15 sm:max-h-15 sm:max-w-15 rounded-2xl "
         />
 
-        <div className="flex flex-col gap-2 font-mono">
+        <div className="flex flex-col gap-1 font-mono">
           <div className="flex flex-wrap items-center gap-4">
             <span
               className="text-2xl font-display font-semibold text-white-glow"
@@ -53,7 +53,7 @@ export function ExperienceCard({
                 href={website}
                 target="_blank"
                 aria-label="Go to the company website (new tab)"
-                className="text-muted-hi text-xs hover:text-solar border-b"
+                className="text-solar hover:text-orange-300/90 text-xs  border-b"
               >
                 ⟶ Website
               </a>

@@ -44,7 +44,6 @@ const tabsTriggerVariants = cva(
 export type TabsProps = {
   defaultValue: string
   direction: 'vertical' | 'horizontal'
-  children?: ReactNode
   tabListStyle?: string
   tabList?: Array<{
     id: number
@@ -64,7 +63,6 @@ export function Tabs({
   variant,
   size,
   direction,
-  children,
   tabListStyle,
   tabList,
   tabContent,
@@ -74,14 +72,6 @@ export function Tabs({
       <div className="flex max-md:flex-col gap-6">
         {/* Left column */}
         <div className="flex flex-col gap-6">
-          {children && (
-            <div className="flex flex-col gap-6">
-              {children}
-
-              <Divider className="md:hidden " />
-            </div>
-          )}
-
           <PrimitiveTabs.List
             className={twMerge(tabsListVariants({ direction }), tabListStyle)}
           >
