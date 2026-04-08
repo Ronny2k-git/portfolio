@@ -68,6 +68,11 @@ body {
   background-color: var(--color-background);
 }
 
+::selection {
+  background: rgba(201, 160, 60, 0.3);
+  color: var(--color-white-glow);
+}
+
 code {
   font-family:
     source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;

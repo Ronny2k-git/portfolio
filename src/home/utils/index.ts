@@ -239,7 +239,7 @@ export const PROJECTS = [
     title: 'Metavault',
     description:
       'A decentralized Web3 platform where users can create on-chain vaults, execute trades, monitor active and completed vaults, and manage their profiles directly on the blockchain. I worked on this project for 3 months.',
-    image: '/home/metavault.webp',
+    image: '/home/projects/metavault.webp',
     alt: 'Metavault Web3 platform interface',
     github: 'https://github.com/Ronny2k-git/metavault',
     live: 'https://metavault-phi.vercel.app/',
@@ -252,7 +252,7 @@ export const PROJECTS = [
     title: 'Vault Marketplace',
     description:
       'A decentralized web3 marketplace when you can create your own vault on the blockchain to save your tokens and manage them on sepolia network, allowing users to deposit, withdraw, and explore active or finalized vaults',
-    image: '/home/vault-marketplace.webp',
+    image: '/home/projects/vault-marketplace.webp',
     alt: 'Vault Marketplace Web3 interface',
     github: 'https://github.com/Ronny2k-git/vault-marketplace',
     class: 'col-span-1',
@@ -263,7 +263,7 @@ export const PROJECTS = [
     title: 'Product Manager',
     description:
       'A website where users can create their products to manage inventory and track updates. All data is stored in local storage. I worked on this project for two weeks in the past and recently refactored it.',
-    image: '/home/manager.webp',
+    image: '/home/projects/manager.webp',
     alt: 'Product Manager dashboard interface',
     github: 'https://github.com/Ronny2k-git/marketplace',
     live: 'https://product-manager2k.vercel.app/',

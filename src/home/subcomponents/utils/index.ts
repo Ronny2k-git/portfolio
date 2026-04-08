@@ -2,7 +2,7 @@ export const MY_EXPERIENCE = [
   {
     id: 1,
     value: 'freelance',
-    logo: '/home/freelance-logo.webp',
+    logo: '/home/companies/freelance-logo.webp',
     company: 'Freelance',
     role: 'Frontend Developer (Freelance)',
     date: 'Nov 2025 - Present',
@@ -44,7 +44,7 @@ export const MY_EXPERIENCE = [
   {
     id: 1,
     value: 'fjord',
-    logo: '/home/fjord-logo.webp',
+    logo: '/home/companies/fjord-logo.webp',
     company: 'Fjord Foundry',
     website: 'https://www.fjordfoundry.com/',
     role: 'Junior Frontend Developer',
