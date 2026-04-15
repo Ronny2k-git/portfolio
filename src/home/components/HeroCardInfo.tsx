@@ -1,3 +1,4 @@
+import { getYearsOfExperience } from '@/global/utils/getYearsOfExperience'
 import { Card } from '@/ui/components'
 import { useEffect, useState } from 'react'
 import { MAIN_STACK } from '../utils'
@@ -58,7 +59,9 @@ export function HeroCardInfo() {
         {/* Role */}
         <p className="text-lg text-muted font-mono tracking-wide">
           // Frontend Developer
-          <span className="text-solar/75 block">2+ years exp</span>
+          <span className="text-solar/75 block">
+            {getYearsOfExperience('2024-03-01')}+ years exp
+          </span>
         </p>
 
         {/* Stack */}
