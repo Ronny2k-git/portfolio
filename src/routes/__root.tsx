@@ -1,4 +1,4 @@
-import { ScrollToTop } from '@/global/components'
+import { ScrollToTop, Stars } from '@/global/components'
 import Footer from '@/global/components/Footer'
 import NotFound from '@/global/components/NotFound'
 import { TanStackDevtools } from '@tanstack/react-devtools'
@@ -17,6 +17,8 @@ export const Route = createRootRoute({
 
       {/* Component to scroll to the top of the page */}
       <ScrollToTop />
+
+      <Stars />
 
       {/* Project Footer */}
       <Footer />

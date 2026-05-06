@@ -23,7 +23,7 @@ export function HeroCardInfo() {
 
   return (
     <Card
-      className=" relative z-50 flex items-center justify-center max-sm:max-w-[19.8rem] sm:size-[25.5rem] 
+      className=" relative z-50 flex items-center justify-center max-sm:max-w-[19.8rem] sm:size-[23rem] 
       rounded-[32px] sm:rounded-full "
       variant={'gradient'}
     >
@@ -38,7 +38,7 @@ export function HeroCardInfo() {
         <span
           key={animationKey}
           className="
-            text-5xl sm:text-[3.7rem] font-serif leading-[1.05] text-solar tracking-tight
+            text-5xl sm:text-[3rem] font-serif leading-[1.05] text-solar tracking-tight
             hover:scale-110 whitespace-nowrap"
           translate="no"
         >

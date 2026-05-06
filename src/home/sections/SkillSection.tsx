@@ -19,17 +19,17 @@ export function SkillSection() {
       />
 
       {SKILLS.map((section, index) => (
-        <div className="flex flex-col gap-6">
+        <div key={`${section.id}_${index}`} className="flex flex-col gap-6">
           {/* Section Title */}
-          <SectionDivider
-            key={`${section.id}_${index}`}
-            title={section.title}
-            textStyle="secondary"
-          />
+          <SectionDivider title={section.title} textStyle="secondary" />
 
           <div className="w-full z-40 gap-4 grid grid-cols-[repeat(auto-fit,minmax(210px,1fr))]">
-            {section.items.map((skill) => (
-              <SkillCard key={skill.lang} pct={skill.pct} title={skill.lang} />
+            {section.items.map((skill, i) => (
+              <SkillCard
+                key={`${skill.lang}_${i}`}
+                pct={skill.pct}
+                title={skill.lang}
+              />
             ))}
           </div>
         </div>

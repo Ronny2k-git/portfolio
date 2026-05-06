@@ -8,23 +8,26 @@ export function HeroSection() {
       className="scroll-mt-[5rem] relative flex w-full h-[44rem] justify-center items-center "
     >
       {/* Background glow */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[31rem] h-[31rem] rounded-full bg-[radial-gradient(circle,rgba(201,160,60,0.10),transparent_70%)]" />
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none ">
+        <div
+          className="w-[31rem] h-[31rem] rounded-full"
+          style={{ background: 'var(--bg-radial-orange)' }}
+        />
       </div>
 
       {/* Outer orbit ring */}
       <div
         className="
-          absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-[43rem] h-[43rem] 
+          absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-[41rem] h-[41rem] 
           border border-border-hi/50 rounded-full "
       >
         {/* Middle ring */}
         <div
           className="
-            flex items-center justify-center w-[36rem] h-[36rem] border border-border-hi/40 rounded-full "
+            flex items-center justify-center w-[34rem] h-[34rem] border border-border-hi/40 rounded-full "
         >
           {/* Inner dashed rotating ring */}
-          <div className=" absolute w-[30rem] h-[30rem] border border-dashed border-border-hi/60 rounded-full " />
+          <div className=" absolute w-[28rem] h-[28rem] border border-dashed border-border-hi/60 rounded-full " />
 
           {/* Orbiting logos */}
           <div className="z-50 will-change-transform orbit absolute flex items-center justify-center ">

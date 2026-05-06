@@ -11,6 +11,7 @@ export default function Footer() {
           <div className="flex gap-4 text-[15px] text-muted-hi cursor-pointer">
             {socials.map((social) => (
               <a
+                key={social.label}
                 href={social.path}
                 className="flex items-center gap-2 hover:underline"
                 target="_blank"

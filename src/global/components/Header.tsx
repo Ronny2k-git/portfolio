@@ -1,5 +1,5 @@
+import { NAV_ROUTE_ID } from '@/consts'
 import { GithubIcon, LinkedInIcon, TwitterIcon } from '../icons'
-import { NAV_ROUTE_ID } from '../utils'
 
 export const socials = [
   {
@@ -54,8 +54,9 @@ export default function Header() {
 
       {/* Socials */}
       <div className="flex items-center gap-4 text-gray-400 cursor-pointer">
-        {socials.map((s) => (
+        {socials.map((s, index) => (
           <a
+            key={index}
             className=" border border-bg-border hover:text-solar hover:border-solar hover:bg-solar-glow 
             p-2 rounded-full"
             aria-label={s.aria}

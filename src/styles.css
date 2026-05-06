@@ -18,7 +18,7 @@
 
   /* Colors */
   --color-bg-border: rgba(201, 160, 60, 0.13);
-  --color-border-hi: rgba(201, 160, 60, 0.35);
+  --color-border-hi: rgba(201, 160, 60, 0.45);
   --color-muted: #7a7060;
   --color-muted-hi: #afa08a;
   --color-solar: #c9a03c;
@@ -29,7 +29,7 @@
   --color-white-glow: #f5f0e8;
   --color-card-basic: #111009;
   --color-card-gradient: #15130d;
-  --color-background: #0a0906;
+  --color-background: rgba(2, 8, 16);
 
   /* Breakpoint */
   --breakpoint-desktop-lg: 1300px;
@@ -39,6 +39,32 @@
     0 0 4px rgba(201, 160, 60, 0.4), 0 0 10px rgba(201, 160, 60, 0.25);
 
   /* Backgrounds */
+  --bg-radial-orange: radial-gradient(
+    circle,
+    rgba(255, 140, 0, 0.22) 1%,
+    transparent 70%
+  );
+}
+
+main,
+footer {
+  position: relative;
+  z-index: 10;
+}
+
+/* =========================
+   LAYOUT / BACKGROUND EFFECTS
+========================= */
+#stars {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#stars canvas {
+  width: 100%;
+  height: 100%;
 }
 
 /* =========================
