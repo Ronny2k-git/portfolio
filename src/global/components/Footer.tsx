@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col items-center font-display gap-6">
           <p className="text-3xl text-solar font-serif">Ronny2k</p>
 
-          <div className="flex gap-4 text-[15px] text-muted-hi cursor-pointer">
+          <div className="flex gap-4 text-sm text-muted-hi cursor-pointer">
             {socials.map((social) => (
               <a
                 key={social.label}

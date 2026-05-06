@@ -39,14 +39,14 @@ export function ProjectCard({
         <img
           alt="The project banner"
           src={banner}
-          className="w-full aspect-video max-h-[18rem] object-cover"
+          className="w-full aspect-video max-h-[16rem] object-cover"
         />
 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a12]/95 via-[#0a0a12]/50" />
 
         {/* Logo + title + date */}
-        <div className="absolute bottom-0 w-full p-4 sm:p-8 flex sm:items-center gap-4">
+        <div className="absolute bottom-0 w-full p-4 flex sm:items-center gap-4">
           <img
             src={logo}
             alt="The project logo"
@@ -95,9 +95,9 @@ export function ProjectCard({
       </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-4 p-4 sm:p-8">
+      <div className="flex flex-col gap-4 p-4">
         {/* Description */}
-        <p className="text-muted text-[15px]">{description}</p>
+        <p className="text-muted text-sm">{description}</p>
 
         <Divider />
 

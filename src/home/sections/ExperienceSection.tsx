@@ -15,7 +15,7 @@ export function ExperienceSection() {
   return (
     <motion.section
       id="experience"
-      className="scroll-mt-[12rem] flex flex-col w-full gap-20 text-solar"
+      className="scroll-mt-[12rem] flex flex-col w-full gap-10 text-solar"
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 120 }}
       transition={{ duration: 1 }}

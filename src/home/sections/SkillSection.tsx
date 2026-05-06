@@ -6,7 +6,7 @@ export function SkillSection() {
   return (
     <motion.section
       id="skill"
-      className="scroll-mt-[12rem] relative flex flex-col w-full gap-20 "
+      className="scroll-mt-[12rem] relative flex flex-col w-full gap-10 "
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 120 }}
       transition={{ duration: 1 }}
@@ -19,11 +19,11 @@ export function SkillSection() {
       />
 
       {SKILLS.map((section, index) => (
-        <div key={`${section.id}_${index}`} className="flex flex-col gap-6">
+        <div key={`${section.id}_${index}`} className="flex flex-col gap-4">
           {/* Section Title */}
           <SectionDivider title={section.title} textStyle="secondary" />
 
-          <div className="w-full z-40 gap-4 grid grid-cols-[repeat(auto-fit,minmax(210px,1fr))]">
+          <div className="w-full z-40 gap-4 grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(180px,1fr))]">
             {section.items.map((skill, i) => (
               <SkillCard
                 key={`${skill.lang}_${i}`}

@@ -14,7 +14,7 @@ export function ProjectSection() {
   return (
     <motion.section
       id="project"
-      className="scroll-mt-[12rem] flex w-full flex-col gap-20 text-solar"
+      className="scroll-mt-[12rem] flex w-full flex-col gap-10 text-solar"
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 120 }}
       transition={{ duration: 1 }}

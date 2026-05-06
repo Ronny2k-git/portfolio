@@ -20,19 +20,19 @@ export function AboutCard({
 }: AboutCardProps) {
   return (
     <Card
-      className={twMerge('p-6 gap-4 rounded-4xl', className)}
+      className={twMerge('p-4 sm:p-6 gap-4 rounded-4xl', className)}
       variant={'basic'}
     >
       <div className="flex items-center gap-2">
         <Icon className="w-5 h-5 text-solar shrink-0" />
 
-        <span className="text-base font-bold text-solar uppercase font-display">
+        <span className="text-sm font-bold text-solar uppercase font-display">
           {title}
         </span>
       </div>
 
       {description && (
-        <p className="text-[15px] text-muted-hi">
+        <p className="text-sm text-muted-hi">
           I’m Ronny, a{' '}
           <span className="text-white/80 font-semibold">
             Frontend Developer
@@ -48,7 +48,7 @@ export function AboutCard({
       )}
 
       {items && (
-        <ul className="flex flex-col gap-[1px] text-[15px] text-muted-hi">
+        <ul className="flex flex-col gap-[1px] text-sm text-muted-hi whitespace-nowrap">
           {items.map((item) => (
             <li key={item}>• {item}</li>
           ))}

@@ -28,7 +28,7 @@ export function ExperienceCard({
   return (
     <Card
       variant="secondary"
-      className="rounded-4xl p-4 sm:p-8 overflow-hidden "
+      className="rounded-4xl p-4 sm:p-6 overflow-hidden gap-4 "
     >
       {/* HEADER */}
       <div className=" flex gap-4">
@@ -39,10 +39,10 @@ export function ExperienceCard({
            sm:min-w-15 sm:max-h-15 sm:max-w-15 rounded-2xl "
         />
 
-        <div className="flex flex-col gap-1 font-mono">
+        <div className="flex flex-col font-mono">
           <div className="flex flex-wrap items-center gap-4">
             <span
-              className="text-2xl font-display font-semibold text-white-glow"
+              className="text-xl font-display font-semibold text-white-glow"
               translate="no"
             >
               {company}
@@ -53,7 +53,7 @@ export function ExperienceCard({
                 href={website}
                 target="_blank"
                 aria-label="Go to the company website (new tab)"
-                className="text-solar hover:text-orange-300/90 text-xs  border-b"
+                className="text-solar hover:text-orange-300/90 text-xs border-b"
               >
                 ⟶ Website
               </a>
@@ -66,13 +66,11 @@ export function ExperienceCard({
       </div>
 
       {/* Overview */}
-      <p className="text-muted text-[15px] max-sm:mt-4 p-2 sm:p-4">
-        {firstDescription}
-      </p>
+      <p className="text-muted text-sm">{firstDescription}</p>
 
       {/* Mobile Content */}
-      <div className="sm:hidden mt-4">
-        <Divider className="mb-4 opacity-70" />
+      <div className="sm:hidden">
+        <Divider />
 
         <Tabs
           direction="vertical"
@@ -87,7 +85,7 @@ export function ExperienceCard({
             {
               value: 'skills',
               content: (
-                <ul className="flex flex-wrap gap-2">
+                <ul className="flex flex-wrap gap-1">
                   {tech?.map((item, index) => (
                     <li key={index}>
                       <Tag
@@ -108,7 +106,7 @@ export function ExperienceCard({
             {
               value: 'activities',
               content: (
-                <ul className="flex flex-col gap-2">
+                <ul className="flex flex-col gap-1">
                   {contributions?.map((item, index) => (
                     <li
                       key={index}
@@ -126,7 +124,7 @@ export function ExperienceCard({
       </div>
 
       {/* Desktop Content */}
-      <div className="hidden sm:flex p-6  flex-col gap-4 sm:gap-8">
+      <div className="hidden sm:flex  flex-col gap-4 sm:gap-8">
         <div className="flex flex-col gap-2 text-muted">
           <span className="text-[13px] uppercase font-display">
             Skills used

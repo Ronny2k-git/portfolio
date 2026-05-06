@@ -26,7 +26,7 @@ const tabsTriggerVariants = cva(
         basic2: 'bg-card-basic',
       },
       size: {
-        md: 'p-4',
+        md: 'p-3',
         sm: 'p-3',
       },
       direction: {
