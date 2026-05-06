@@ -25,7 +25,7 @@ export function TimeLine() {
           >
             <span className="text-muted-hi text-xs">{item.code}</span>
 
-            <div className="flex items-center justify-center size-12 rounded-full shadow-glow-solar/30">
+            <div className="flex items-center justify-center size-12 rounded-full shadow-glow-solar/70 hover:scale-105 cursor-pointer">
               <img
                 className="!text-2xl rounded-full size-12"
                 src={item.img}
