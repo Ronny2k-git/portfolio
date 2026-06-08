@@ -318,4 +318,50 @@ export const PROJECTS = [
       },
     ],
   },
+  {
+    id: 'r2k-mission-control',
+    title: 'R2K Mission Control',
+    description:
+      'A futuristic mission control dashboard used for simulate a space operations system with live, scheduled, and historical missions.',
+    banner: '/home/projects/r2k-mission-control.webp',
+    logo: '/home/projects/r2k-mission-control-logo.svg',
+    alt: 'R2K Mission Control Dashboard',
+    github: 'https://github.com/Ronny2k-git/r2k-mission-control',
+    live: '',
+    class: 'max-desktop-lg:col-span-1 col-span-2',
+    date: 'May 2026 - Jun 2026',
+    techs: [
+      { label: 'Vite', icon: '/logos/vite-logo.webp', alt: 'Vite logo' },
+      { label: 'React', icon: '/logos/tag/react-logo.webp', alt: 'React logo' },
+      {
+        label: 'Tailwind',
+        icon: '/logos/tag/tailwind.webp',
+        alt: 'Tailwind CSS logo',
+      },
+      { label: 'Node.js', icon: '/logos/node-js.webp', alt: 'Node.js logo' },
+      {
+        label: 'Express',
+        icon: '/logos/node_and_express.webp',
+        alt: 'Express logo',
+      },
+      { label: 'Jest', icon: '/logos/jest-logo.webp', alt: 'Zod logo' },
+      { label: 'Zod', icon: '/logos/tag/zod.webp', alt: 'Zod logo' },
+      {
+        label: 'React hook form',
+        icon: '/logos/tag/hook-form.webp',
+        alt: 'React Hook Form logo',
+      },
+
+      {
+        label: 'Tanstack',
+        icon: '/logos/tag/tanstack.webp',
+        alt: 'TanStack logo',
+      },
+      {
+        label: 'Vercel',
+        icon: '/logos/tag/vercel-logo.webp',
+        alt: 'Vercel logo',
+      },
+    ],
+  },
 ]

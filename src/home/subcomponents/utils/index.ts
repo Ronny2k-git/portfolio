@@ -5,7 +5,7 @@ export const MY_EXPERIENCE = [
     logo: '/home/companies/freelance-logo.webp',
     company: 'Freelance',
     role: 'Frontend Developer (Freelance)',
-    date: 'Nov 2025 - Present',
+    date: 'Jan 2026 - Present',
     firstDescription:
       'Developing modern web applications for clients, focusing on scalable frontend architecture, API integration, and production-ready deployments.',
     tech: [
@@ -48,7 +48,7 @@ export const MY_EXPERIENCE = [
     company: 'Fjord Foundry',
     website: 'https://www.fjordfoundry.com/',
     role: 'Junior Frontend Developer',
-    date: 'Oct 2024 - Nov 2025',
+    date: 'Oct 2024 - Dec 2025',
     firstDescription:
       'Worked on production-level Web3 applications, contributing to frontend architecture, UI development, and blockchain integrations within a fast-paced team environment.',
     tech: [
@@ -77,7 +77,7 @@ export const MY_EXPERIENCE = [
       },
     ],
     contributions: [
-      'Built reusable and accessible UI components.',
+      'Built a design system with a little over 20 reusable UI components.',
       'Built new pages and wired them up with backend data.',
       'Contributed to the development of the new website version (v4).',
       'Contributed to the integration of the Solana ecosystem.',

@@ -39,7 +39,7 @@ export function ProjectCard({
         <img
           alt="The project banner"
           src={banner}
-          className="w-full aspect-video max-h-[16rem] object-cover"
+          className="w-full aspect-video max-h-[16rem] object-cover object-top"
         />
 
         {/* Gradient overlay */}
@@ -57,7 +57,7 @@ export function ProjectCard({
           <div className="flex gap-2 flex-wrap justify-between w-full font-mono">
             <div className="flex flex-col">
               <span
-                className="text-2xl font-display font-semibold text-white-glow"
+                className="text-xl sm:text-2xl font-display font-semibold text-white-glow"
                 translate="no"
               >
                 {title}
