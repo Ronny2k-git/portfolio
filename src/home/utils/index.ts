@@ -327,7 +327,7 @@ export const PROJECTS = [
     logo: '/home/projects/r2k-mission-control-logo.svg',
     alt: 'R2K Mission Control Dashboard',
     github: 'https://github.com/Ronny2k-git/r2k-mission-control',
-    live: 'https://r2k-mission-control.vercel.app/history',
+    live: 'https://r2k-mission-control.vercel.app',
     class: 'max-desktop-lg:col-span-1 col-span-2',
     date: 'May 2026 - Jun 2026',
     techs: [
