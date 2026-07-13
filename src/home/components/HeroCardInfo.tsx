@@ -24,7 +24,7 @@ export function HeroCardInfo() {
   return (
     <Card
       className=" relative z-50 flex items-center justify-center max-sm:max-w-[19.8rem] sm:size-[23rem] 
-      rounded-[32px] sm:rounded-full "
+      rounded-4xl sm:rounded-full "
       variant={'gradient'}
     >
       {/* Content */}
@@ -60,7 +60,7 @@ export function HeroCardInfo() {
         <p className="text-lg text-muted font-mono tracking-wide">
           // Frontend Developer
           <span className="text-solar/75 block">
-            {getYearsOfExperience('2024-03-01')}+ years exp
+            {getYearsOfExperience('2024-07-01')}+ years exp
           </span>
         </p>
 
