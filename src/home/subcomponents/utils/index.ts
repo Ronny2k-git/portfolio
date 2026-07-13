@@ -4,10 +4,10 @@ export const MY_EXPERIENCE = [
     value: 'freelance',
     logo: '/home/companies/freelance-logo.webp',
     company: 'Freelance',
-    role: 'Frontend Developer (Freelance)',
+    role: 'Fullstack Developer (Freelance)',
     date: 'Jan 2026 - Present',
     firstDescription:
-      'Developing modern web applications for clients, focusing on scalable frontend architecture, API integration, and production-ready deployments.',
+      'Developing modern web applications for clients, focusing on scalable frontend and backend architecture, API integration, and production-ready deployments.',
     tech: [
       {
         label: 'JS/TS',
@@ -36,7 +36,7 @@ export const MY_EXPERIENCE = [
     contributions: [
       'Web interface development using React, TypeScript, Next.js and Vite.',
       'Consuming REST APIs and database integrations.',
-      'Frontend tests using frameworks such: Vitest, Cypress etc',
+      'Frontend and Backend tests using frameworks such: Vitest, Jest, React testing etc',
       'API development using Node.js and Express.',
       'Application deployment using Vercel, Github or other cloud services.',
     ],

@@ -58,7 +58,7 @@ export function HeroCardInfo() {
 
         {/* Role */}
         <p className="text-lg text-muted font-mono tracking-wide">
-          // Frontend Developer
+          // Fullstack Developer
           <span className="text-solar/75 block">
             {getYearsOfExperience('2024-07-01')}+ years exp
           </span>

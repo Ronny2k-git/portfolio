@@ -35,7 +35,7 @@ export function AboutCard({
         <p className="text-sm text-muted-hi">
           I’m Ronny, a{' '}
           <span className="text-white/80 font-semibold">
-            Frontend Developer
+            Fullstack Developer
           </span>{' '}
           with{' '}
           <span className="text-white/80 font-semibold">
