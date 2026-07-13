@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { MAIN_STACK } from '../utils'
 import { Tag } from './Tag'
 
-const NAMES = ['Ronny EDM', 'Frontend']
+const NAMES = ['Ronny EDM', 'Fullstack']
 
 export function HeroCardInfo() {
   const [nameIndex, setNameIndex] = useState(0)
