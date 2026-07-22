@@ -46,7 +46,16 @@ export const MY_EXPERIENCE = [
     value: 'fjord',
     logo: '/home/companies/fjord-logo.webp',
     company: 'Fjord Foundry',
-    website: 'https://www.fjordfoundry.com/',
+    socials: [
+      {
+        url: 'https://www.fjordfoundry.com',
+        label: 'Website',
+      },
+      {
+        url: 'https://x.com/FjordFoundry',
+        label: 'Twitter',
+      },
+    ],
     role: 'Junior Frontend Developer',
     date: 'Oct 2024 - Dec 2025',
     firstDescription:

@@ -2,12 +2,18 @@ import { Card, Divider, Tabs } from '@/ui/components'
 import { MoveRight } from 'lucide-react'
 import { Tag } from '../components'
 
+type Social = {
+  url: string
+  label: string
+}
+
 export type ExperienceCardProps = {
   id?: number
   value?: string
   logo: string
   company: string
   website?: string
+  socials?: Array<Social>
   role: string
   date: string
   firstDescription: string
@@ -18,7 +24,7 @@ export type ExperienceCardProps = {
 export function ExperienceCard({
   logo,
   company,
-  website,
+  socials,
   role,
   date,
   firstDescription,
@@ -39,8 +45,8 @@ export function ExperienceCard({
            sm:min-w-15 sm:max-h-15 sm:max-w-15 rounded-2xl "
         />
 
-        <div className="flex flex-col font-mono">
-          <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-col font-mono max-sm:gap-2">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4">
             <span
               className="text-xl font-display font-semibold text-white-glow"
               translate="no"
@@ -48,16 +54,24 @@ export function ExperienceCard({
               {company}
             </span>
 
-            {website && (
-              <a
-                href={website}
-                target="_blank"
-                aria-label="Go to the company website (new tab)"
-                className="text-solar hover:text-orange-300/90 text-xs border-b"
-              >
-                ⟶ Website
-              </a>
-            )}
+            <div className="flex items-center gap-2">
+              {socials?.map((social, i) => (
+                <span key={social.url} className="flex items-center gap-2">
+                  <a
+                    href={social.url}
+                    target="_blank"
+                    aria-label={social.label}
+                    className="text-solar hover:text-orange-300/90 text-xs border-b"
+                  >
+                    {social.label}
+                  </a>
+
+                  {i < socials.length - 1 && (
+                    <span className="mx- text-muted">•</span>
+                  )}
+                </span>
+              ))}
+            </div>
           </div>
 
           <span className="text-xs">{role} </span>
